@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D7EE047E-AEC5-48C9-93D3-487997C2D6F5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>JBRanOnlineCP.My.MyApplication</StartupObject>
+    <RootNamespace>JBRanOnlineCP</RootNamespace>
+    <AssemblyName>JBRanOnlineCP</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>JBRanOnlineCP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>JBRanOnlineCP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>RanOnlineGS.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MdiTabControl">
+      <HintPath>F:\Users\Bartholomew\Documents\GitHub\7-11-SQL\Reference\MdiTabControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminCP\frmAdCPMain.Designer.vb">
+      <DependentUpon>frmAdCPMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\frmAdCPMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCP\frmAdLogin.Designer.vb">
+      <DependentUpon>frmAdLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\frmAdLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCP\frmAdSetting.Designer.vb">
+      <DependentUpon>frmAdSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\frmAdSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCP\frmAdUserEdit.Designer.vb">
+      <DependentUpon>frmAdUserEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\frmAdUserEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCP\frmAdUserSetting.Designer.vb">
+      <DependentUpon>frmAdUserSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\frmAdUserSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class\cfgRead.vb" />
+    <Compile Include="Class\encryption.vb" />
+    <Compile Include="Class\sqlConn.vb" />
+    <Compile Include="Class\flatButton.Designer.vb">
+      <DependentUpon>flatButton.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Class\flatButton.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientCP\frmAddPoint.Designer.vb">
+      <DependentUpon>frmAddPoint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientCP\frmAddPoint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientCP\frmChgPass.Designer.vb">
+      <DependentUpon>frmChgPass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientCP\frmChgPass.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientCP\frmChgSchool.Designer.vb">
+      <DependentUpon>frmChgSchool.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientCP\frmChgSchool.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientCP\frmClearPoint.Designer.vb">
+      <DependentUpon>frmClearPoint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientCP\frmClearPoint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientCP\frmClearRed.Designer.vb">
+      <DependentUpon>frmClearRed.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientCP\frmClearRed.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientCP\frmCP.Designer.vb">
+      <DependentUpon>frmCP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientCP\frmCP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientCP\frmFgtPwd.Designer.vb">
+      <DependentUpon>frmFgtPwd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientCP\frmFgtPwd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientCP\frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientCP\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientCP\frmNotice.Designer.vb">
+      <DependentUpon>frmNotice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientCP\frmNotice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientCP\frmRanking.Designer.vb">
+      <DependentUpon>frmRanking.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientCP\frmRanking.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientCP\frmReborn.Designer.vb">
+      <DependentUpon>frmReborn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientCP\frmReborn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientCP\frmRegister.Designer.vb">
+      <DependentUpon>frmRegister.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientCP\frmRegister.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientCP\frmRename.Designer.vb">
+      <DependentUpon>frmRename.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientCP\frmRename.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientCP\frmSelfHelp.Designer.vb">
+      <DependentUpon>frmSelfHelp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientCP\frmSelfHelp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoad.Designer.vb">
+      <DependentUpon>frmLoad.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdminCP\frmAdCPMain.resx">
+      <DependentUpon>frmAdCPMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCP\frmAdLogin.resx">
+      <DependentUpon>frmAdLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCP\frmAdSetting.resx">
+      <DependentUpon>frmAdSetting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCP\frmAdUserEdit.resx">
+      <DependentUpon>frmAdUserEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCP\frmAdUserSetting.resx">
+      <DependentUpon>frmAdUserSetting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Class\flatButton.resx">
+      <DependentUpon>flatButton.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientCP\frmAddPoint.resx">
+      <DependentUpon>frmAddPoint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientCP\frmChgPass.resx">
+      <DependentUpon>frmChgPass.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientCP\frmChgSchool.resx">
+      <DependentUpon>frmChgSchool.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientCP\frmClearPoint.resx">
+      <DependentUpon>frmClearPoint.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientCP\frmClearRed.resx">
+      <DependentUpon>frmClearRed.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientCP\frmCP.resx">
+      <DependentUpon>frmCP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientCP\frmFgtPwd.resx">
+      <DependentUpon>frmFgtPwd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientCP\frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientCP\frmNotice.resx">
+      <DependentUpon>frmNotice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientCP\frmRanking.resx">
+      <DependentUpon>frmRanking.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientCP\frmReborn.resx">
+      <DependentUpon>frmReborn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientCP\frmRegister.resx">
+      <DependentUpon>frmRegister.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientCP\frmRename.resx">
+      <DependentUpon>frmRename.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientCP\frmSelfHelp.resx">
+      <DependentUpon>frmSelfHelp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoad.resx">
+      <DependentUpon>frmLoad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="RanOnlineGS.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
