@@ -56,7 +56,7 @@ Partial Class frmRanking
         Me.cmb_Rank.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmb_Rank.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.cmb_Rank.FormattingEnabled = True
-        Me.cmb_Rank.Items.AddRange(New Object() {"总排行", "圣门学院", "玄岩学院", "凤凰学院", "格斗部", "剑道部", "气功部", "弓箭部", "大富翁"})
+        Me.cmb_Rank.Items.AddRange(New Object() {"总排行", "圣门学院", "玄岩学院", "凤凰学院", "大富翁"})
         Me.cmb_Rank.Location = New System.Drawing.Point(579, 12)
         Me.cmb_Rank.Name = "cmb_Rank"
         Me.cmb_Rank.Size = New System.Drawing.Size(219, 29)

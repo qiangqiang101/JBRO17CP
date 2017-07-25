@@ -37,14 +37,7 @@ Public Class frmCP
     Private Sub frmCP_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.Text = FormName & " - 控制面板"
 
-        'RefreshData()
-        'UpdateData()
 
-        'Try
-        '    Dim newForm As frmNotice = New frmNotice
-        '    cpTab.TabPages.Add(newForm)
-        'Catch ex As Exception
-        'End Try
     End Sub
 
     Public Function OnlineCheck(ByVal _ChaName As String)
@@ -215,5 +208,19 @@ Public Class frmCP
             cpTab.TabPages.Add(newForm)
         Catch ex As Exception
         End Try
+    End Sub
+
+    Private Sub frmCP_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        If frmLogin.PasswordisMd5 Then
+            Try
+                Dim newForm As frmChgPass = New frmChgPass
+                newForm.txt_CPUserName.Text = myUserName
+                newForm.txt_CPPassword.Text = frmLogin.txt_Password.Text
+                cpTab.TabPages.Add(newForm)
+            Catch ex As Exception
+            End Try
+            Threading.Thread.Sleep(1)
+            MsgBox("旧密码已经失效了，请换新密码。", MsgBoxStyle.Information, "温馨提示")
+        End If
     End Sub
 End Class

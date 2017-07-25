@@ -5,6 +5,7 @@ Public Class frmLogin
     Dim xConn As sqlConn
     Dim userID, userType, userNum As New Label
     Public PasswordEncrypt As Integer = 0
+    Public PasswordisMd5 As Boolean = False
 
     Private Sub frmLogin_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
         End
@@ -47,6 +48,10 @@ Public Class frmLogin
                 For Each _DataRow In dt.Rows
                     If txt_UserName.Text = _DataRow.item(2) And Md5FromString(txt_Password.Text) = _DataRow(3) Then
                         xConn.UserSQLConn.Close()
+                        Return True
+                    ElseIf txt_UserName.Text = _DataRow.item(2) And txt_Password.Text = _DataRow(3) Then
+                        xConn.UserSQLConn.Close()
+                        PasswordisMd5 = True
                         Return True
                     End If
                 Next
@@ -163,6 +168,7 @@ Public Class frmLogin
 
     Private Sub lbl_ForgotPwd_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles lbl_ForgotPwd.LinkClicked
         frmFgtPwd.Show()
+        Me.Hide()
     End Sub
 
     Private Sub RefreshData()

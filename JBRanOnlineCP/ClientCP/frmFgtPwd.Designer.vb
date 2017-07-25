@@ -98,6 +98,7 @@ Partial Class frmFgtPwd
         '
         'frmFgtPwd
         '
+        Me.AcceptButton = Me.btn_Login
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(424, 232)
@@ -108,6 +109,7 @@ Partial Class frmFgtPwd
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False

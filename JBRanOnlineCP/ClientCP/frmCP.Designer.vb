@@ -46,6 +46,8 @@ Partial Class frmCP
         Me.fbAddPoint = New JBRanOnlineCP.flatButton()
         Me.fbReborn = New JBRanOnlineCP.flatButton()
         Me.fbNotice = New JBRanOnlineCP.flatButton()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.llblProfile = New System.Windows.Forms.LinkLabel()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.sideBar.SuspendLayout()
         Me.SuspendLayout()
@@ -449,11 +451,43 @@ Partial Class frmCP
         Me.fbNotice.TabIndex = 40
         Me.fbNotice.Value = "游戏公告"
         '
+        'Label3
+        '
+        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(834, 51)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(14, 21)
+        Me.Label3.TabIndex = 43
+        Me.Label3.Text = "|"
+        '
+        'llblProfile
+        '
+        Me.llblProfile.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.llblProfile.AutoSize = True
+        Me.llblProfile.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.llblProfile.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.llblProfile.ForeColor = System.Drawing.Color.White
+        Me.llblProfile.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.llblProfile.LinkColor = System.Drawing.Color.White
+        Me.llblProfile.Location = New System.Drawing.Point(754, 51)
+        Me.llblProfile.Name = "llblProfile"
+        Me.llblProfile.Size = New System.Drawing.Size(74, 21)
+        Me.llblProfile.TabIndex = 44
+        Me.llblProfile.TabStop = True
+        Me.llblProfile.Text = "帐户设置"
+        Me.llblProfile.VisitedLinkColor = System.Drawing.Color.White
+        '
         'frmCP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 730)
+        Me.Controls.Add(Me.llblProfile)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.llblChgPass)
@@ -499,4 +533,6 @@ Partial Class frmCP
     Friend WithEvents llblChgPass As LinkLabel
     Friend WithEvents Label2 As Label
     Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents Label3 As Label
+    Friend WithEvents llblProfile As LinkLabel
 End Class

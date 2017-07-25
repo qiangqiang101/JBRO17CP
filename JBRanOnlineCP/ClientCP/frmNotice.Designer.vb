@@ -33,6 +33,7 @@ Partial Class frmNotice
         Me.WebBrowser1.Location = New System.Drawing.Point(0, 0)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(23, 23)
         Me.WebBrowser1.Name = "WebBrowser1"
+        Me.WebBrowser1.ScriptErrorsSuppressed = True
         Me.WebBrowser1.Size = New System.Drawing.Size(810, 478)
         Me.WebBrowser1.TabIndex = 1
         Me.WebBrowser1.Url = New System.Uri("", System.UriKind.Relative)

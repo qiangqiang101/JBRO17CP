@@ -15,6 +15,8 @@ Public Class frmFgtPwd
     Public Host As String '= "mail.zettabytetek.com"
     Public Subject As String '= "新劲爆乱Online - 找回密码"
 
+    Dim failed As Boolean = False
+
     Private Sub btn_Login_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Login.Click
         If txt_UserName.Text = "" Then
             MsgBox("请输入帐号。", MsgBoxStyle.Exclamation, "错误")
@@ -70,6 +72,10 @@ Public Class frmFgtPwd
         RefreshData()
     End Sub
 
+    Private Sub frmFgtPwd_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        frmLogin.Show()
+    End Sub
+
     Private Sub SendEmail(ByVal _UserId As String, ByVal _UserPass As String, ByVal _UserEmail As String)
         Try
             Dim smtpServer As New SmtpClient
@@ -87,9 +93,12 @@ Public Class frmFgtPwd
             email.IsBodyHtml = False
             email.Body = "尊敬的 " & _UserId & nl & nl & "您收到这封电子邮件是因为您最近找回密码，如果非本人操作，请尽快修改密码！" & nl & nl & "密码：" & _UserPass
             smtpServer.Send(email)
-            MsgBox("您的密码已经发送到 " & _UserEmail, MsgBoxStyle.Exclamation, "错误")
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
+            failed = True
+        Finally
+            If Not failed = True Then MsgBox("您的密码已经发送到 " & _UserEmail, MsgBoxStyle.Exclamation, "错误")
+            Me.Close()
         End Try
     End Sub
 
