@@ -20,4 +20,4 @@ cpNews	"http://www.jbranonline.com"
 Arguments list:
 /admincp = Admin CP
 /reg = Straight to Register
-/dafuqpukimaklancau!@#%$#^$@^%$" = Encrypt/Decrypt text
+/dafuqpukimaklancau!@#%$#^$@^%$ = Encrypt/Decrypt text
