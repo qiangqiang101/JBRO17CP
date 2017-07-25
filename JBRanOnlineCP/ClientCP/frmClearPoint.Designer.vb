@@ -33,7 +33,8 @@ Partial Class frmClearPoint
         '
         'btn_ClearStat
         '
-        Me.btn_ClearStat.Location = New System.Drawing.Point(344, 265)
+        Me.btn_ClearStat.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.btn_ClearStat.Location = New System.Drawing.Point(344, 277)
         Me.btn_ClearStat.Name = "btn_ClearStat"
         Me.btn_ClearStat.Size = New System.Drawing.Size(105, 29)
         Me.btn_ClearStat.TabIndex = 36
@@ -44,49 +45,55 @@ Partial Class frmClearPoint
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(258, 239)
+        Me.Label14.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label14.Location = New System.Drawing.Point(247, 245)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(34, 15)
+        Me.Label14.Size = New System.Drawing.Size(45, 21)
         Me.Label14.TabIndex = 39
         Me.Label14.Text = "角色:"
         '
         'txt_XDUserName
         '
+        Me.txt_XDUserName.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.txt_XDUserName.Location = New System.Drawing.Point(298, 207)
         Me.txt_XDUserName.MaxLength = 14
         Me.txt_XDUserName.Name = "txt_XDUserName"
         Me.txt_XDUserName.ReadOnly = True
-        Me.txt_XDUserName.Size = New System.Drawing.Size(219, 23)
+        Me.txt_XDUserName.Size = New System.Drawing.Size(219, 29)
         Me.txt_XDUserName.TabIndex = 34
         '
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(258, 210)
+        Me.Label15.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label15.Location = New System.Drawing.Point(247, 210)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(34, 15)
+        Me.Label15.Size = New System.Drawing.Size(45, 21)
         Me.Label15.TabIndex = 38
         Me.Label15.Text = "帐号:"
         '
         'cmb_CSCha
         '
         Me.cmb_CSCha.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmb_CSCha.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.cmb_CSCha.FormattingEnabled = True
-        Me.cmb_CSCha.Location = New System.Drawing.Point(298, 236)
+        Me.cmb_CSCha.Location = New System.Drawing.Point(298, 242)
         Me.cmb_CSCha.Name = "cmb_CSCha"
-        Me.cmb_CSCha.Size = New System.Drawing.Size(219, 23)
+        Me.cmb_CSCha.Size = New System.Drawing.Size(219, 29)
         Me.cmb_CSCha.TabIndex = 35
         '
         'Label13
         '
+        Me.Label13.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.Label13.Location = New System.Drawing.Point(12, 9)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(750, 35)
+        Me.Label13.Size = New System.Drawing.Size(750, 48)
         Me.Label13.TabIndex = 37
         Me.Label13.Text = "1. 请确认你的人物帐号已下线。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "2. 在线洗点只开放给黄金会员。"
         '
         'frmClearPoint
         '
+        Me.AcceptButton = Me.btn_ClearStat
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White

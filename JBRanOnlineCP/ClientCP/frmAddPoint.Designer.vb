@@ -46,110 +46,123 @@ Partial Class frmAddPoint
         '
         'txt_ChaStRemain
         '
-        Me.txt_ChaStRemain.Location = New System.Drawing.Point(460, 319)
+        Me.txt_ChaStRemain.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.txt_ChaStRemain.Location = New System.Drawing.Point(483, 331)
         Me.txt_ChaStRemain.MaxLength = 4
         Me.txt_ChaStRemain.Name = "txt_ChaStRemain"
         Me.txt_ChaStRemain.ReadOnly = True
-        Me.txt_ChaStRemain.Size = New System.Drawing.Size(170, 23)
+        Me.txt_ChaStRemain.Size = New System.Drawing.Size(170, 29)
         Me.txt_ChaStRemain.TabIndex = 53
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(384, 322)
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label12.Location = New System.Drawing.Point(384, 334)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(70, 15)
+        Me.Label12.Size = New System.Drawing.Size(93, 21)
         Me.Label12.TabIndex = 64
         Me.Label12.Text = "剩余属性点:"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(420, 293)
+        Me.Label11.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label11.Location = New System.Drawing.Point(432, 299)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(34, 15)
+        Me.Label11.Size = New System.Drawing.Size(45, 21)
         Me.Label11.TabIndex = 63
         Me.Label11.Text = "耐力:"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(420, 264)
+        Me.Label10.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label10.Location = New System.Drawing.Point(432, 264)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(34, 15)
+        Me.Label10.Size = New System.Drawing.Size(45, 21)
         Me.Label10.TabIndex = 62
         Me.Label10.Text = "体力:"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(141, 322)
+        Me.Label9.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label9.Location = New System.Drawing.Point(130, 334)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(34, 15)
+        Me.Label9.Size = New System.Drawing.Size(45, 21)
         Me.Label9.TabIndex = 61
         Me.Label9.Text = "精神:"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(141, 293)
+        Me.Label8.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label8.Location = New System.Drawing.Point(130, 299)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(34, 15)
+        Me.Label8.Size = New System.Drawing.Size(45, 21)
         Me.Label8.TabIndex = 60
         Me.Label8.Text = "敏捷:"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(141, 264)
+        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label7.Location = New System.Drawing.Point(130, 264)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(34, 15)
+        Me.Label7.Size = New System.Drawing.Size(45, 21)
         Me.Label7.TabIndex = 59
         Me.Label7.Text = "力量:"
         '
         'txt_SP
         '
-        Me.txt_SP.Location = New System.Drawing.Point(460, 290)
+        Me.txt_SP.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.txt_SP.Location = New System.Drawing.Point(483, 296)
         Me.txt_SP.MaxLength = 4
         Me.txt_SP.Name = "txt_SP"
-        Me.txt_SP.Size = New System.Drawing.Size(170, 23)
+        Me.txt_SP.Size = New System.Drawing.Size(170, 29)
         Me.txt_SP.TabIndex = 52
         '
         'txt_HP
         '
-        Me.txt_HP.Location = New System.Drawing.Point(460, 261)
+        Me.txt_HP.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.txt_HP.Location = New System.Drawing.Point(483, 261)
         Me.txt_HP.MaxLength = 4
         Me.txt_HP.Name = "txt_HP"
-        Me.txt_HP.Size = New System.Drawing.Size(170, 23)
+        Me.txt_HP.Size = New System.Drawing.Size(170, 29)
         Me.txt_HP.TabIndex = 51
         '
         'txt_Spirit
         '
-        Me.txt_Spirit.Location = New System.Drawing.Point(181, 319)
+        Me.txt_Spirit.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.txt_Spirit.Location = New System.Drawing.Point(181, 331)
         Me.txt_Spirit.MaxLength = 4
         Me.txt_Spirit.Name = "txt_Spirit"
-        Me.txt_Spirit.Size = New System.Drawing.Size(170, 23)
+        Me.txt_Spirit.Size = New System.Drawing.Size(170, 29)
         Me.txt_Spirit.TabIndex = 50
         '
         'txt_Dex
         '
-        Me.txt_Dex.Location = New System.Drawing.Point(181, 290)
+        Me.txt_Dex.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.txt_Dex.Location = New System.Drawing.Point(181, 296)
         Me.txt_Dex.MaxLength = 4
         Me.txt_Dex.Name = "txt_Dex"
-        Me.txt_Dex.Size = New System.Drawing.Size(170, 23)
+        Me.txt_Dex.Size = New System.Drawing.Size(170, 29)
         Me.txt_Dex.TabIndex = 49
         '
         'txt_Power
         '
+        Me.txt_Power.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.txt_Power.Location = New System.Drawing.Point(181, 261)
         Me.txt_Power.MaxLength = 4
         Me.txt_Power.Name = "txt_Power"
-        Me.txt_Power.Size = New System.Drawing.Size(170, 23)
+        Me.txt_Power.Size = New System.Drawing.Size(170, 29)
         Me.txt_Power.TabIndex = 48
         '
         'btn_AddStat
         '
-        Me.btn_AddStat.Location = New System.Drawing.Point(344, 348)
+        Me.btn_AddStat.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.btn_AddStat.Location = New System.Drawing.Point(354, 385)
         Me.btn_AddStat.Name = "btn_AddStat"
         Me.btn_AddStat.Size = New System.Drawing.Size(105, 29)
         Me.btn_AddStat.TabIndex = 54
@@ -160,57 +173,68 @@ Partial Class frmAddPoint
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(258, 191)
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label3.Location = New System.Drawing.Point(247, 197)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(34, 15)
+        Me.Label3.Size = New System.Drawing.Size(45, 21)
         Me.Label3.TabIndex = 58
         Me.Label3.Text = "角色:"
         '
         'txt_JDUserName
         '
+        Me.txt_JDUserName.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.txt_JDUserName.Location = New System.Drawing.Point(298, 159)
         Me.txt_JDUserName.MaxLength = 14
         Me.txt_JDUserName.Name = "txt_JDUserName"
         Me.txt_JDUserName.ReadOnly = True
-        Me.txt_JDUserName.Size = New System.Drawing.Size(219, 23)
+        Me.txt_JDUserName.Size = New System.Drawing.Size(219, 29)
         Me.txt_JDUserName.TabIndex = 46
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(258, 162)
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label5.Location = New System.Drawing.Point(247, 162)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(34, 15)
+        Me.Label5.Size = New System.Drawing.Size(45, 21)
         Me.Label5.TabIndex = 57
         Me.Label5.Text = "帐号:"
         '
         'cmb_JDChar
         '
         Me.cmb_JDChar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmb_JDChar.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.cmb_JDChar.FormattingEnabled = True
-        Me.cmb_JDChar.Location = New System.Drawing.Point(298, 188)
+        Me.cmb_JDChar.Location = New System.Drawing.Point(298, 194)
         Me.cmb_JDChar.Name = "cmb_JDChar"
-        Me.cmb_JDChar.Size = New System.Drawing.Size(219, 23)
+        Me.cmb_JDChar.Size = New System.Drawing.Size(219, 29)
         Me.cmb_JDChar.TabIndex = 47
         '
         'lbl_JBNote2
         '
-        Me.lbl_JBNote2.Location = New System.Drawing.Point(12, 44)
+        Me.lbl_JBNote2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_JBNote2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.lbl_JBNote2.Location = New System.Drawing.Point(12, 66)
         Me.lbl_JBNote2.Name = "lbl_JBNote2"
-        Me.lbl_JBNote2.Size = New System.Drawing.Size(750, 35)
+        Me.lbl_JBNote2.Size = New System.Drawing.Size(786, 45)
         Me.lbl_JBNote2.TabIndex = 56
         Me.lbl_JBNote2.Text = "手续费详情：" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "        加点花费要 {AddStatGold} 游戏币。"
         '
         'lbl_JDNote
         '
+        Me.lbl_JDNote.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lbl_JDNote.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.lbl_JDNote.Location = New System.Drawing.Point(12, 9)
         Me.lbl_JDNote.Name = "lbl_JDNote"
-        Me.lbl_JDNote.Size = New System.Drawing.Size(750, 35)
+        Me.lbl_JDNote.Size = New System.Drawing.Size(786, 44)
         Me.lbl_JDNote.TabIndex = 55
         Me.lbl_JDNote.Text = "1. 请确认你的人物帐号已下线，否则会白白花费你的游戏币哦。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "2. 加点费用将会从你身上扣除，请带足够的游戏币再来哦！"
         '
         'frmAddPoint
         '
+        Me.AcceptButton = Me.btn_AddStat
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White

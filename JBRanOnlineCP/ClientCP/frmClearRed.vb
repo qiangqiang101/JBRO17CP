@@ -12,6 +12,7 @@ Public Class frmClearRed
     Public ClearPKGold As Integer '= 5000000 '漂白所需游戏币
 
     Private Sub frmClearRed_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        RefreshData()
         LoadClearPK()
     End Sub
 
@@ -92,5 +93,22 @@ Public Class frmClearRed
     Private Sub NumbericKeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txt_PKValue.KeyPress
         Dim ValidChars As String = "0123456789"
         e.Handled = Not (ValidChars.IndexOf(e.KeyChar) > -1 OrElse e.KeyChar = Convert.ToChar(Keys.Back))
+    End Sub
+
+    Private Sub RefreshData()
+        Try
+            xConn = New sqlConn()
+            xConn.connectUser("Select * From CPSetting;")
+
+            xConn.UserSQLComm.Connection = xConn.UserSQLConn
+            Dim d As SqlDataReader = xConn.UserSQLComm.ExecuteReader()
+            Do While d.Read
+                ClearPKGold = d("ClearPKGold")
+            Loop
+
+            xConn.UserSQLConn.Close()
+        Catch ex As Exception
+            'MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
+        End Try
     End Sub
 End Class

@@ -36,7 +36,7 @@ Public Class frmReborn
         lbl_RBNote1.Text = "1. 最多可以转生 " & Reborn & " 次。" & nl &
             "2. 目前提供高级转生、中级转生、初级转生。" & nl &
             "3. 转生前请先确认帐号内的角色已经下线。" & nl &
-            "4 : .转生费用将会从你身上扣除, 请带足够的游戏币和积分再来哦!"
+            "4.转生费用将会从你身上扣除, 请带足够的游戏币和积分再来哦!"
         lbl_RBNote2.Text = "转生级数需求：" & nl &
             "    初级转生 " & PrimaryLevel & " 等级，" & PrimaryReborn & " 转生，每转一次增加 " & PrimaryStat & " 属性点。" & nl &
             "    中级转生 " & SecondaryLevel & " 等级，" & SecondaryReborn & " 转生，每转一次增加 " & SecondaryStat & " 属性点。" & nl &
@@ -211,6 +211,37 @@ Public Class frmReborn
     End Sub
 
     Private Sub frmReborn_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        RefreshData()
         LoadReborn()
+    End Sub
+
+    Private Sub RefreshData()
+        Try
+            xConn = New sqlConn()
+            xConn.connectUser("Select * From CPSetting;")
+
+            xConn.UserSQLComm.Connection = xConn.UserSQLConn
+            Dim d As SqlDataReader = xConn.UserSQLComm.ExecuteReader()
+            Do While d.Read
+                Reborn = d("MaxReborn")
+                PrimaryLevel = d("RBPrimaryLvl")
+                SecondaryLevel = d("RBSecondaryLvl")
+                AdvanceLevel = d("RBAdvanceLvl")
+                PrimaryReborn = d("RBPrimary")
+                SecondaryReborn = d("RBSecondary")
+                AdvanceReborn = d("RBAdvance")
+                PrimaryStat = d("RBPrimaryStat")
+                SecondaryStat = d("RBSecondaryStat")
+                AdvanceStat = d("RBAdvanceStat")
+                PrimaryGold = d("RBPrimaryGold")
+                SecondaryGold = d("RBSecondaryGold")
+                AdvanceGold = d("RBAdvanceGold")
+                RebornWait = d("RebornWait")
+            Loop
+
+            xConn.UserSQLConn.Close()
+        Catch ex As Exception
+            'MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
+        End Try
     End Sub
 End Class

@@ -135,6 +135,7 @@ Public Class frmLogin
 
     Private Sub btn_Register_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Register.Click
         frmRegister.Show()
+        frmRegister.from = "Login"
     End Sub
 
     Private Sub lbl_ForgotPwd_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles lbl_ForgotPwd.LinkClicked

@@ -30,7 +30,8 @@ Partial Class frmSelfHelp
         '
         'btn_SelfHelp
         '
-        Me.btn_SelfHelp.Location = New System.Drawing.Point(345, 225)
+        Me.btn_SelfHelp.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.btn_SelfHelp.Location = New System.Drawing.Point(349, 231)
         Me.btn_SelfHelp.Name = "btn_SelfHelp"
         Me.btn_SelfHelp.Size = New System.Drawing.Size(105, 29)
         Me.btn_SelfHelp.TabIndex = 65
@@ -40,19 +41,21 @@ Partial Class frmSelfHelp
         '
         'txt_SHUserName
         '
+        Me.txt_SHUserName.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.txt_SHUserName.Location = New System.Drawing.Point(299, 196)
         Me.txt_SHUserName.MaxLength = 14
         Me.txt_SHUserName.Name = "txt_SHUserName"
         Me.txt_SHUserName.ReadOnly = True
-        Me.txt_SHUserName.Size = New System.Drawing.Size(219, 23)
+        Me.txt_SHUserName.Size = New System.Drawing.Size(219, 29)
         Me.txt_SHUserName.TabIndex = 64
         '
         'Label27
         '
         Me.Label27.AutoSize = True
-        Me.Label27.Location = New System.Drawing.Point(259, 199)
+        Me.Label27.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label27.Location = New System.Drawing.Point(248, 199)
         Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(34, 15)
+        Me.Label27.Size = New System.Drawing.Size(45, 21)
         Me.Label27.TabIndex = 63
         Me.Label27.Text = "帐号:"
         '

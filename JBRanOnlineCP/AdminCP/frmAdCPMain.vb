@@ -14,4 +14,8 @@
         Catch ex As Exception
         End Try
     End Sub
+
+    Private Sub frmAdCPMain_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        End
+    End Sub
 End Class

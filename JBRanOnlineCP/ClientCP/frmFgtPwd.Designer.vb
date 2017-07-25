@@ -34,7 +34,8 @@ Partial Class frmFgtPwd
         '
         'btn_Login
         '
-        Me.btn_Login.Location = New System.Drawing.Point(304, 168)
+        Me.btn_Login.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.btn_Login.Location = New System.Drawing.Point(307, 191)
         Me.btn_Login.Name = "btn_Login"
         Me.btn_Login.Size = New System.Drawing.Size(105, 29)
         Me.btn_Login.TabIndex = 23
@@ -45,18 +46,20 @@ Partial Class frmFgtPwd
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(74, 110)
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label3.Location = New System.Drawing.Point(63, 110)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(34, 15)
+        Me.Label3.Size = New System.Drawing.Size(45, 21)
         Me.Label3.TabIndex = 27
         Me.Label3.Text = "帐号:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'txt_UserName
         '
+        Me.txt_UserName.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.txt_UserName.Location = New System.Drawing.Point(114, 107)
         Me.txt_UserName.Name = "txt_UserName"
-        Me.txt_UserName.Size = New System.Drawing.Size(246, 23)
+        Me.txt_UserName.Size = New System.Drawing.Size(246, 29)
         Me.txt_UserName.TabIndex = 22
         '
         'Label1
@@ -89,7 +92,7 @@ Partial Class frmFgtPwd
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Top
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(421, 75)
+        Me.PictureBox1.Size = New System.Drawing.Size(424, 75)
         Me.PictureBox1.TabIndex = 24
         Me.PictureBox1.TabStop = False
         '
@@ -97,7 +100,7 @@ Partial Class frmFgtPwd
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(421, 209)
+        Me.ClientSize = New System.Drawing.Size(424, 232)
         Me.Controls.Add(Me.btn_Login)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txt_UserName)

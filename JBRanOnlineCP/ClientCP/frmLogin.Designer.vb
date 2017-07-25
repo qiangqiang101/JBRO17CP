@@ -40,16 +40,18 @@ Partial Class frmLogin
         'lbl_ForgotPwd
         '
         Me.lbl_ForgotPwd.AutoSize = True
-        Me.lbl_ForgotPwd.Location = New System.Drawing.Point(305, 140)
+        Me.lbl_ForgotPwd.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.lbl_ForgotPwd.Location = New System.Drawing.Point(286, 156)
         Me.lbl_ForgotPwd.Name = "lbl_ForgotPwd"
-        Me.lbl_ForgotPwd.Size = New System.Drawing.Size(55, 15)
+        Me.lbl_ForgotPwd.Size = New System.Drawing.Size(74, 21)
         Me.lbl_ForgotPwd.TabIndex = 33
         Me.lbl_ForgotPwd.TabStop = True
         Me.lbl_ForgotPwd.Text = "找回密码"
         '
         'btn_Register
         '
-        Me.btn_Register.Location = New System.Drawing.Point(304, 168)
+        Me.btn_Register.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.btn_Register.Location = New System.Drawing.Point(307, 191)
         Me.btn_Register.Name = "btn_Register"
         Me.btn_Register.Size = New System.Drawing.Size(105, 29)
         Me.btn_Register.TabIndex = 32
@@ -60,16 +62,18 @@ Partial Class frmLogin
         'chk_Remember
         '
         Me.chk_Remember.AutoSize = True
-        Me.chk_Remember.Location = New System.Drawing.Point(114, 143)
+        Me.chk_Remember.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.chk_Remember.Location = New System.Drawing.Point(114, 155)
         Me.chk_Remember.Name = "chk_Remember"
-        Me.chk_Remember.Size = New System.Drawing.Size(62, 19)
+        Me.chk_Remember.Size = New System.Drawing.Size(77, 25)
         Me.chk_Remember.TabIndex = 25
         Me.chk_Remember.Text = "记住我"
         Me.chk_Remember.UseVisualStyleBackColor = True
         '
         'btn_Login
         '
-        Me.btn_Login.Location = New System.Drawing.Point(193, 168)
+        Me.btn_Login.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.btn_Login.Location = New System.Drawing.Point(196, 191)
         Me.btn_Login.Name = "btn_Login"
         Me.btn_Login.Size = New System.Drawing.Size(105, 29)
         Me.btn_Login.TabIndex = 26
@@ -80,9 +84,10 @@ Partial Class frmLogin
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(74, 117)
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label4.Location = New System.Drawing.Point(63, 123)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(34, 15)
+        Me.Label4.Size = New System.Drawing.Size(45, 21)
         Me.Label4.TabIndex = 31
         Me.Label4.Text = "密码:"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopRight
@@ -90,26 +95,29 @@ Partial Class frmLogin
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(74, 88)
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label3.Location = New System.Drawing.Point(63, 88)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(34, 15)
+        Me.Label3.Size = New System.Drawing.Size(45, 21)
         Me.Label3.TabIndex = 30
         Me.Label3.Text = "帐号:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
         'txt_Password
         '
-        Me.txt_Password.Location = New System.Drawing.Point(114, 114)
+        Me.txt_Password.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.txt_Password.Location = New System.Drawing.Point(114, 120)
         Me.txt_Password.Name = "txt_Password"
-        Me.txt_Password.Size = New System.Drawing.Size(246, 23)
+        Me.txt_Password.Size = New System.Drawing.Size(246, 29)
         Me.txt_Password.TabIndex = 24
         Me.txt_Password.UseSystemPasswordChar = True
         '
         'txt_UserName
         '
+        Me.txt_UserName.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.txt_UserName.Location = New System.Drawing.Point(114, 85)
         Me.txt_UserName.Name = "txt_UserName"
-        Me.txt_UserName.Size = New System.Drawing.Size(246, 23)
+        Me.txt_UserName.Size = New System.Drawing.Size(246, 29)
         Me.txt_UserName.TabIndex = 23
         '
         'Label1
@@ -142,7 +150,7 @@ Partial Class frmLogin
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Top
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(421, 75)
+        Me.PictureBox1.Size = New System.Drawing.Size(424, 75)
         Me.PictureBox1.TabIndex = 27
         Me.PictureBox1.TabStop = False
         '
@@ -151,7 +159,7 @@ Partial Class frmLogin
         Me.AcceptButton = Me.btn_Login
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(421, 209)
+        Me.ClientSize = New System.Drawing.Size(424, 232)
         Me.Controls.Add(Me.lbl_ForgotPwd)
         Me.Controls.Add(Me.btn_Register)
         Me.Controls.Add(Me.chk_Remember)

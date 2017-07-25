@@ -115,7 +115,7 @@ Partial Class frmAdCPMain
         Me.tsmChar.Size = New System.Drawing.Size(67, 20)
         Me.tsmChar.Text = "角色设置"
         '
-        'frmAdminCP
+        'frmAdCPMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -128,7 +128,7 @@ Partial Class frmAdCPMain
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Name = "frmAdminCP"
+        Me.Name = "frmAdCPMain"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "后台控制面板"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

@@ -40,40 +40,13 @@ Public Class frmLoad
             xConn.UserSQLComm.Connection = xConn.UserSQLConn
             Dim d As SqlDataReader = xConn.UserSQLComm.ExecuteReader()
             Do While d.Read
-                frmRegister.CharRemain = d("CharRemain")
-                frmRegister.CharTestRemain = d("CharTestRemain")
-                frmReborn.Reborn = d("MaxReborn")
-                frmReborn.PrimaryLevel = d("RBPrimaryLvl")
-                frmReborn.SecondaryLevel = d("RBSecondaryLvl")
-                frmReborn.AdvanceLevel = d("RBAdvanceLvl")
-                frmReborn.PrimaryReborn = d("RBPrimary")
-                frmReborn.SecondaryReborn = d("RBSecondary")
-                frmReborn.AdvanceReborn = d("RBAdvance")
-                frmReborn.PrimaryStat = d("RBPrimaryStat")
-                frmReborn.SecondaryStat = d("RBSecondaryStat")
-                frmReborn.AdvanceStat = d("RBAdvanceStat")
-                frmReborn.PrimaryGold = d("RBPrimaryGold")
-                frmReborn.SecondaryGold = d("RBSecondaryGold")
-                frmReborn.AdvanceGold = d("RBAdvanceGold")
-                frmReborn.RebornWait = d("RebornWait")
-                frmAddPoint.AddStatGold = d("AddStatGold")
-                frmChgSchool.ChangeSchoolGold = d("ChgSchoolGold")
-                frmClearRed.ClearPKGold = d("ClearPKGold")
-                frmRename.ChangeNameGold = d("ChgNameGold")
-                frmRename.ChangeNameWait = d("ChgNameWait")
                 frmCP.FormName = d("FormName")
-                frmFgtPwd.EmailAddr = d("EmailAddr")
-                frmFgtPwd.Password = d("EmailPwd")
-                frmFgtPwd.Port = d("EmailPort")
-                frmFgtPwd.Host = d("EmailHost")
-                frmFgtPwd.Subject = d("EmailSubject")
             Loop
 
             xConn.UserSQLConn.Close()
             connected = True
 
             Me.Hide()
-            Threading.Thread.Sleep(1)
             frmLogin.Show()
         Catch ex As Exception
             'MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
@@ -96,7 +69,10 @@ Public Class frmLoad
             Loop
 
             xConn.UserSQLConn.Close()
+            connected = True
+            Me.Hide()
             frmRegister.Show()
+            frmRegister.from = "Load"
         Catch ex As Exception
             'MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
         End Try
@@ -117,6 +93,8 @@ Public Class frmLoad
             Loop
 
             xConn.UserSQLConn.Close()
+            connected = True
+            Me.Hide()
             frmAdLogin.Show()
         Catch ex As Exception
             'MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")

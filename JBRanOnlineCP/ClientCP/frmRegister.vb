@@ -5,12 +5,14 @@ Public Class frmRegister
 
     Dim xConn As sqlConn
     Dim r As Random = New Random
+    Public from As String = Nothing
 
     'Settings
     Public CharRemain As Integer = 2
     Public CharTestRemain As Integer = 2
 
     Private Sub frmRegister_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        RefreshData()
         lbl_CODE.Text = r.Next(1, 9999)
         txt_UserName.Focus()
     End Sub
@@ -106,5 +108,35 @@ Public Class frmRegister
 
     Private Sub btnCancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnCancel.Click
         Me.Close()
+    End Sub
+
+    Private Sub RefreshData()
+        Try
+            xConn = New sqlConn()
+            xConn.connectUser("Select * From CPSetting;")
+
+            xConn.UserSQLComm.Connection = xConn.UserSQLConn
+            Dim d As SqlDataReader = xConn.UserSQLComm.ExecuteReader()
+            Do While d.Read
+                CharRemain = d("CharRemain")
+                CharTestRemain = d("CharTestRemain")
+            Loop
+
+            xConn.UserSQLConn.Close()
+        Catch ex As Exception
+            'MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
+        End Try
+    End Sub
+
+    Private Sub frmRegister_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        frmLoad.Hide()
+    End Sub
+
+    Private Sub frmRegister_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
+        Select Case from
+            Case "Load"
+                End
+            Case "Login"
+        End Select
     End Sub
 End Class

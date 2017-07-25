@@ -43,9 +43,10 @@ Partial Class frmRanking
         '
         Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(539, 15)
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label2.Location = New System.Drawing.Point(528, 15)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(34, 15)
+        Me.Label2.Size = New System.Drawing.Size(45, 21)
         Me.Label2.TabIndex = 33
         Me.Label2.Text = "分类:"
         '
@@ -53,11 +54,12 @@ Partial Class frmRanking
         '
         Me.cmb_Rank.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cmb_Rank.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmb_Rank.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.cmb_Rank.FormattingEnabled = True
         Me.cmb_Rank.Items.AddRange(New Object() {"总排行", "圣门学院", "玄岩学院", "凤凰学院", "格斗部", "剑道部", "气功部", "弓箭部", "大富翁"})
         Me.cmb_Rank.Location = New System.Drawing.Point(579, 12)
         Me.cmb_Rank.Name = "cmb_Rank"
-        Me.cmb_Rank.Size = New System.Drawing.Size(219, 23)
+        Me.cmb_Rank.Size = New System.Drawing.Size(219, 29)
         Me.cmb_Rank.TabIndex = 32
         '
         'lvRank
@@ -68,12 +70,13 @@ Partial Class frmRanking
         Me.lvRank.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.lvRank.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.chChaName, Me.chNo, Me.chChaIntel, Me.chChaLevel, Me.chChaClass, Me.chChaSchool, Me.chChaMoney})
         Me.lvRank.ContextMenuStrip = Me.cms_Rank
+        Me.lvRank.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.lvRank.GridLines = True
         Me.lvRank.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
-        Me.lvRank.Location = New System.Drawing.Point(12, 41)
+        Me.lvRank.Location = New System.Drawing.Point(12, 47)
         Me.lvRank.MultiSelect = False
         Me.lvRank.Name = "lvRank"
-        Me.lvRank.Size = New System.Drawing.Size(786, 425)
+        Me.lvRank.Size = New System.Drawing.Size(786, 419)
         Me.lvRank.TabIndex = 31
         Me.lvRank.UseCompatibleStateImageBehavior = False
         Me.lvRank.View = System.Windows.Forms.View.Details
@@ -90,7 +93,7 @@ Partial Class frmRanking
         Me.chNo.DisplayIndex = 0
         Me.chNo.Text = "名次"
         Me.chNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.chNo.Width = 40
+        Me.chNo.Width = 50
         '
         'chChaIntel
         '
@@ -124,15 +127,16 @@ Partial Class frmRanking
         '
         'cms_Rank
         '
+        Me.cms_Rank.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.cms_Rank.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmi_Copy})
         Me.cms_Rank.Name = "cms_Rank"
-        Me.cms_Rank.Size = New System.Drawing.Size(165, 26)
+        Me.cms_Rank.Size = New System.Drawing.Size(201, 30)
         '
         'tsmi_Copy
         '
         Me.tsmi_Copy.Name = "tsmi_Copy"
         Me.tsmi_Copy.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
-        Me.tsmi_Copy.Size = New System.Drawing.Size(164, 22)
+        Me.tsmi_Copy.Size = New System.Drawing.Size(200, 26)
         Me.tsmi_Copy.Text = "複製文字"
         '
         'frmRanking

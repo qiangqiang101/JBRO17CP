@@ -14,6 +14,7 @@ Public Class frmRename
     Public ChangeNameWait As Integer '= 3 '改名时间相隔(天)
 
     Private Sub frmRename_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        RefreshData()
         LoadChangeName()
     End Sub
 
@@ -134,4 +135,22 @@ Public Class frmRename
         xConn.GameSQLConn.Close()
         Return False
     End Function
+
+    Private Sub RefreshData()
+        Try
+            xConn = New sqlConn()
+            xConn.connectUser("Select * From CPSetting;")
+
+            xConn.UserSQLComm.Connection = xConn.UserSQLConn
+            Dim d As SqlDataReader = xConn.UserSQLComm.ExecuteReader()
+            Do While d.Read
+                ChangeNameGold = d("ChgNameGold")
+                ChangeNameWait = d("ChgNameWait")
+            Loop
+
+            xConn.UserSQLConn.Close()
+        Catch ex As Exception
+            'MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
+        End Try
+    End Sub
 End Class

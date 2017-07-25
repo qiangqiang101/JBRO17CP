@@ -36,9 +36,10 @@ Partial Class frmRename
         '
         'lbl_CNNote
         '
+        Me.lbl_CNNote.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.lbl_CNNote.Location = New System.Drawing.Point(12, 9)
         Me.lbl_CNNote.Name = "lbl_CNNote"
-        Me.lbl_CNNote.Size = New System.Drawing.Size(750, 67)
+        Me.lbl_CNNote.Size = New System.Drawing.Size(786, 88)
         Me.lbl_CNNote.TabIndex = 67
         Me.lbl_CNNote.Text = "1. 请确认你的人物帐号已下线。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "2. 改名需要 {ChangeNameGold} 游戏币，钱将从你身上扣除，清代足够的钱哦！" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "3. 角色名不可以含有 - &" &
     " ; 、 = : # $ "" { } [ ] 的这些字符。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "4. 改角色名后下次改角色名需等 {ChangeNameWait} 天。"
@@ -46,33 +47,37 @@ Partial Class frmRename
         'Label23
         '
         Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.Label23.ForeColor = System.Drawing.Color.Red
-        Me.Label23.Location = New System.Drawing.Point(295, 275)
+        Me.Label23.Location = New System.Drawing.Point(294, 293)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(180, 15)
+        Me.Label23.Size = New System.Drawing.Size(244, 21)
         Me.Label23.TabIndex = 66
         Me.Label23.Text = "只允许输入4-18个字符或9个汉字"
         '
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(234, 252)
+        Me.Label24.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label24.Location = New System.Drawing.Point(215, 264)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(58, 15)
+        Me.Label24.Size = New System.Drawing.Size(77, 21)
         Me.Label24.TabIndex = 65
         Me.Label24.Text = "新角色名:"
         '
         'txt_CNNewName
         '
-        Me.txt_CNNewName.Location = New System.Drawing.Point(298, 249)
+        Me.txt_CNNewName.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.txt_CNNewName.Location = New System.Drawing.Point(298, 261)
         Me.txt_CNNewName.MaxLength = 18
         Me.txt_CNNewName.Name = "txt_CNNewName"
-        Me.txt_CNNewName.Size = New System.Drawing.Size(219, 23)
+        Me.txt_CNNewName.Size = New System.Drawing.Size(219, 29)
         Me.txt_CNNewName.TabIndex = 61
         '
         'btn_ChangeName
         '
-        Me.btn_ChangeName.Location = New System.Drawing.Point(344, 293)
+        Me.btn_ChangeName.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.btn_ChangeName.Location = New System.Drawing.Point(349, 317)
         Me.btn_ChangeName.Name = "btn_ChangeName"
         Me.btn_ChangeName.Size = New System.Drawing.Size(105, 29)
         Me.btn_ChangeName.TabIndex = 62
@@ -83,37 +88,41 @@ Partial Class frmRename
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(234, 223)
+        Me.Label25.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label25.Location = New System.Drawing.Point(215, 229)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(58, 15)
+        Me.Label25.Size = New System.Drawing.Size(77, 21)
         Me.Label25.TabIndex = 64
         Me.Label25.Text = "原角色名:"
         '
         'txt_CNUserName
         '
+        Me.txt_CNUserName.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.txt_CNUserName.Location = New System.Drawing.Point(298, 191)
         Me.txt_CNUserName.MaxLength = 14
         Me.txt_CNUserName.Name = "txt_CNUserName"
         Me.txt_CNUserName.ReadOnly = True
-        Me.txt_CNUserName.Size = New System.Drawing.Size(219, 23)
+        Me.txt_CNUserName.Size = New System.Drawing.Size(219, 29)
         Me.txt_CNUserName.TabIndex = 59
         '
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(258, 194)
+        Me.Label26.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label26.Location = New System.Drawing.Point(247, 194)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(34, 15)
+        Me.Label26.Size = New System.Drawing.Size(45, 21)
         Me.Label26.TabIndex = 63
         Me.Label26.Text = "帐号:"
         '
         'cmb_CNCha
         '
         Me.cmb_CNCha.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmb_CNCha.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.cmb_CNCha.FormattingEnabled = True
-        Me.cmb_CNCha.Location = New System.Drawing.Point(298, 220)
+        Me.cmb_CNCha.Location = New System.Drawing.Point(298, 226)
         Me.cmb_CNCha.Name = "cmb_CNCha"
-        Me.cmb_CNCha.Size = New System.Drawing.Size(219, 23)
+        Me.cmb_CNCha.Size = New System.Drawing.Size(219, 29)
         Me.cmb_CNCha.TabIndex = 60
         '
         'frmRename

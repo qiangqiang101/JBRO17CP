@@ -19,6 +19,7 @@ Public Class frmAddPoint
     Public AddStatGold As Integer '= 1000000 '加点所需游戏币
 
     Private Sub frmAddPoint_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        RefreshData()
         LoadAddStat()
     End Sub
 
@@ -130,5 +131,22 @@ Public Class frmAddPoint
     Private Sub NumbericKeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txt_Power.KeyPress, txt_Dex.KeyPress, txt_Spirit.KeyPress, txt_HP.KeyPress, txt_SP.KeyPress
         Dim ValidChars As String = "0123456789"
         e.Handled = Not (ValidChars.IndexOf(e.KeyChar) > -1 OrElse e.KeyChar = Convert.ToChar(Keys.Back))
+    End Sub
+
+    Private Sub RefreshData()
+        Try
+            xConn = New sqlConn()
+            xConn.connectUser("Select * From CPSetting;")
+
+            xConn.UserSQLComm.Connection = xConn.UserSQLConn
+            Dim d As SqlDataReader = xConn.UserSQLComm.ExecuteReader()
+            Do While d.Read
+                AddStatGold = d("AddStatGold")
+            Loop
+
+            xConn.UserSQLConn.Close()
+        Catch ex As Exception
+            'MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
+        End Try
     End Sub
 End Class

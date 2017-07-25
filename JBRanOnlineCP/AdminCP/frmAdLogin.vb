@@ -20,4 +20,8 @@
         End
     End Sub
 
+    Private Sub frmAdLogin_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        frmLoad.Hide()
+    End Sub
+
 End Class

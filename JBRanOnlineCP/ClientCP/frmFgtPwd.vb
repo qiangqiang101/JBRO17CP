@@ -66,6 +66,10 @@ Public Class frmFgtPwd
         Return False
     End Function
 
+    Private Sub frmFgtPwd_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        RefreshData()
+    End Sub
+
     Private Sub SendEmail(ByVal _UserId As String, ByVal _UserPass As String, ByVal _UserEmail As String)
         Try
             Dim smtpServer As New SmtpClient
@@ -86,6 +90,27 @@ Public Class frmFgtPwd
             MsgBox("您的密码已经发送到 " & _UserEmail, MsgBoxStyle.Exclamation, "错误")
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
+        End Try
+    End Sub
+
+    Private Sub RefreshData()
+        Try
+            xConn = New sqlConn()
+            xConn.connectUser("Select * From CPSetting;")
+
+            xConn.UserSQLComm.Connection = xConn.UserSQLConn
+            Dim d As SqlDataReader = xConn.UserSQLComm.ExecuteReader()
+            Do While d.Read
+                EmailAddr = d("EmailAddr")
+                Password = d("EmailPwd")
+                Port = d("EmailPort")
+                Host = d("EmailHost")
+                Subject = d("EmailSubject")
+            Loop
+
+            xConn.UserSQLConn.Close()
+        Catch ex As Exception
+            'MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
         End Try
     End Sub
 End Class
