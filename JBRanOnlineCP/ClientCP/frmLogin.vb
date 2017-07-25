@@ -4,6 +4,7 @@ Imports System.Data.SqlClient
 Public Class frmLogin
     Dim xConn As sqlConn
     Dim userID, userType, userNum As New Label
+    Public PasswordEncrypt As Integer = 0
 
     Private Sub frmLogin_Disposed(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Disposed
         End
@@ -19,6 +20,8 @@ Public Class frmLogin
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
         End Try
+
+        RefreshData()
 
         txt_UserName.Focus()
         If My.Settings.check_box = True Then
@@ -39,12 +42,23 @@ Public Class frmLogin
         Dim da As New SqlDataAdapter("Select * From UserInfo", xConn.UserSQLConn)
         da.Fill(dt)
 
-        For Each _DataRow In dt.Rows
-            If txt_UserName.Text = _DataRow.item(2) And txt_Password.Text = _DataRow(3) Then
-                xConn.UserSQLConn.Close()
-                Return True
-            End If
-        Next
+        Select Case PasswordEncrypt
+            Case 1
+                For Each _DataRow In dt.Rows
+                    If txt_UserName.Text = _DataRow.item(2) And Md5FromString(txt_Password.Text) = _DataRow(3) Then
+                        xConn.UserSQLConn.Close()
+                        Return True
+                    End If
+                Next
+            Case 0
+                For Each _DataRow In dt.Rows
+                    If txt_UserName.Text = _DataRow.item(2) And txt_Password.Text = _DataRow(3) Then
+                        xConn.UserSQLConn.Close()
+                        Return True
+                    End If
+                Next
+        End Select
+
         xConn.UserSQLConn.Close()
         Return False
     End Function
@@ -106,6 +120,14 @@ Public Class frmLogin
                 xConn.UserSQLConn.Close()
                 Me.Hide()
                 frmCP.Show()
+                frmCP.RefreshData()
+                frmCP.UpdateData()
+
+                Try
+                    Dim newForm As frmNotice = New frmNotice
+                    frmCP.cpTab.TabPages.Add(newForm)
+                Catch ex As Exception
+                End Try
 
                 If chk_Remember.Checked = True Then
                     My.Settings.user_id = txt_UserName.Text
@@ -136,9 +158,27 @@ Public Class frmLogin
     Private Sub btn_Register_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_Register.Click
         frmRegister.Show()
         frmRegister.from = "Login"
+        Me.Hide()
     End Sub
 
     Private Sub lbl_ForgotPwd_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles lbl_ForgotPwd.LinkClicked
         frmFgtPwd.Show()
+    End Sub
+
+    Private Sub RefreshData()
+        Try
+            xConn = New sqlConn()
+            xConn.connectUser("Select * From CPSetting;")
+
+            xConn.UserSQLComm.Connection = xConn.UserSQLConn
+            Dim d As SqlDataReader = xConn.UserSQLComm.ExecuteReader()
+            Do While d.Read
+                PasswordEncrypt = d("PasswordEncrypt")
+            Loop
+
+            xConn.UserSQLConn.Close()
+        Catch ex As Exception
+            'MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
+        End Try
     End Sub
 End Class

@@ -1,0 +1,5 @@
+// CP OPTION
+cpServer	"Ck6RE13O7QHN01XKNEX7aw=="
+cpUser	"TGlgV4vTZCxbgaBAgSbsgw=="
+cpPassword	"mms1MJyVaI04GzLAwEOJSA=="
+cpNews	"http://www.jbranonline.com"

@@ -23,6 +23,10 @@ Public Class frmLoad
                     'thread.Start()
                     ReadAdmin()
                     Exit Sub
+                Case "/dafuqpukimaklancau!@#%$#^$@^%$"
+                    frmEncDec.Show()
+                    Me.Hide()
+                    Exit Sub
             End Select
         Next
         'thread = New Thread(AddressOf ReadServer)

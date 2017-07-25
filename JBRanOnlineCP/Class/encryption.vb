@@ -53,4 +53,33 @@ Module encryption
         Dim cipherText As String = Convert.ToBase64String(cipherTextBytes)
         Return cipherText
     End Function
+
+    Public Function Md5FromString(ByVal Source As String) As String
+        Dim Bytes() As Byte
+        Dim sb As New StringBuilder()
+        Dim result As String = Nothing
+
+        'Check for empty string.
+        If String.IsNullOrEmpty(Source) Then
+            Throw New ArgumentNullException
+        End If
+
+        'Get bytes from string.
+        Bytes = Encoding.Default.GetBytes(Source)
+
+        'Get md5 hash
+        Bytes = MD5.Create().ComputeHash(Bytes)
+
+        'Loop though the byte array and convert each byte to hex.
+        For x As Integer = 0 To Bytes.Length - 1
+            sb.Append(Bytes(x).ToString("x2"))
+        Next
+
+        'Take the left 19 Characters from string
+        result = sb.ToString.Substring(0, 19)
+
+        'Return md5 hash.
+        Return result
+
+    End Function
 End Module

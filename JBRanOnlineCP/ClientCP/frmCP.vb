@@ -37,19 +37,14 @@ Public Class frmCP
     Private Sub frmCP_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.Text = FormName & " - 控制面板"
 
-        If userType = 2 Then
-            lbl_Member.Text = "会员: 黄金会员"
-        ElseIf userType = 32 Then
-            lbl_Member.Text = "会员: 游戏管理员"
-        Else
-            lbl_Member.Text = "会员: 普通会员"
-        End If
+        'RefreshData()
+        'UpdateData()
 
-        Try
-            Dim newForm As frmNotice = New frmNotice
-            cpTab.TabPages.Add(newForm)
-        Catch ex As Exception
-        End Try
+        'Try
+        '    Dim newForm As frmNotice = New frmNotice
+        '    cpTab.TabPages.Add(newForm)
+        'Catch ex As Exception
+        'End Try
     End Sub
 
     Public Function OnlineCheck(ByVal _ChaName As String)
@@ -162,6 +157,7 @@ Public Class frmCP
         Try
             Dim result As Integer = MessageBox.Show("你确定要登出？", "登出", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
             If result = DialogResult.Yes Then
+                cpTab.TabPages.Clear()
                 'If xConn.GameSQLConn.State = ConnectionState.Open Then xConn.GameSQLConn.Close()
                 'If xConn.UserSQLConn.State = ConnectionState.Open Then xConn.UserSQLConn.Close()
                 frmLogin.Show()
@@ -169,6 +165,55 @@ Public Class frmCP
             End If
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
+        End Try
+    End Sub
+
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        RefreshData()
+        UpdateData()
+    End Sub
+
+    Public Sub RefreshData()
+        Try
+            xConn = New sqlConn()
+            xConn.connectUser("Select * From UserInfo Where UserName = '" & myUserName & "';")
+
+            xConn.UserSQLComm.Connection = xConn.UserSQLConn
+            Dim d As SqlDataReader = xConn.UserSQLComm.ExecuteReader()
+            Do While d.Read
+                myPoint = d("UserPoint")
+                userType = d("UserType")
+            Loop
+
+            xConn.UserSQLConn.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
+        End Try
+    End Sub
+
+    Public Sub UpdateData()
+        Try
+            Select Case userType
+                Case 1
+                    lbl_Member.Text = "会员: 普通会员"
+                Case 2
+                    lbl_Member.Text = "会员: 黄金会员"
+                Case 32
+                    lbl_Member.Text = "会员: 游戏管理员"
+
+            End Select
+
+            lbl_Point.Text = String.Format("积分：{0}", myPoint.ToString("N0"))
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
+        End Try
+    End Sub
+
+    Private Sub fbTopup_Click(sender As Object, e As EventArgs) Handles fbTopup.Click
+        Try
+            Dim newForm As frmTransaction = New frmTransaction
+            cpTab.TabPages.Add(newForm)
+        Catch ex As Exception
         End Try
     End Sub
 End Class

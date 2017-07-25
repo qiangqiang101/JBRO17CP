@@ -35,7 +35,9 @@ Public Class frmAdSetting
                               "[EmailPort] = '" & txt_EmailPort.Text & "', " &
                               "[EmailHost] = '" & txt_EmailHost.Text & "', " &
                               "[EmailSubject] = '" & txt_EmailSubject.Text & "', " &
-                              "[AdminPass] = '" & txt_AdminPass.Text & "' " &
+                              "[AdminPass] = '" & txt_AdminPass.Text & "', " &
+                              "[PasswordEncrypt] = '" & Convert.ToInt32(cbMd5Pwd.Checked) & "', " &
+                              "[RankingDisplay] = '" & cmbRankingDisplay.SelectedIndex & "' " &
                               "Where [ID] = '1';")
 
             xConn.UserSQLComm.Connection = xConn.UserSQLConn
@@ -83,6 +85,9 @@ Public Class frmAdSetting
                 txt_EmailHost.Text = d("EmailHost")
                 txt_EmailSubject.Text = d("EmailSubject")
                 txt_AdminPass.Text = d("AdminPass")
+                Dim md5 As Integer = d("PasswordEncrypt")
+                cbMd5Pwd.Checked = Convert.ToBoolean(md5)
+                cmbRankingDisplay.SelectedIndex = d("RankingDisplay")
             Loop
 
             xConn.UserSQLConn.Close()

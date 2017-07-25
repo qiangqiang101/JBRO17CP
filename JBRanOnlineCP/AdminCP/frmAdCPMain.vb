@@ -18,4 +18,12 @@
     Private Sub frmAdCPMain_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
         End
     End Sub
+
+    Private Sub tsmTransaction_Click(sender As Object, e As EventArgs) Handles tsmTransaction.Click
+        Try
+            Dim newForm As frmAdTransaction = New frmAdTransaction
+            cpTab.TabPages.Add(newForm)
+        Catch ex As Exception
+        End Try
+    End Sub
 End Class

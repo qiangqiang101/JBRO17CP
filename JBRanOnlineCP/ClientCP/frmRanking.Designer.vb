@@ -71,6 +71,7 @@ Partial Class frmRanking
         Me.lvRank.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.chChaName, Me.chNo, Me.chChaIntel, Me.chChaLevel, Me.chChaClass, Me.chChaSchool, Me.chChaMoney})
         Me.lvRank.ContextMenuStrip = Me.cms_Rank
         Me.lvRank.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.lvRank.FullRowSelect = True
         Me.lvRank.GridLines = True
         Me.lvRank.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
         Me.lvRank.Location = New System.Drawing.Point(12, 47)

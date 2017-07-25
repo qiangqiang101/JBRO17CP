@@ -96,6 +96,18 @@
     <Compile Include="AdminCP\frmAdSetting.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AdminCP\frmAdTransaction.Designer.vb">
+      <DependentUpon>frmAdTransaction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\frmAdTransaction.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCP\frmAdTransDetails.Designer.vb">
+      <DependentUpon>frmAdTransDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\frmAdTransDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AdminCP\frmAdUserEdit.Designer.vb">
       <DependentUpon>frmAdUserEdit.vb</DependentUpon>
     </Compile>
@@ -201,11 +213,29 @@
     <Compile Include="ClientCP\frmSelfHelp.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmEncDec.Designer.vb">
+      <DependentUpon>frmEncDec.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEncDec.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmLoad.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLoad.Designer.vb">
       <DependentUpon>frmLoad.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientCP\frmTopup.Designer.vb">
+      <DependentUpon>frmTopup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientCP\frmTopup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientCP\frmTransaction.Designer.vb">
+      <DependentUpon>frmTransaction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientCP\frmTransaction.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -233,6 +263,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminCP\frmAdSetting.resx">
       <DependentUpon>frmAdSetting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCP\frmAdTransaction.resx">
+      <DependentUpon>frmAdTransaction.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCP\frmAdTransDetails.resx">
+      <DependentUpon>frmAdTransDetails.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminCP\frmAdUserEdit.resx">
       <DependentUpon>frmAdUserEdit.vb</DependentUpon>
@@ -285,8 +321,17 @@
     <EmbeddedResource Include="ClientCP\frmSelfHelp.resx">
       <DependentUpon>frmSelfHelp.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ClientCP\frmTransaction.resx">
+      <DependentUpon>frmTransaction.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEncDec.resx">
+      <DependentUpon>frmEncDec.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLoad.resx">
       <DependentUpon>frmLoad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientCP\frmTopup.resx">
+      <DependentUpon>frmTopup.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

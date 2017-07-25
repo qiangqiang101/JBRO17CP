@@ -31,6 +31,7 @@ Partial Class frmAdCPMain
         Me.tsmSetting = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmUser = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmChar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmTransaction = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -89,7 +90,7 @@ Partial Class frmAdCPMain
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MenuStrip1.AutoSize = False
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmSetting, Me.tsmUser, Me.tsmChar})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmSetting, Me.tsmUser, Me.tsmChar, Me.tsmTransaction})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 75)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(784, 24)
@@ -114,6 +115,12 @@ Partial Class frmAdCPMain
         Me.tsmChar.Name = "tsmChar"
         Me.tsmChar.Size = New System.Drawing.Size(67, 20)
         Me.tsmChar.Text = "角色设置"
+        '
+        'tsmTransaction
+        '
+        Me.tsmTransaction.Name = "tsmTransaction"
+        Me.tsmTransaction.Size = New System.Drawing.Size(67, 20)
+        Me.tsmTransaction.Text = "用户交易"
         '
         'frmAdCPMain
         '
@@ -147,4 +154,5 @@ Partial Class frmAdCPMain
     Friend WithEvents tsmSetting As ToolStripMenuItem
     Friend WithEvents tsmUser As ToolStripMenuItem
     Friend WithEvents tsmChar As ToolStripMenuItem
+    Friend WithEvents tsmTransaction As ToolStripMenuItem
 End Class

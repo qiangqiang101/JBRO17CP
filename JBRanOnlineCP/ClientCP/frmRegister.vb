@@ -10,6 +10,7 @@ Public Class frmRegister
     'Settings
     Public CharRemain As Integer = 2
     Public CharTestRemain As Integer = 2
+    Public PasswordEncrypt As Integer = 0
 
     Private Sub frmRegister_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         RefreshData()
@@ -54,13 +55,25 @@ Public Class frmRegister
         Else
             Try
                 xConn = New sqlConn()
-                xConn.connectUser("Insert Into UserInfo (UserName, UserID, UserPass, UserPass2, UserType, UserAvailable, ChaRemain, ChaTestRemain, UserEmail) Values (" _
+                Select Case PasswordEncrypt
+                    Case 1
+                        xConn.connectUser("Insert Into UserInfo (UserName, UserID, UserPass, UserPass2, UserType, UserAvailable, ChaRemain, ChaTestRemain, UserEmail) Values (" _
+                                  & "'" & txt_UserName.Text & "', " _
+                                  & "'" & txt_UserName.Text & "', " _
+                                  & "'" & Md5FromString(txt_Pass1.Text) & "', " _
+                                  & "'" & Md5FromString(txt_2ndPass1.Text) & "', " _
+                                  & "'1', '1', '" & CharRemain & "', '" & CharTestRemain & "', " _
+                                  & "'" & txt_Email.Text & "');")
+                    Case 0
+                        xConn.connectUser("Insert Into UserInfo (UserName, UserID, UserPass, UserPass2, UserType, UserAvailable, ChaRemain, ChaTestRemain, UserEmail) Values (" _
                                   & "'" & txt_UserName.Text & "', " _
                                   & "'" & txt_UserName.Text & "', " _
                                   & "'" & txt_Pass1.Text & "', " _
                                   & "'" & txt_2ndPass1.Text & "', " _
                                   & "'1', '1', '" & CharRemain & "', '" & CharTestRemain & "', " _
                                   & "'" & txt_Email.Text & "');")
+                End Select
+
 
                 xConn.UserSQLComm.Connection = xConn.UserSQLConn
                 xConn.UserSQLComm.ExecuteNonQuery()
@@ -120,6 +133,7 @@ Public Class frmRegister
             Do While d.Read
                 CharRemain = d("CharRemain")
                 CharTestRemain = d("CharTestRemain")
+                PasswordEncrypt = d("PasswordEncrypt")
             Loop
 
             xConn.UserSQLConn.Close()
@@ -137,6 +151,7 @@ Public Class frmRegister
             Case "Load"
                 End
             Case "Login"
+                frmLogin.Show()
         End Select
     End Sub
 End Class

@@ -86,10 +86,19 @@ Partial Class frmAdSetting
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.txt_AdminPass = New System.Windows.Forms.TextBox()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox6 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox7 = New System.Windows.Forms.GroupBox()
+        Me.cmbRankingDisplay = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cbMd5Pwd = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
+        Me.GroupBox5.SuspendLayout()
+        Me.GroupBox6.SuspendLayout()
+        Me.GroupBox7.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -380,7 +389,7 @@ Partial Class frmAdSetting
         'btn_Save
         '
         Me.btn_Save.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btn_Save.Location = New System.Drawing.Point(624, 363)
+        Me.btn_Save.Location = New System.Drawing.Point(663, 370)
         Me.btn_Save.Name = "btn_Save"
         Me.btn_Save.Size = New System.Drawing.Size(105, 29)
         Me.btn_Save.TabIndex = 42
@@ -390,26 +399,17 @@ Partial Class frmAdSetting
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.Label24)
-        Me.GroupBox2.Controls.Add(Me.txt_CharRemain)
-        Me.GroupBox2.Controls.Add(Me.Label25)
-        Me.GroupBox2.Controls.Add(Me.txt_CharTestRemain)
-        Me.GroupBox2.Controls.Add(Me.Label23)
         Me.GroupBox2.Controls.Add(Me.Label17)
         Me.GroupBox2.Controls.Add(Me.txt_SvrName)
-        Me.GroupBox2.Controls.Add(Me.Label18)
-        Me.GroupBox2.Controls.Add(Me.Label19)
-        Me.GroupBox2.Controls.Add(Me.txt_ChgNameWait)
-        Me.GroupBox2.Controls.Add(Me.txt_ChgNameGold)
         Me.GroupBox2.Controls.Add(Me.Label20)
         Me.GroupBox2.Controls.Add(Me.Label21)
         Me.GroupBox2.Controls.Add(Me.Label22)
         Me.GroupBox2.Controls.Add(Me.txt_ClearPKGold)
         Me.GroupBox2.Controls.Add(Me.txt_ChgSchoolGold)
         Me.GroupBox2.Controls.Add(Me.txt_AddStatGold)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 248)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 324)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(400, 144)
+        Me.GroupBox2.Size = New System.Drawing.Size(400, 81)
         Me.GroupBox2.TabIndex = 40
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "其它"
@@ -417,15 +417,15 @@ Partial Class frmAdSetting
         'Label24
         '
         Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(200, 83)
+        Me.Label24.Location = New System.Drawing.Point(30, 25)
         Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(82, 15)
+        Me.Label24.Size = New System.Drawing.Size(58, 15)
         Me.Label24.TabIndex = 81
-        Me.Label24.Text = "注册剩余角色:"
+        Me.Label24.Text = "剩余角色:"
         '
         'txt_CharRemain
         '
-        Me.txt_CharRemain.Location = New System.Drawing.Point(288, 80)
+        Me.txt_CharRemain.Location = New System.Drawing.Point(94, 22)
         Me.txt_CharRemain.MaxLength = 1
         Me.txt_CharRemain.Name = "txt_CharRemain"
         Me.txt_CharRemain.Size = New System.Drawing.Size(100, 23)
@@ -434,15 +434,15 @@ Partial Class frmAdSetting
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(200, 112)
+        Me.Label25.Location = New System.Drawing.Point(224, 25)
         Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(82, 15)
+        Me.Label25.Size = New System.Drawing.Size(58, 15)
         Me.Label25.TabIndex = 79
-        Me.Label25.Text = "注册剩余测试:"
+        Me.Label25.Text = "剩余测试:"
         '
         'txt_CharTestRemain
         '
-        Me.txt_CharTestRemain.Location = New System.Drawing.Point(288, 109)
+        Me.txt_CharTestRemain.Location = New System.Drawing.Point(288, 22)
         Me.txt_CharTestRemain.MaxLength = 1
         Me.txt_CharTestRemain.Name = "txt_CharTestRemain"
         Me.txt_CharTestRemain.Size = New System.Drawing.Size(100, 23)
@@ -451,7 +451,7 @@ Partial Class frmAdSetting
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(369, 54)
+        Me.Label23.Location = New System.Drawing.Point(321, 25)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(19, 15)
         Me.Label23.TabIndex = 77
@@ -476,24 +476,24 @@ Partial Class frmAdSetting
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(200, 54)
+        Me.Label18.Location = New System.Drawing.Point(176, 25)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(82, 15)
+        Me.Label18.Size = New System.Drawing.Size(58, 15)
         Me.Label18.TabIndex = 74
-        Me.Label18.Text = "改名时间相隔:"
+        Me.Label18.Text = "时间相隔:"
         '
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(200, 25)
+        Me.Label19.Location = New System.Drawing.Point(6, 25)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(82, 15)
+        Me.Label19.Size = New System.Drawing.Size(58, 15)
         Me.Label19.TabIndex = 73
-        Me.Label19.Text = "改名所需金币:"
+        Me.Label19.Text = "所需金币:"
         '
         'txt_ChgNameWait
         '
-        Me.txt_ChgNameWait.Location = New System.Drawing.Point(288, 51)
+        Me.txt_ChgNameWait.Location = New System.Drawing.Point(240, 22)
         Me.txt_ChgNameWait.MaxLength = 2
         Me.txt_ChgNameWait.Name = "txt_ChgNameWait"
         Me.txt_ChgNameWait.Size = New System.Drawing.Size(75, 23)
@@ -501,7 +501,7 @@ Partial Class frmAdSetting
         '
         'txt_ChgNameGold
         '
-        Me.txt_ChgNameGold.Location = New System.Drawing.Point(288, 22)
+        Me.txt_ChgNameGold.Location = New System.Drawing.Point(70, 22)
         Me.txt_ChgNameGold.MaxLength = 10
         Me.txt_ChgNameGold.Name = "txt_ChgNameGold"
         Me.txt_ChgNameGold.Size = New System.Drawing.Size(100, 23)
@@ -510,7 +510,7 @@ Partial Class frmAdSetting
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(6, 112)
+        Me.Label20.Location = New System.Drawing.Point(200, 54)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(82, 15)
         Me.Label20.TabIndex = 70
@@ -519,7 +519,7 @@ Partial Class frmAdSetting
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(6, 83)
+        Me.Label21.Location = New System.Drawing.Point(200, 25)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(82, 15)
         Me.Label21.TabIndex = 69
@@ -536,7 +536,7 @@ Partial Class frmAdSetting
         '
         'txt_ClearPKGold
         '
-        Me.txt_ClearPKGold.Location = New System.Drawing.Point(94, 109)
+        Me.txt_ClearPKGold.Location = New System.Drawing.Point(288, 51)
         Me.txt_ClearPKGold.MaxLength = 10
         Me.txt_ClearPKGold.Name = "txt_ClearPKGold"
         Me.txt_ClearPKGold.Size = New System.Drawing.Size(100, 23)
@@ -544,7 +544,7 @@ Partial Class frmAdSetting
         '
         'txt_ChgSchoolGold
         '
-        Me.txt_ChgSchoolGold.Location = New System.Drawing.Point(94, 80)
+        Me.txt_ChgSchoolGold.Location = New System.Drawing.Point(288, 22)
         Me.txt_ChgSchoolGold.MaxLength = 10
         Me.txt_ChgSchoolGold.Name = "txt_ChgSchoolGold"
         Me.txt_ChgSchoolGold.Size = New System.Drawing.Size(100, 23)
@@ -572,7 +572,7 @@ Partial Class frmAdSetting
         Me.GroupBox3.Controls.Add(Me.txt_Email)
         Me.GroupBox3.Location = New System.Drawing.Point(418, 13)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(269, 170)
+        Me.GroupBox3.Size = New System.Drawing.Size(350, 167)
         Me.GroupBox3.TabIndex = 41
         Me.GroupBox3.TabStop = False
         Me.GroupBox3.Text = "邮件"
@@ -590,7 +590,7 @@ Partial Class frmAdSetting
         '
         Me.txt_EmailSubject.Location = New System.Drawing.Point(70, 135)
         Me.txt_EmailSubject.Name = "txt_EmailSubject"
-        Me.txt_EmailSubject.Size = New System.Drawing.Size(193, 23)
+        Me.txt_EmailSubject.Size = New System.Drawing.Size(270, 23)
         Me.txt_EmailSubject.TabIndex = 27
         '
         'Label27
@@ -624,21 +624,21 @@ Partial Class frmAdSetting
         '
         Me.txt_EmailHost.Location = New System.Drawing.Point(70, 106)
         Me.txt_EmailHost.Name = "txt_EmailHost"
-        Me.txt_EmailHost.Size = New System.Drawing.Size(193, 23)
+        Me.txt_EmailHost.Size = New System.Drawing.Size(270, 23)
         Me.txt_EmailHost.TabIndex = 26
         '
         'txt_EmailPort
         '
         Me.txt_EmailPort.Location = New System.Drawing.Point(70, 77)
         Me.txt_EmailPort.Name = "txt_EmailPort"
-        Me.txt_EmailPort.Size = New System.Drawing.Size(193, 23)
+        Me.txt_EmailPort.Size = New System.Drawing.Size(270, 23)
         Me.txt_EmailPort.TabIndex = 25
         '
         'txt_EmailPass
         '
         Me.txt_EmailPass.Location = New System.Drawing.Point(70, 48)
         Me.txt_EmailPass.Name = "txt_EmailPass"
-        Me.txt_EmailPass.Size = New System.Drawing.Size(193, 23)
+        Me.txt_EmailPass.Size = New System.Drawing.Size(270, 23)
         Me.txt_EmailPass.TabIndex = 24
         '
         'Label30
@@ -654,16 +654,16 @@ Partial Class frmAdSetting
         '
         Me.txt_Email.Location = New System.Drawing.Point(70, 19)
         Me.txt_Email.Name = "txt_Email"
-        Me.txt_Email.Size = New System.Drawing.Size(193, 23)
+        Me.txt_Email.Size = New System.Drawing.Size(270, 23)
         Me.txt_Email.TabIndex = 23
         '
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.Label31)
         Me.GroupBox4.Controls.Add(Me.txt_AdminPass)
-        Me.GroupBox4.Location = New System.Drawing.Point(418, 189)
+        Me.GroupBox4.Location = New System.Drawing.Point(418, 186)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(269, 56)
+        Me.GroupBox4.Size = New System.Drawing.Size(350, 56)
         Me.GroupBox4.TabIndex = 43
         Me.GroupBox4.TabStop = False
         Me.GroupBox4.Text = "后台"
@@ -682,15 +682,86 @@ Partial Class frmAdSetting
         Me.txt_AdminPass.Location = New System.Drawing.Point(70, 22)
         Me.txt_AdminPass.MaxLength = 14
         Me.txt_AdminPass.Name = "txt_AdminPass"
-        Me.txt_AdminPass.Size = New System.Drawing.Size(193, 23)
+        Me.txt_AdminPass.Size = New System.Drawing.Size(270, 23)
         Me.txt_AdminPass.TabIndex = 28
         '
-        'frmAdminSetting
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.cbMd5Pwd)
+        Me.GroupBox5.Controls.Add(Me.Label24)
+        Me.GroupBox5.Controls.Add(Me.txt_CharRemain)
+        Me.GroupBox5.Controls.Add(Me.txt_CharTestRemain)
+        Me.GroupBox5.Controls.Add(Me.Label25)
+        Me.GroupBox5.Location = New System.Drawing.Point(12, 248)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Size = New System.Drawing.Size(400, 74)
+        Me.GroupBox5.TabIndex = 44
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "注册"
+        '
+        'GroupBox6
+        '
+        Me.GroupBox6.Controls.Add(Me.Label23)
+        Me.GroupBox6.Controls.Add(Me.txt_ChgNameGold)
+        Me.GroupBox6.Controls.Add(Me.txt_ChgNameWait)
+        Me.GroupBox6.Controls.Add(Me.Label19)
+        Me.GroupBox6.Controls.Add(Me.Label18)
+        Me.GroupBox6.Location = New System.Drawing.Point(418, 248)
+        Me.GroupBox6.Name = "GroupBox6"
+        Me.GroupBox6.Size = New System.Drawing.Size(350, 53)
+        Me.GroupBox6.TabIndex = 45
+        Me.GroupBox6.TabStop = False
+        Me.GroupBox6.Text = "改名"
+        '
+        'GroupBox7
+        '
+        Me.GroupBox7.Controls.Add(Me.Label1)
+        Me.GroupBox7.Controls.Add(Me.cmbRankingDisplay)
+        Me.GroupBox7.Location = New System.Drawing.Point(418, 307)
+        Me.GroupBox7.Name = "GroupBox7"
+        Me.GroupBox7.Size = New System.Drawing.Size(350, 56)
+        Me.GroupBox7.TabIndex = 46
+        Me.GroupBox7.TabStop = False
+        Me.GroupBox7.Text = "排行榜"
+        '
+        'cmbRankingDisplay
+        '
+        Me.cmbRankingDisplay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbRankingDisplay.FormattingEnabled = True
+        Me.cmbRankingDisplay.Items.AddRange(New Object() {"男格+男剑+女弓+女气", "男格+男剑+女弓+女气+男终+女终", "男女格+男女剑+男女弓+男女气+男女终", "男女格+男女剑+男女弓+男女气+男女终+男女超", "男女格+男女剑+男女弓+男女气+男女终+男女超+男女忍", "男女格+男女剑+男女弓+男女气+男女终+男女超+男女忍+男女魔", "男女格+男女剑+男女弓+男女气+男女终+男女超+男女忍+男女魔+男女变"})
+        Me.cmbRankingDisplay.Location = New System.Drawing.Point(70, 22)
+        Me.cmbRankingDisplay.Name = "cmbRankingDisplay"
+        Me.cmbRankingDisplay.Size = New System.Drawing.Size(270, 23)
+        Me.cmbRankingDisplay.TabIndex = 0
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(30, 25)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(34, 15)
+        Me.Label1.TabIndex = 69
+        Me.Label1.Text = "版本:"
+        '
+        'cbMd5Pwd
+        '
+        Me.cbMd5Pwd.AutoSize = True
+        Me.cbMd5Pwd.Location = New System.Drawing.Point(94, 51)
+        Me.cbMd5Pwd.Name = "cbMd5Pwd"
+        Me.cbMd5Pwd.Size = New System.Drawing.Size(99, 19)
+        Me.cbMd5Pwd.TabIndex = 82
+        Me.cbMd5Pwd.Text = "密码MD5加密"
+        Me.cbMd5Pwd.UseVisualStyleBackColor = True
+        '
+        'frmAdSetting
         '
         Me.AcceptButton = Me.btn_Save
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(739, 401)
+        Me.ClientSize = New System.Drawing.Size(780, 411)
+        Me.Controls.Add(Me.GroupBox7)
+        Me.Controls.Add(Me.GroupBox6)
+        Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.btn_Save)
@@ -698,7 +769,7 @@ Partial Class frmAdSetting
         Me.Controls.Add(Me.GroupBox3)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "frmAdminSetting"
+        Me.Name = "frmAdSetting"
         Me.Text = "一般设置"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
@@ -708,6 +779,12 @@ Partial Class frmAdSetting
         Me.GroupBox3.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
+        Me.GroupBox6.ResumeLayout(False)
+        Me.GroupBox6.PerformLayout()
+        Me.GroupBox7.ResumeLayout(False)
+        Me.GroupBox7.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -775,4 +852,10 @@ Partial Class frmAdSetting
     Friend WithEvents GroupBox4 As GroupBox
     Friend WithEvents Label31 As Label
     Friend WithEvents txt_AdminPass As TextBox
+    Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents GroupBox6 As GroupBox
+    Friend WithEvents GroupBox7 As GroupBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents cmbRankingDisplay As ComboBox
+    Friend WithEvents cbMd5Pwd As CheckBox
 End Class

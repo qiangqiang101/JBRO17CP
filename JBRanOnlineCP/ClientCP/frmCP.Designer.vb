@@ -29,7 +29,6 @@ Partial Class frmCP
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lbl_Welcome = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.sideBar = New System.Windows.Forms.Panel()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.cpTab = New MdiTabControl.TabControl()
@@ -130,6 +129,11 @@ Partial Class frmCP
         Me.sideBar.Name = "sideBar"
         Me.sideBar.Size = New System.Drawing.Size(238, 655)
         Me.sideBar.TabIndex = 38
+        '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 30000
         '
         'cpTab
         '
@@ -462,6 +466,7 @@ Partial Class frmCP
         Me.Controls.Add(Me.PictureBox1)
         Me.Font = New System.Drawing.Font("Segoe UI", 9.0!)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MinimumSize = New System.Drawing.Size(900, 700)
         Me.Name = "frmCP"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "新劲爆乱Online - 控制面板"
@@ -477,7 +482,6 @@ Partial Class frmCP
     Friend WithEvents Label1 As Label
     Friend WithEvents lbl_Welcome As Label
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents sideBar As Panel
     Friend WithEvents Timer1 As Timer
     Friend WithEvents cpTab As MdiTabControl.TabControl
