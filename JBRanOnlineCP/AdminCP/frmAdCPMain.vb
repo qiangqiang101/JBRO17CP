@@ -28,4 +28,21 @@
         Catch ex As Exception
         End Try
     End Sub
+
+    Private Sub tsmProducts_Click(sender As Object, e As EventArgs) Handles tsmProducts.Click
+        Try
+            Dim newForm As frmAdShopMgmt = New frmAdShopMgmt
+            cpTab.TabPages.Add(newForm)
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub tsmAddProduct_Click(sender As Object, e As EventArgs) Handles tsmAddProduct.Click
+        Try
+            Dim newForm As frmAdProductDetails = New frmAdProductDetails
+            newForm.Text = "添加产品"
+            cpTab.TabPages.Add(newForm)
+        Catch ex As Exception
+        End Try
+    End Sub
 End Class

@@ -36,7 +36,7 @@ Public Class sqlConn
     Function connectUser(ByVal userSqlString) As Boolean
         Try
             'RANSERVE-596C66\SQLEXPRESS 'Server=192.168.0.188;Database=RanUser;User=sa;Pwd=cnran1234;
-            UserSQLConn = New SqlConnection With {.ConnectionString = "Server=" & Server & ",1419;Database=" & UserDB & ";User=" & User & ";Pwd=" & Password & ";"}
+            UserSQLConn = New SqlConnection With {.ConnectionString = "Server=" & Server & ";Database=" & UserDB & ";User=" & User & ";Pwd=" & Password & ";"}
             UserSQLConn.Open()
             UserSQLComm.CommandText = userSqlString
             Return True
@@ -49,7 +49,7 @@ Public Class sqlConn
     Function connectGame(ByVal gameSqlString) As Boolean
         Try
             'RANSERVE-596C66\SQLEXPRESS
-            GameSQLConn = New SqlConnection With {.ConnectionString = "Server=" & Server & ",1419;Database=" & GameDB & ";User=" & User & ";Pwd=" & Password & ";"}
+            GameSQLConn = New SqlConnection With {.ConnectionString = "Server=" & Server & ";Database=" & GameDB & ";User=" & User & ";Pwd=" & Password & ";"}
             GameSQLConn.Open()
             GameSQLComm.CommandText = gameSqlString
             Return True

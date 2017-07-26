@@ -32,6 +32,10 @@ Partial Class frmAdCPMain
         Me.tsmUser = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmChar = New System.Windows.Forms.ToolStripMenuItem()
         Me.tsmTransaction = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmShopMgmt = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmShopTransaction = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmProducts = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsmAddProduct = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -90,7 +94,7 @@ Partial Class frmAdCPMain
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.MenuStrip1.AutoSize = False
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmSetting, Me.tsmUser, Me.tsmChar, Me.tsmTransaction})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmSetting, Me.tsmUser, Me.tsmChar, Me.tsmTransaction, Me.tsmShopMgmt, Me.tsmShopTransaction})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 75)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(1008, 24)
@@ -121,6 +125,31 @@ Partial Class frmAdCPMain
         Me.tsmTransaction.Name = "tsmTransaction"
         Me.tsmTransaction.Size = New System.Drawing.Size(67, 20)
         Me.tsmTransaction.Text = "用户交易"
+        '
+        'tsmShopMgmt
+        '
+        Me.tsmShopMgmt.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmProducts, Me.tsmAddProduct})
+        Me.tsmShopMgmt.Name = "tsmShopMgmt"
+        Me.tsmShopMgmt.Size = New System.Drawing.Size(67, 20)
+        Me.tsmShopMgmt.Text = "商城设置"
+        '
+        'tsmShopTransaction
+        '
+        Me.tsmShopTransaction.Name = "tsmShopTransaction"
+        Me.tsmShopTransaction.Size = New System.Drawing.Size(67, 20)
+        Me.tsmShopTransaction.Text = "商城交易"
+        '
+        'tsmProducts
+        '
+        Me.tsmProducts.Name = "tsmProducts"
+        Me.tsmProducts.Size = New System.Drawing.Size(152, 22)
+        Me.tsmProducts.Text = "商城管理"
+        '
+        'tsmAddProduct
+        '
+        Me.tsmAddProduct.Name = "tsmAddProduct"
+        Me.tsmAddProduct.Size = New System.Drawing.Size(152, 22)
+        Me.tsmAddProduct.Text = "添加产品"
         '
         'frmAdCPMain
         '
@@ -155,4 +184,8 @@ Partial Class frmAdCPMain
     Friend WithEvents tsmUser As ToolStripMenuItem
     Friend WithEvents tsmChar As ToolStripMenuItem
     Friend WithEvents tsmTransaction As ToolStripMenuItem
+    Friend WithEvents tsmShopMgmt As ToolStripMenuItem
+    Friend WithEvents tsmShopTransaction As ToolStripMenuItem
+    Friend WithEvents tsmProducts As ToolStripMenuItem
+    Friend WithEvents tsmAddProduct As ToolStripMenuItem
 End Class

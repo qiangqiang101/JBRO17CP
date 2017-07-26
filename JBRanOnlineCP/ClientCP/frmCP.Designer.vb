@@ -37,6 +37,7 @@ Partial Class frmCP
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.llblAdmin = New System.Windows.Forms.LinkLabel()
+        Me.copyright = New System.Windows.Forms.Label()
         Me.fbTopup = New JBRanOnlineCP.flatButton()
         Me.fbRanking = New JBRanOnlineCP.flatButton()
         Me.fbStore = New JBRanOnlineCP.flatButton()
@@ -115,6 +116,7 @@ Partial Class frmCP
         'sideBar
         '
         Me.sideBar.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.sideBar.Controls.Add(Me.copyright)
         Me.sideBar.Controls.Add(Me.fbTopup)
         Me.sideBar.Controls.Add(Me.fbRanking)
         Me.sideBar.Controls.Add(Me.fbStore)
@@ -240,6 +242,19 @@ Partial Class frmCP
         Me.llblAdmin.Text = "进入后台"
         Me.llblAdmin.Visible = False
         Me.llblAdmin.VisitedLinkColor = System.Drawing.Color.White
+        '
+        'copyright
+        '
+        Me.copyright.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.copyright.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.copyright.Font = New System.Drawing.Font("Segoe UI", 8.0!)
+        Me.copyright.ForeColor = System.Drawing.Color.Silver
+        Me.copyright.Location = New System.Drawing.Point(8, 564)
+        Me.copyright.Name = "copyright"
+        Me.copyright.Size = New System.Drawing.Size(224, 82)
+        Me.copyright.TabIndex = 52
+        Me.copyright.Text = "copyright"
+        Me.copyright.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'fbTopup
         '
@@ -538,4 +553,5 @@ Partial Class frmCP
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents Label3 As Label
     Friend WithEvents llblAdmin As LinkLabel
+    Friend WithEvents copyright As Label
 End Class

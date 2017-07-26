@@ -140,6 +140,26 @@
         End Set
     End Property
 
+    Private _remaining As Integer
+    Public Property Remaining() As Integer
+        Get
+            Return _remaining
+        End Get
+        Set(value As Integer)
+            _remaining = value
+        End Set
+    End Property
+
+    Private _desc As String
+    Public Property Desciption() As String
+        Get
+            Return _desc
+        End Get
+        Set(value As String)
+            _desc = value
+        End Set
+    End Property
+
     Public Sub New()
         _activeColor = Color.FromArgb(255, 0, 102, 204)
         _activetextcolor = Color.White

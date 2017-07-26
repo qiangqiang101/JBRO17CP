@@ -90,6 +90,12 @@
     <Compile Include="AdminCP\frmAdLogin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AdminCP\frmAdProductDetails.Designer.vb">
+      <DependentUpon>frmAdProductDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\frmAdProductDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AdminCP\frmAdSetting.Designer.vb">
       <DependentUpon>frmAdSetting.vb</DependentUpon>
     </Compile>
@@ -118,6 +124,12 @@
       <DependentUpon>frmAdUserSetting.vb</DependentUpon>
     </Compile>
     <Compile Include="AdminCP\frmAdUserSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCP\frmAdShopMgmt.Designer.vb">
+      <DependentUpon>frmAdShopMgmt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\frmAdShopMgmt.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Class\cfgRead.vb" />
@@ -273,6 +285,9 @@
     <EmbeddedResource Include="AdminCP\frmAdLogin.resx">
       <DependentUpon>frmAdLogin.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminCP\frmAdProductDetails.resx">
+      <DependentUpon>frmAdProductDetails.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminCP\frmAdSetting.resx">
       <DependentUpon>frmAdSetting.vb</DependentUpon>
     </EmbeddedResource>
@@ -287,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminCP\frmAdUserSetting.resx">
       <DependentUpon>frmAdUserSetting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCP\frmAdShopMgmt.resx">
+      <DependentUpon>frmAdShopMgmt.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Class\flatButton.resx">
       <DependentUpon>flatButton.vb</DependentUpon>

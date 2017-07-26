@@ -50,6 +50,7 @@ Public Class frmAdTransDetails
                 btnApprove.Enabled = False
                 btnReject.Enabled = False
                 cmbRejectReason.Enabled = False
+                Me.Close()
             End If
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
@@ -73,6 +74,7 @@ Public Class frmAdTransDetails
                     btnApprove.Enabled = False
                     btnReject.Enabled = False
                     cmbRejectReason.Enabled = False
+                    Me.Close()
                 End If
             Catch ex As Exception
                 MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")

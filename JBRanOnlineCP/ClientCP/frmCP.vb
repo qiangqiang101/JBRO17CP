@@ -36,7 +36,7 @@ Public Class frmCP
 
     Private Sub frmCP_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.Text = FormName & " - 控制面板"
-
+        copyright.Text = String.Format("Version: {1}{0}{2}", vbNewLine, My.Application.Info.Version, My.Application.Info.Copyright)
 
     End Sub
 
