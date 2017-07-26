@@ -11,6 +11,7 @@ Public Class frmChgPass
         lbl_CODE.Text = r.Next(1, 9999)
 
         RefreshData()
+        RefreshData2()
     End Sub
 
     Private Sub btn_ChgPwd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btn_ChgPwd.Click
@@ -120,6 +121,8 @@ Public Class frmChgPass
                     End Try
                 End If
         End Select
+
+        lbl_CODE.Text = r.Next(1, 9999)
     End Sub
 
     Private Sub RefreshData()
@@ -137,5 +140,44 @@ Public Class frmChgPass
         Catch ex As Exception
             'MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
         End Try
+    End Sub
+
+    Private Sub RefreshData2()
+        Try
+            xConn = New sqlConn()
+            xConn.connectUser("Select * From UserInfo Where UserID = '" & txt_CPUserName.Text & "';")
+
+            xConn.UserSQLComm.Connection = xConn.UserSQLConn
+            Dim d As SqlDataReader = xConn.UserSQLComm.ExecuteReader()
+            Do While d.Read
+                txtEmail.Text = d("UserEmail")
+                txtName.Text = Nothing
+                txtTel.Text = Nothing
+            Loop
+
+            xConn.UserSQLConn.Close()
+        Catch ex As Exception
+            'MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
+        End Try
+    End Sub
+
+    Private Sub btnUpdateInfo_Click(sender As Object, e As EventArgs) Handles btnUpdateInfo.Click
+        If txtEmail.Text = "" Then
+            MsgBox("输入电邮。。", MsgBoxStyle.Critical, "错误")
+            txt_CPPassword.Focus()
+        Else
+            Try
+                xConn = New sqlConn()
+                xConn.connectUser("Update UserInfo Set " &
+                                  "[UserEmail] = '" & txtEmail.Text & "' Where UserID = '" & txt_CPUserName.Text & "';")
+
+                xConn.UserSQLComm.Connection = xConn.UserSQLConn
+                xConn.UserSQLComm.ExecuteNonQuery()
+
+                MsgBox("资料更新成功！", MsgBoxStyle.Information, "密码")
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
+            End Try
+        End If
     End Sub
 End Class

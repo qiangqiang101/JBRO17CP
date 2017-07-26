@@ -219,7 +219,7 @@ Partial Class frmAddPoint
         Me.lbl_JBNote2.Name = "lbl_JBNote2"
         Me.lbl_JBNote2.Size = New System.Drawing.Size(786, 45)
         Me.lbl_JBNote2.TabIndex = 56
-        Me.lbl_JBNote2.Text = "手续费详情：" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "        加点花费要 {AddStatGold} 游戏币。"
+        Me.lbl_JBNote2.Text = "手续费详情：" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "        加点花费要 {AddStatGold} 游戏币，{AddStatJifen}积分。"
         '
         'lbl_JDNote
         '

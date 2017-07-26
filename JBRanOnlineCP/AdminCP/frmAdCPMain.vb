@@ -16,7 +16,9 @@
     End Sub
 
     Private Sub frmAdCPMain_FormClosed(sender As Object, e As FormClosedEventArgs) Handles MyBase.FormClosed
-        End
+        If Not frmCP.Visible Then
+            End
+        End If
     End Sub
 
     Private Sub tsmTransaction_Click(sender As Object, e As EventArgs) Handles tsmTransaction.Click

@@ -111,7 +111,8 @@ Partial Class frmChgSchool
         Me.lbl_ZXNote.Name = "lbl_ZXNote"
         Me.lbl_ZXNote.Size = New System.Drawing.Size(786, 50)
         Me.lbl_ZXNote.TabIndex = 46
-        Me.lbl_ZXNote.Text = "1. 请确认你的人物帐号已下线。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "2. 转学需要 {ChangeSchoolGold} 游戏币，钱将从你身上扣除，清代足够的钱哦！"
+        Me.lbl_ZXNote.Text = "1. 请确认你的人物帐号已下线。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "2. 转学需要 {ChangeSchoolGold} 游戏币，{ChangeSchoolJifen} 积分，钱将从你身上扣除，" &
+    "清代足够的钱哦！"
         '
         'frmChgSchool
         '

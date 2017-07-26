@@ -10,6 +10,7 @@ Public Class frmChgSchool
     Private ChaMoney As Integer = 0
 
     Public ChangeSchoolGold As Integer '= 10000000 '转学所需游戏币
+    Public ChangeSchoolJifen As Integer '转学所需积分
 
     Private Sub frmChgSchool_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         RefreshData()
@@ -17,8 +18,7 @@ Public Class frmChgSchool
     End Sub
 
     Public Sub LoadChangeSchool()
-        lbl_ZXNote.Text = "1. 请确认你的人物帐号已下线。" & nl &
-        "2. 转学需要 " & ChangeSchoolGold & " 游戏币，钱将从你身上扣除，清代足够的钱哦！"
+        lbl_ZXNote.Text = String.Format("1. 请确认你的人物帐号已下线。{0}2. 转学需要{1}游戏币，{2}积分，游戏币将从你身上扣除，请带足够的游戏币哦！", nl, ChangeSchoolGold, ChangeSchoolJifen)
 
         cmb_ZXSchool.Items.Add("圣门学院")
         cmb_ZXSchool.Items.Add("玄岩学院")
@@ -92,6 +92,8 @@ Public Class frmChgSchool
             MsgBox("转学失败，角色还在线上，请下线后再试。", MsgBoxStyle.Critical, "错误")
         ElseIf ChaMoney < ChangeSchoolGold Then
             MsgBox("您的游戏币不足，转学需要 " & ChangeSchoolGold & " 游戏币哦！", MsgBoxStyle.Critical, "错误")
+        ElseIf frmCP.myPoint < ChangeSchoolJifen Then
+            MsgBox("您的积分不足，转学需要 " & ChangeSchoolJifen & " 积分哦！", MsgBoxStyle.Critical, "错误")
         ElseIf ChaSchool = cmb_ZXSchool.SelectedIndex Then
             MsgBox("您目前已经是" & cmb_ZXSchool.SelectedItem & "的学生，转学失败。", MsgBoxStyle.Critical, "错误")
         Else
@@ -105,10 +107,12 @@ Public Class frmChgSchool
                 xConn.GameSQLComm.Connection = xConn.GameSQLConn
                 xConn.GameSQLComm.ExecuteNonQuery()
 
-                MsgBox("转学成功，消耗 " & ChangeSchoolGold & " 游戏币！", MsgBoxStyle.Information, "转学")
-                ChaMoney = 0
-                ChaSchool = 0
-                cmb_ZXCha.SelectedIndex = 0
+                If frmCP.AdjustPoints(ChangeSchoolJifen) Then
+                    MsgBox("转学成功，消耗 " & ChangeSchoolGold & " 游戏币，" & ChangeSchoolJifen & " 积分！", MsgBoxStyle.Information, "转学")
+                    ChaMoney = 0
+                    ChaSchool = 0
+                    cmb_ZXCha.SelectedIndex = 0
+                End If
             Catch ex As Exception
                 MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
             End Try
@@ -124,6 +128,7 @@ Public Class frmChgSchool
             Dim d As SqlDataReader = xConn.UserSQLComm.ExecuteReader()
             Do While d.Read
                 ChangeSchoolGold = d("ChgSchoolGold")
+                ChangeSchoolJifen = d("ChangeSchoolJifen")
             Loop
 
             xConn.UserSQLConn.Close()

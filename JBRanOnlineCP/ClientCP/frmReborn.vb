@@ -28,23 +28,17 @@ Public Class frmReborn
     Public SecondaryStat As Integer '= 100 '中级转生转生后属性
     Public AdvanceStat As Integer '= 100 '高级转生转生后属性
     Public PrimaryGold As Integer '= 0 '初级转生所需游戏币
+    Public PrimaryJifen As Integer
     Public SecondaryGold As Integer '= 1000000 '中级转生所需游戏币
+    Public SecondaryJifen As Integer
     Public AdvanceGold As Integer '= 10000000 '高级转生所需游戏币
+    Public AdvanceJifen As Integer
     Public RebornWait As Integer '= 1 '转生时间相隔(小时)
 
     Public Sub LoadReborn()
-        lbl_RBNote1.Text = "1. 最多可以转生 " & Reborn & " 次。" & nl &
-            "2. 目前提供高级转生、中级转生、初级转生。" & nl &
-            "3. 转生前请先确认帐号内的角色已经下线。" & nl &
-            "4.转生费用将会从你身上扣除, 请带足够的游戏币和积分再来哦!"
-        lbl_RBNote2.Text = "转生级数需求：" & nl &
-            "    初级转生 " & PrimaryLevel & " 等级，" & PrimaryReborn & " 转生，每转一次增加 " & PrimaryStat & " 属性点。" & nl &
-            "    中级转生 " & SecondaryLevel & " 等级，" & SecondaryReborn & " 转生，每转一次增加 " & SecondaryStat & " 属性点。" & nl &
-            "    高级转生 " & AdvanceLevel & " 等级，" & AdvanceReborn & " 转生，每转一次增加 " & AdvanceStat & " 属性点。"
-        lbl_RBNote3.Text = "手续费详情：" & nl &
-            "    初级转生 " & PrimaryGold & " 游戏币。" & nl &
-            "    中级转生 " & SecondaryGold & " 游戏币。" & nl &
-            "    高级转生 " & AdvanceGold & " 游戏币。"
+        lbl_RBNote1.Text = String.Format("1. 最多可以转生 {1} 次。{0}2. 目前提供高级转生、中级转生、初级转生。{0}3. 转生前请先确认帐号内的角色已经下线。{0}4. 转生费用将会从你身上扣除, 请带足够的游戏币和积分再来哦！", nl, Reborn)
+        lbl_RBNote2.Text = String.Format("转生级数需求：{0}    初级转生 {1} 等级，{2} 转生，每转一次增加 {3} 属性点。{0}    中级转生 {4} 等级，{5} 转生，每转一次增加 {6} 属性点。{0}    高级转生 {7} 等级，{8} 转生，每转一次增加 {9} 属性点。", nl, PrimaryLevel, PrimaryReborn, PrimaryStat, SecondaryLevel, SecondaryReborn, SecondaryStat, AdvanceLevel, AdvanceReborn, AdvanceStat)
+        lbl_RBNote3.Text = String.Format("手续费详情：{0}    初级转生消耗 {1} 游戏币，{2} 积分。{0}    中级转生消耗 {3} 游戏币，{4} 积分。{0}    高级转生消耗 {5} 游戏币，{6} 积分。", nl, PrimaryGold, primaryJifen, SecondaryGold, SecondaryJifen, AdvanceGold, AdvanceJifen)
 
         Try
             xConn = New sqlConn()
@@ -111,17 +105,17 @@ Public Class frmReborn
                         If ChaLevel < PrimaryLevel Then
                             MsgBox("您还未达到初级转生的等级，练练再来吧！", MsgBoxStyle.Critical, "错误")
                         Else
-                            If ChaMoney < PrimaryGold Then
-                                MsgBox("您的游戏币不足，初级转生需要 " & PrimaryGold & " 游戏币哦！", MsgBoxStyle.Critical, "错误")
+                            If (ChaMoney < PrimaryGold) Or (frmCP.myPoint < primaryJifen) Then
+                                MsgBox("您的游戏币或积分不足，初级转生需要 " & PrimaryGold & " 游戏币，" & primaryJifen & " 哦！", MsgBoxStyle.Critical, "错误")
                             Else
                                 If frmCP.OnlineCheck(cmb_RBChar.SelectedItem) = True Then
                                     MsgBox("转生失败，角色还在线上，请下线后再试。", MsgBoxStyle.Critical, "错误")
                                 Else
                                     If frmCP.userType = 2 Then
-                                        UpdateChaIntel(CInt(ChaIntel + 1), PrimaryStat, PrimaryGold)
+                                        UpdateChaIntel(CInt(ChaIntel + 1), PrimaryStat, PrimaryGold, primaryJifen)
                                     Else
                                         If Interval >= RebornWait Then
-                                            UpdateChaIntel(CInt(ChaIntel + 1), PrimaryStat, PrimaryGold)
+                                            UpdateChaIntel(CInt(ChaIntel + 1), PrimaryStat, PrimaryGold, primaryJifen)
                                         Else
                                             Dim NextRB As String = ChaRBDate.Month & "/" & ChaRBDate.Day & "/" & ChaRBDate.Year & " " & ChaRBDate.Hour + RebornWait & ":" & ChaRBDate.Minute & ":" & ChaRBDate.Second & " " & ChaRBDate.ToString("tt")
                                             MsgBox("您已经转生了，下次转生的时间为 " & NextRB & "。", MsgBoxStyle.Critical, "错误")
@@ -134,17 +128,17 @@ Public Class frmReborn
                         If ChaLevel < SecondaryLevel Then
                             MsgBox("您还未达到中级转生的等级，练练再来吧！", MsgBoxStyle.Critical, "错误")
                         Else
-                            If ChaMoney < SecondaryGold Then
-                                MsgBox("您的游戏币不足，中级转生需要 " & SecondaryGold & " 游戏币哦！", MsgBoxStyle.Critical, "错误")
+                            If (ChaMoney < SecondaryGold) Or (frmCP.myPoint < SecondaryJifen) Then
+                                MsgBox("您的游戏币或积分不足，初级转生需要 " & SecondaryGold & " 游戏币，" & SecondaryJifen & " 哦！", MsgBoxStyle.Critical, "错误")
                             Else
                                 If frmCP.OnlineCheck(cmb_RBChar.SelectedItem) = True Then
                                     MsgBox("转生失败，角色还在线上，请下线后再试。", MsgBoxStyle.Critical, "错误")
                                 Else
                                     If frmCP.userType = 2 Then
-                                        UpdateChaIntel(CInt(ChaIntel + 1), SecondaryStat, SecondaryGold)
+                                        UpdateChaIntel(CInt(ChaIntel + 1), SecondaryStat, SecondaryGold, SecondaryJifen)
                                     Else
                                         If Interval >= RebornWait Then
-                                            UpdateChaIntel(CInt(ChaIntel + 1), SecondaryStat, SecondaryGold)
+                                            UpdateChaIntel(CInt(ChaIntel + 1), SecondaryStat, SecondaryGold, SecondaryJifen)
                                         Else
                                             Dim NextRB As String = ChaRBDate.Month & "/" & ChaRBDate.Day & "/" & ChaRBDate.Year & " " & ChaRBDate.Hour + RebornWait & ":" & ChaRBDate.Minute & ":" & ChaRBDate.Second & " " & ChaRBDate.Ticks
                                             MsgBox("您已经转生了，下次转生的时间为 " & NextRB & "。", MsgBoxStyle.Critical, "错误")
@@ -158,17 +152,17 @@ Public Class frmReborn
                         If ChaLevel < AdvanceLevel Then
                             MsgBox("您还未达到高级转生的等级，练练再来吧！", MsgBoxStyle.Critical, "错误")
                         Else
-                            If ChaMoney < AdvanceGold Then
-                                MsgBox("您的游戏币不足，高级转生需要 " & AdvanceGold & " 游戏币哦！", MsgBoxStyle.Critical, "错误")
+                            If (ChaMoney < AdvanceGold) Or (frmCP.myPoint < AdvanceJifen) Then
+                                MsgBox("您的游戏币或积分不足，初级转生需要 " & AdvanceGold & " 游戏币，" & AdvanceJifen & " 哦！", MsgBoxStyle.Critical, "错误")
                             Else
                                 If frmCP.OnlineCheck(cmb_RBChar.SelectedItem) = True Then
                                     MsgBox("转生失败，角色还在线上，请下线后再试。", MsgBoxStyle.Critical, "错误")
                                 Else
                                     If frmCP.userType = 2 Then
-                                        UpdateChaIntel(CInt(ChaIntel + 1), AdvanceStat, AdvanceGold)
+                                        UpdateChaIntel(CInt(ChaIntel + 1), AdvanceStat, AdvanceGold, AdvanceJifen)
                                     Else
                                         If Interval >= RebornWait Then
-                                            UpdateChaIntel(CInt(ChaIntel + 1), AdvanceStat, AdvanceGold)
+                                            UpdateChaIntel(CInt(ChaIntel + 1), AdvanceStat, AdvanceGold, AdvanceJifen)
                                         Else
                                             Dim NextRB As String = ChaRBDate.Month & "/" & ChaRBDate.Day & "/" & ChaRBDate.Year & " " & ChaRBDate.Hour + RebornWait & ":" & ChaRBDate.Minute & ":" & ChaRBDate.Second & " " & ChaRBDate.Ticks
                                             MsgBox("您已经转生了，下次转生的时间为 " & NextRB & "。", MsgBoxStyle.Critical, "错误")
@@ -185,7 +179,7 @@ Public Class frmReborn
         End Try
     End Sub
 
-    Private Sub UpdateChaIntel(ByVal Reborns As Integer, ByVal StRemain As Integer, ByVal CostMoney As Integer)
+    Private Sub UpdateChaIntel(ByVal Reborns As Integer, ByVal StRemain As Integer, ByVal CostMoney As Integer, CostJifen As Integer)
         Try
             xConn = New sqlConn()
             xConn.connectGame("Update ChaInfo Set [ChaIntel] = '" & Reborns & "', " &
@@ -200,11 +194,13 @@ Public Class frmReborn
             xConn.GameSQLComm.ExecuteNonQuery()
             xConn.GameSQLConn.Close()
 
-            MsgBox("您当前第 " & Reborns & " 转，转生成功，得属性 " & (ChaIntel * StRemain) & " 点，消耗 " & CostMoney & " 游戏币！", MsgBoxStyle.Information, "转生")
-            ChaIntel = 0
-            ChaLevel = 0
-            ChaMoney = 0
-            cmb_RBChar.SelectedIndex = 0
+            If frmCP.AdjustPoints(CostJifen) Then
+                MsgBox("您当前第 " & Reborns & " 转，转生成功，得属性 " & (ChaIntel * StRemain) & " 点，消耗 " & CostMoney & " 游戏币，" & CostJifen & " 积分！", MsgBoxStyle.Information, "转生")
+                ChaIntel = 0
+                ChaLevel = 0
+                ChaMoney = 0
+                cmb_RBChar.SelectedIndex = 0
+            End If
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
         End Try
@@ -234,8 +230,11 @@ Public Class frmReborn
                 SecondaryStat = d("RBSecondaryStat")
                 AdvanceStat = d("RBAdvanceStat")
                 PrimaryGold = d("RBPrimaryGold")
+                primaryJifen = d("RBPrimaryJifen")
                 SecondaryGold = d("RBSecondaryGold")
+                SecondaryJifen = d("RBSecondaryJifen")
                 AdvanceGold = d("RBAdvanceGold")
+                AdvanceJifen = d("RBAdvanceJifen")
                 RebornWait = d("RebornWait")
             Loop
 

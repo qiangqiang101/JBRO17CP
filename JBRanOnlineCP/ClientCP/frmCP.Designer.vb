@@ -35,6 +35,8 @@ Partial Class frmCP
         Me.llblChgPass = New System.Windows.Forms.LinkLabel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.llblAdmin = New System.Windows.Forms.LinkLabel()
         Me.fbTopup = New JBRanOnlineCP.flatButton()
         Me.fbRanking = New JBRanOnlineCP.flatButton()
         Me.fbStore = New JBRanOnlineCP.flatButton()
@@ -46,8 +48,6 @@ Partial Class frmCP
         Me.fbAddPoint = New JBRanOnlineCP.flatButton()
         Me.fbReborn = New JBRanOnlineCP.flatButton()
         Me.fbNotice = New JBRanOnlineCP.flatButton()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.llblProfile = New System.Windows.Forms.LinkLabel()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.sideBar.SuspendLayout()
         Me.SuspendLayout()
@@ -176,7 +176,7 @@ Partial Class frmCP
         Me.llblChgPass.Size = New System.Drawing.Size(74, 21)
         Me.llblChgPass.TabIndex = 40
         Me.llblChgPass.TabStop = True
-        Me.llblChgPass.Text = "修改密码"
+        Me.llblChgPass.Text = "帐户设置"
         Me.llblChgPass.VisitedLinkColor = System.Drawing.Color.White
         '
         'Label2
@@ -208,6 +208,38 @@ Partial Class frmCP
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "登出"
         Me.LinkLabel1.VisitedLinkColor = System.Drawing.Color.White
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(834, 51)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(14, 21)
+        Me.Label3.TabIndex = 43
+        Me.Label3.Text = "|"
+        Me.Label3.Visible = False
+        '
+        'llblAdmin
+        '
+        Me.llblAdmin.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.llblAdmin.AutoSize = True
+        Me.llblAdmin.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.llblAdmin.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.llblAdmin.ForeColor = System.Drawing.Color.White
+        Me.llblAdmin.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.llblAdmin.LinkColor = System.Drawing.Color.White
+        Me.llblAdmin.Location = New System.Drawing.Point(754, 51)
+        Me.llblAdmin.Name = "llblAdmin"
+        Me.llblAdmin.Size = New System.Drawing.Size(74, 21)
+        Me.llblAdmin.TabIndex = 44
+        Me.llblAdmin.TabStop = True
+        Me.llblAdmin.Text = "进入后台"
+        Me.llblAdmin.Visible = False
+        Me.llblAdmin.VisitedLinkColor = System.Drawing.Color.White
         '
         'fbTopup
         '
@@ -451,42 +483,12 @@ Partial Class frmCP
         Me.fbNotice.TabIndex = 40
         Me.fbNotice.Value = "游戏公告"
         '
-        'Label3
-        '
-        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(834, 51)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(14, 21)
-        Me.Label3.TabIndex = 43
-        Me.Label3.Text = "|"
-        '
-        'llblProfile
-        '
-        Me.llblProfile.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.llblProfile.AutoSize = True
-        Me.llblProfile.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.llblProfile.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.llblProfile.ForeColor = System.Drawing.Color.White
-        Me.llblProfile.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
-        Me.llblProfile.LinkColor = System.Drawing.Color.White
-        Me.llblProfile.Location = New System.Drawing.Point(754, 51)
-        Me.llblProfile.Name = "llblProfile"
-        Me.llblProfile.Size = New System.Drawing.Size(74, 21)
-        Me.llblProfile.TabIndex = 44
-        Me.llblProfile.TabStop = True
-        Me.llblProfile.Text = "帐户设置"
-        Me.llblProfile.VisitedLinkColor = System.Drawing.Color.White
-        '
         'frmCP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 730)
-        Me.Controls.Add(Me.llblProfile)
+        Me.Controls.Add(Me.llblAdmin)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Label2)
@@ -504,6 +506,7 @@ Partial Class frmCP
         Me.Name = "frmCP"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "新劲爆乱Online - 控制面板"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.sideBar.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -534,5 +537,5 @@ Partial Class frmCP
     Friend WithEvents Label2 As Label
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents Label3 As Label
-    Friend WithEvents llblProfile As LinkLabel
+    Friend WithEvents llblAdmin As LinkLabel
 End Class

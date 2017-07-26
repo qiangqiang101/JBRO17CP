@@ -189,11 +189,16 @@ Public Class frmCP
             Select Case userType
                 Case 1
                     lbl_Member.Text = "会员: 普通会员"
+                    If llblAdmin.Visible Then llblAdmin.Visible = False
+                    If Label3.Visible Then Label3.Visible = False
                 Case 2
                     lbl_Member.Text = "会员: 黄金会员"
+                    If llblAdmin.Visible Then llblAdmin.Visible = False
+                    If Label3.Visible Then Label3.Visible = False
                 Case 32
                     lbl_Member.Text = "会员: 游戏管理员"
-
+                    If Not llblAdmin.Visible Then llblAdmin.Visible = True
+                    If Not Label3.Visible Then Label3.Visible = True
             End Select
 
             lbl_Point.Text = String.Format("积分：{0}", myPoint.ToString("N0"))
@@ -222,5 +227,36 @@ Public Class frmCP
             Threading.Thread.Sleep(1)
             MsgBox("旧密码已经失效了，请换新密码。", MsgBoxStyle.Information, "温馨提示")
         End If
+    End Sub
+
+    Public Function AdjustPoints(howMany As Integer) As Boolean
+        Dim goterror As Boolean = False
+
+        Try
+            xConn = New sqlConn()
+            xConn.connectUser(String.Format("Update UserInfo Set [UserPoint] = '{0}' Where UserName = '{1}';", myPoint - howMany, myUserName))
+            xConn.UserSQLComm.Connection = xConn.UserSQLConn
+            xConn.UserSQLComm.ExecuteNonQuery()
+        Catch ex As Exception
+            goterror = True
+        End Try
+
+        Return goterror
+    End Function
+
+    Private Sub llblAdmin_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llblAdmin.LinkClicked
+        Try
+            Dim newForm As frmAdCPMain = New frmAdCPMain
+            newForm.Show()
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub fbStore_Click(sender As Object, e As EventArgs) Handles fbStore.Click
+        Try
+            Dim newForm As frmShop = New frmShop
+            cpTab.TabPages.Add(newForm)
+        Catch ex As Exception
+        End Try
     End Sub
 End Class

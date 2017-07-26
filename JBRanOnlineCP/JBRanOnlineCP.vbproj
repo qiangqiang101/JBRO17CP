@@ -122,6 +122,12 @@
     </Compile>
     <Compile Include="Class\cfgRead.vb" />
     <Compile Include="Class\encryption.vb" />
+    <Compile Include="Class\shopItem.Designer.vb">
+      <DependentUpon>shopItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Class\shopItem.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Class\sqlConn.vb" />
     <Compile Include="Class\flatButton.Designer.vb">
       <DependentUpon>flatButton.vb</DependentUpon>
@@ -213,6 +219,12 @@
     <Compile Include="ClientCP\frmSelfHelp.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ClientCP\frmShop.Designer.vb">
+      <DependentUpon>frmShop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientCP\frmShop.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmEncDec.Designer.vb">
       <DependentUpon>frmEncDec.vb</DependentUpon>
     </Compile>
@@ -279,6 +291,9 @@
     <EmbeddedResource Include="Class\flatButton.resx">
       <DependentUpon>flatButton.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Class\shopItem.resx">
+      <DependentUpon>shopItem.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClientCP\frmAddPoint.resx">
       <DependentUpon>frmAddPoint.vb</DependentUpon>
     </EmbeddedResource>
@@ -320,6 +335,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClientCP\frmSelfHelp.resx">
       <DependentUpon>frmSelfHelp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientCP\frmShop.resx">
+      <DependentUpon>frmShop.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientCP\frmTransaction.resx">
       <DependentUpon>frmTransaction.vb</DependentUpon>

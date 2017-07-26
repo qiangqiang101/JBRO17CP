@@ -41,8 +41,9 @@ Partial Class frmRename
         Me.lbl_CNNote.Name = "lbl_CNNote"
         Me.lbl_CNNote.Size = New System.Drawing.Size(786, 88)
         Me.lbl_CNNote.TabIndex = 67
-        Me.lbl_CNNote.Text = "1. 请确认你的人物帐号已下线。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "2. 改名需要 {ChangeNameGold} 游戏币，钱将从你身上扣除，清代足够的钱哦！" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "3. 角色名不可以含有 - &" &
-    " ; 、 = : # $ "" { } [ ] 的这些字符。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "4. 改角色名后下次改角色名需等 {ChangeNameWait} 天。"
+        Me.lbl_CNNote.Text = "1. 请确认你的人物帐号已下线。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "2. 改名需要 {ChangeNameGold} 游戏币 {ChangeNameJifen}积分，钱将从你身上扣除，清代足够的" &
+    "钱哦！" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "3. 角色名不可以含有 - & ; 、 = : # $ "" { } [ ] 的这些字符。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "4. 改角色名后下次改角色名需等 {ChangeNameW" &
+    "ait} 天。"
         '
         'Label23
         '
@@ -127,6 +128,7 @@ Partial Class frmRename
         '
         'frmRename
         '
+        Me.AcceptButton = Me.btn_ChangeName
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White

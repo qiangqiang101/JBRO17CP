@@ -11,6 +11,7 @@ Public Class frmRename
     Private ChaCNDate As Date
 
     Public ChangeNameGold As Integer '= 100000000 '改名所需游戏币
+    Public ChangeNameJifen As Integer
     Public ChangeNameWait As Integer '= 3 '改名时间相隔(天)
 
     Private Sub frmRename_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -19,10 +20,7 @@ Public Class frmRename
     End Sub
 
     Private Sub LoadChangeName()
-        lbl_CNNote.Text = "1. 请确认你的人物帐号已下线。" & nl &
-        "2. 改名需要 " & ChangeNameGold & " 游戏币，钱将从你身上扣除，清代足够的钱哦！" & nl &
-        "3. 角色名不可以含有 - & ; / \ = : # $ """" { } [ ] 的这些字符。" & nl &
-        "4. 改角色名后下次改角色名需等 " & ChangeNameWait & " 天。"
+        lbl_CNNote.Text = String.Format("1. 请确认你的人物帐号已下线。{0}2. 改名需要 {1} 游戏币，{2} 积分，游戏币将从你身上扣除，请带足够的游戏币哦！{0}3. 角色名不可以含有 - & ; / \ = : # $ """" { } [ ] 的这些字符。{0}4. 改角色名后下次改角色名需等 {3} 天。", nl, ChangeNameGold, ChangeNameJifen, ChangeNameWait)
 
         Try
             xConn = New sqlConn()
@@ -93,21 +91,12 @@ Public Class frmRename
                     xConn.GameSQLComm.Connection = xConn.GameSQLConn
                     xConn.GameSQLComm.ExecuteNonQuery()
 
-                    MsgBox("改名成功，消耗 " & ChangeNameGold & " 游戏币！", MsgBoxStyle.Information, "转学")
-                    ChaMoney = 0
-                    cmb_CNCha.Items.Clear()
-                    frmClearPoint.cmb_CSCha.Items.Clear()
-                    frmAddPoint.cmb_JDChar.Items.Clear()
-                    frmClearRed.cmb_PKCha.Items.Clear()
-                    frmReborn.cmb_RBChar.Items.Clear()
-                    frmChgSchool.cmb_ZXCha.Items.Clear()
-                    frmChgSchool.cmb_ZXSchool.Items.Clear()
-                    LoadChangeName()
-                    frmAddPoint.LoadAddStat()
-                    frmChgSchool.LoadChangeSchool()
-                    frmClearRed.LoadClearPK()
-                    frmClearPoint.LoadClearStat()
-                    frmReborn.LoadReborn()
+                    If frmCP.AdjustPoints(ChangeNameJifen) Then
+                        MsgBox("改名成功，消耗 " & ChangeNameGold & " 游戏币，" & ChangeNameJifen & " 积分！", MsgBoxStyle.Information, "转学")
+                        ChaMoney = 0
+                        cmb_CNCha.Items.Clear()
+                        LoadChangeName()
+                    End If
                 Catch ex As Exception
                     MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
                 End Try
@@ -145,6 +134,7 @@ Public Class frmRename
             Dim d As SqlDataReader = xConn.UserSQLComm.ExecuteReader()
             Do While d.Read
                 ChangeNameGold = d("ChgNameGold")
+                ChangeNameJifen = d("ChgNameJifen")
                 ChangeNameWait = d("ChgNameWait")
             Loop
 

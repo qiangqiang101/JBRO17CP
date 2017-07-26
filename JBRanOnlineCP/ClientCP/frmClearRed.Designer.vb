@@ -32,6 +32,7 @@ Partial Class frmClearRed
         Me.Label20 = New System.Windows.Forms.Label()
         Me.cmb_PKCha = New System.Windows.Forms.ComboBox()
         Me.lbl_PKNote = New System.Windows.Forms.Label()
+        Me.btnClearPKJifen = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label22
@@ -61,17 +62,17 @@ Partial Class frmClearRed
         Me.txt_PKValue.MaxLength = 4
         Me.txt_PKValue.Name = "txt_PKValue"
         Me.txt_PKValue.Size = New System.Drawing.Size(180, 29)
-        Me.txt_PKValue.TabIndex = 51
+        Me.txt_PKValue.TabIndex = 3
         Me.txt_PKValue.Text = "0"
         '
         'btn_ClearPK
         '
         Me.btn_ClearPK.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.btn_ClearPK.Location = New System.Drawing.Point(345, 304)
+        Me.btn_ClearPK.Location = New System.Drawing.Point(298, 304)
         Me.btn_ClearPK.Name = "btn_ClearPK"
         Me.btn_ClearPK.Size = New System.Drawing.Size(105, 29)
-        Me.btn_ClearPK.TabIndex = 53
-        Me.btn_ClearPK.Text = "开始漂白"
+        Me.btn_ClearPK.TabIndex = 4
+        Me.btn_ClearPK.Text = "游戏币漂白"
         Me.btn_ClearPK.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_ClearPK.UseVisualStyleBackColor = True
         '
@@ -93,7 +94,7 @@ Partial Class frmClearRed
         Me.txt_PKUserName.Name = "txt_PKUserName"
         Me.txt_PKUserName.ReadOnly = True
         Me.txt_PKUserName.Size = New System.Drawing.Size(219, 29)
-        Me.txt_PKUserName.TabIndex = 49
+        Me.txt_PKUserName.TabIndex = 1
         '
         'Label20
         '
@@ -113,24 +114,36 @@ Partial Class frmClearRed
         Me.cmb_PKCha.Location = New System.Drawing.Point(298, 234)
         Me.cmb_PKCha.Name = "cmb_PKCha"
         Me.cmb_PKCha.Size = New System.Drawing.Size(219, 29)
-        Me.cmb_PKCha.TabIndex = 50
+        Me.cmb_PKCha.TabIndex = 2
         '
         'lbl_PKNote
         '
         Me.lbl_PKNote.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.lbl_PKNote.Location = New System.Drawing.Point(12, 9)
         Me.lbl_PKNote.Name = "lbl_PKNote"
-        Me.lbl_PKNote.Size = New System.Drawing.Size(786, 51)
+        Me.lbl_PKNote.Size = New System.Drawing.Size(786, 70)
         Me.lbl_PKNote.TabIndex = 52
-        Me.lbl_PKNote.Text = "1. 请确认你的人物帐号已下线。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "2. 每花费 {ClearPKGold} 游戏币可以漂白 1 点PK值，钱将从你身上扣除，清代足够的钱哦！"
+        Me.lbl_PKNote.Text = "1. 请确认你的人物帐号已下线。" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "2. 每花费 {ClearPKGold} 游戏币可以漂白 1 点PK值，钱将从你身上扣除，清代足够的钱哦！" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "3. 每花费 {" &
+    "ClearPKJifen} 积分可以漂白 1 点PK值。"
+        '
+        'btnClearPKJifen
+        '
+        Me.btnClearPKJifen.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.btnClearPKJifen.Location = New System.Drawing.Point(409, 304)
+        Me.btnClearPKJifen.Name = "btnClearPKJifen"
+        Me.btnClearPKJifen.Size = New System.Drawing.Size(105, 29)
+        Me.btnClearPKJifen.TabIndex = 5
+        Me.btnClearPKJifen.Text = "积分漂白"
+        Me.btnClearPKJifen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btnClearPKJifen.UseVisualStyleBackColor = True
         '
         'frmClearRed
         '
-        Me.AcceptButton = Me.btn_ClearPK
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(810, 478)
+        Me.Controls.Add(Me.btnClearPKJifen)
         Me.Controls.Add(Me.Label22)
         Me.Controls.Add(Me.Label21)
         Me.Controls.Add(Me.txt_PKValue)
@@ -159,4 +172,5 @@ Partial Class frmClearRed
     Friend WithEvents Label20 As Label
     Friend WithEvents cmb_PKCha As ComboBox
     Friend WithEvents lbl_PKNote As Label
+    Friend WithEvents btnClearPKJifen As Button
 End Class

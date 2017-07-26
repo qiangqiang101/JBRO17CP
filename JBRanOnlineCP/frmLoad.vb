@@ -83,26 +83,29 @@ Public Class frmLoad
     End Sub
 
     Private Sub ReadAdmin()
-        Try
-            Dim tcb As TimerCallback = AddressOf Timeout
-            Dim t As Timer = New Timer(tcb, Nothing, 10000, -1)
+        'Try
+        '    Dim tcb As TimerCallback = AddressOf Timeout
+        '    Dim t As Timer = New Timer(tcb, Nothing, 10000, -1)
 
-            xConn = New sqlConn()
-            xConn.connectUser("Select * From CPSetting;")
+        '    xConn = New sqlConn()
+        '    xConn.connectUser("Select * From CPSetting;")
 
-            xConn.UserSQLComm.Connection = xConn.UserSQLConn
-            Dim d As SqlDataReader = xConn.UserSQLComm.ExecuteReader()
-            Do While d.Read
-                frmAdLogin.AdminPass = d("AdminPass")
-            Loop
+        '    xConn.UserSQLComm.Connection = xConn.UserSQLConn
+        '    Dim d As SqlDataReader = xConn.UserSQLComm.ExecuteReader()
+        '    Do While d.Read
+        '        frmAdLogin.AdminPass = d("AdminPass")
+        '    Loop
 
-            xConn.UserSQLConn.Close()
-            connected = True
-            Me.Hide()
-            frmAdLogin.Show()
-        Catch ex As Exception
-            'MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
-        End Try
+        '    xConn.UserSQLConn.Close()
+        '    connected = True
+        '    Me.Hide()
+        '    frmAdLogin.Show()
+        'Catch ex As Exception
+        '    'MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
+        'End Try
+
+        MsgBox("请在前台登录管理员帐号来开后台！", MsgBoxStyle.Critical, "出错啦！")
+        End
     End Sub
 
     Private Sub Timeout()

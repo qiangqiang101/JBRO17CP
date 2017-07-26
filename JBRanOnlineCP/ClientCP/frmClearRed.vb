@@ -10,6 +10,7 @@ Public Class frmClearRed
     Private ChaMoney As Integer = 0
 
     Public ClearPKGold As Integer '= 5000000 '漂白所需游戏币
+    Public ClearPKJifen As Integer '漂白所需积分
 
     Private Sub frmClearRed_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         RefreshData()
@@ -17,8 +18,7 @@ Public Class frmClearRed
     End Sub
 
     Public Sub LoadClearPK()
-        lbl_PKNote.Text = "1. 请确认你的人物帐号已下线。" & nl &
-        "2. 每花费 " & ClearPKGold & " 游戏币可以漂白 1 点PK值，钱将从你身上扣除，清代足够的钱哦！"
+        lbl_PKNote.Text = String.Format("1. 请确认你的人物帐号已下线。{0}2. 每花费 {1} 游戏币可以漂白 1 点PK值，游戏币将从你身上扣除，请带足够的游戏币哦！{0}3. 每花费 {2} 积分可以漂白 1 点PK值。", nl, ClearPKGold, ClearPKJifen)
 
         Try
             xConn = New sqlConn()
@@ -67,7 +67,7 @@ Public Class frmClearRed
         ElseIf txt_PKValue.Text = "" Then
             MsgBox("漂白失败，请输入清洗PK数量。", MsgBoxStyle.Critical, "错误")
         ElseIf ChaBright > 1 Then
-            MsgBox("漂白失败，您已经很白了。", MsgBoxStyle.Critical, "错误")
+            MsgBox("漂白失败，您已经够白了。", MsgBoxStyle.Critical, "错误")
         Else
             Dim ClearCost As Integer = ClearPKGold * Val(txt_PKValue.Text)
             Try
@@ -104,11 +104,59 @@ Public Class frmClearRed
             Dim d As SqlDataReader = xConn.UserSQLComm.ExecuteReader()
             Do While d.Read
                 ClearPKGold = d("ClearPKGold")
+                ClearPKJifen = d("ClearPKJifen")
             Loop
 
             xConn.UserSQLConn.Close()
         Catch ex As Exception
             'MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
         End Try
+    End Sub
+
+    Private Sub btnClearPKJifen_Click(sender As Object, e As EventArgs) Handles btnClearPKJifen.Click
+        Try
+            xConn = New sqlConn()
+            xConn.connectGame("Select * From ChaInfo Where ChaName = '" & cmb_PKCha.SelectedItem & "';")
+            xConn.GameSQLComm.Connection = xConn.GameSQLConn
+
+            Dim d As SqlDataReader = xConn.GameSQLComm.ExecuteReader()
+            Do While d.Read
+                ChaBright = d("ChaBright")
+            Loop
+            xConn.GameSQLConn.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
+        End Try
+
+        If String.IsNullOrEmpty(cmb_PKCha.SelectedItem) Then
+            MsgBox("请选择要漂白的角色！", MsgBoxStyle.Critical, "错误")
+        ElseIf frmCP.OnlineCheck(cmb_PKCha.SelectedItem) = True Then
+            MsgBox("漂白失败，角色还在线上，请下线后再试。", MsgBoxStyle.Critical, "错误")
+        ElseIf frmCP.mypoint < ClearPKJifen * Val(txt_PKValue.Text) Then
+            MsgBox("您的积分不足，漂白需要 " & ClearPKJifen * Val(txt_PKValue.Text) & " 积分哦！", MsgBoxStyle.Critical, "错误")
+        ElseIf txt_PKValue.Text = "" Then
+            MsgBox("漂白失败，请输入清洗PK数量。", MsgBoxStyle.Critical, "错误")
+        ElseIf ChaBright > 1 Then
+            MsgBox("漂白失败，您已经够白了。", MsgBoxStyle.Critical, "错误")
+        Else
+            Dim ClearCost As Integer = ClearPKJifen * Val(txt_PKValue.Text)
+            Try
+                xConn = New sqlConn()
+                xConn.connectGame("Update ChaInfo Set " &
+                                  "[ChaBright] = '" & Val(txt_PKValue.Text) + ChaBright & "' Where ChaName = '" & cmb_PKCha.SelectedItem & "';")
+
+                xConn.GameSQLComm.Connection = xConn.GameSQLConn
+                xConn.GameSQLComm.ExecuteNonQuery()
+
+                If frmCP.AdjustPoints(ClearPKJifen) Then
+                    MsgBox("漂白成功，消耗 " & ClearCost & " 积分！", MsgBoxStyle.Information, "转学")
+                    ChaMoney = 0
+                    ChaBright = 0
+                    cmb_PKCha.SelectedIndex = 0
+                End If
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
+            End Try
+        End If
     End Sub
 End Class

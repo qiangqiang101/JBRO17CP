@@ -66,7 +66,7 @@ Partial Class frmAdCPMain
         Me.PictureBox1.Dock = System.Windows.Forms.DockStyle.Top
         Me.PictureBox1.Location = New System.Drawing.Point(0, 0)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(784, 75)
+        Me.PictureBox1.Size = New System.Drawing.Size(1008, 75)
         Me.PictureBox1.TabIndex = 34
         Me.PictureBox1.TabStop = False
         '
@@ -78,7 +78,7 @@ Partial Class frmAdCPMain
         Me.cpTab.Location = New System.Drawing.Point(0, 102)
         Me.cpTab.MenuRenderer = Nothing
         Me.cpTab.Name = "cpTab"
-        Me.cpTab.Size = New System.Drawing.Size(784, 461)
+        Me.cpTab.Size = New System.Drawing.Size(1008, 629)
         Me.cpTab.TabCloseButtonImage = Nothing
         Me.cpTab.TabCloseButtonImageDisabled = Nothing
         Me.cpTab.TabCloseButtonImageHot = Nothing
@@ -93,7 +93,7 @@ Partial Class frmAdCPMain
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsmSetting, Me.tsmUser, Me.tsmChar, Me.tsmTransaction})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 75)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(784, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1008, 24)
         Me.MenuStrip1.TabIndex = 38
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -126,7 +126,7 @@ Partial Class frmAdCPMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(784, 562)
+        Me.ClientSize = New System.Drawing.Size(1008, 730)
         Me.Controls.Add(Me.cpTab)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lbl_Welcome)

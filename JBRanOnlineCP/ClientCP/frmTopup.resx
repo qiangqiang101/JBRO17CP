@@ -117,17 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lbl_RBNote1.Text" xml:space="preserve">
-    <value>1. 玩家必须出于自愿赞助以及维持伺服器运行。
-2. 请玩家自行保管好自己的账号及密码，珍惜自己的装备，不要互相转借。
-3. 会员装备如出现不慎强化爆装或贩售商店由玩家自行负责。
-4. 会员装备玩家若转借发生纠纷或者因转借而遗失，本服不介入处理。
-5. 所购买之会员装备不得转售，如有转售情形立即对买卖双方停权并没收会员装备。
-6. 本服不帮忙任何玩家调趴服务。
-7. 所有会员装备一旦发到玩家手上正常绝对不会丢失，一旦发现丢失既不负责。
-8. 游戏内的任何物品，在白名或红名的情况下，死亡都会有可能掉落。
-9. 任何已购买的物品，买了以后不能退货，也不能换其他等值的赞助物品，一旦买错自行负责。</value>
-  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

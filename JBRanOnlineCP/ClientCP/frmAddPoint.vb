@@ -17,6 +17,7 @@ Public Class frmAddPoint
     Private UserLoginState As Integer = 0
 
     Public AddStatGold As Integer '= 1000000 '加点所需游戏币
+    Public AddStatJifen As Integer '家电所需积分
 
     Private Sub frmAddPoint_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         RefreshData()
@@ -24,8 +25,7 @@ Public Class frmAddPoint
     End Sub
 
     Public Sub LoadAddStat()
-        lbl_JBNote2.Text = "手续费详情：" & nl &
-        "    加点花费要 " & AddStatGold & " 游戏币。"
+        lbl_JBNote2.Text = String.Format("手续费详情： {0}    加点花费需要{1}游戏币，{2}积分。", nl, AddStatGold, AddStatJifen)
 
         Try
             xConn = New sqlConn()
@@ -80,6 +80,8 @@ Public Class frmAddPoint
                 MsgBox("分点有误，请重新分配！", MsgBoxStyle.Critical, "错误")
             ElseIf ChaMoney < AddStatGold Then
                 MsgBox("您的游戏币不足，加点需要 " & AddStatGold & " 游戏币哦！", MsgBoxStyle.Critical, "错误")
+            ElseIf frmCP.myPoint < AddStatJifen Then
+                MsgBox("您的积分不足，加点需要 " & AddStatJifen & " 积分哦！", MsgBoxStyle.Critical, "错误")
             Else
                 Try
                     xConn = New sqlConn()
@@ -96,10 +98,12 @@ Public Class frmAddPoint
                     xConn.GameSQLComm.Connection = xConn.GameSQLConn
                     xConn.GameSQLComm.ExecuteNonQuery()
 
-                    MsgBox("加点成功，消耗 " & AddStatGold & " 游戏币！", MsgBoxStyle.Information, "加点")
-                    ChaStRemain = 0
-                    ChaMoney = 0
-                    cmb_JDChar.SelectedIndex = 0
+                    If frmCP.AdjustPoints(AddStatJifen) Then
+                        MsgBox("加点成功，消耗 " & AddStatGold & " 游戏币，" & AddStatJifen & " 积分！", MsgBoxStyle.Information, "加点")
+                        ChaStRemain = 0
+                        ChaMoney = 0
+                        cmb_JDChar.SelectedIndex = 0
+                    End If
                 Catch ex As Exception
                     MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
                 End Try
@@ -142,6 +146,7 @@ Public Class frmAddPoint
             Dim d As SqlDataReader = xConn.UserSQLComm.ExecuteReader()
             Do While d.Read
                 AddStatGold = d("AddStatGold")
+                AddStatJifen = d("AddStatJifen")
             Loop
 
             xConn.UserSQLConn.Close()
