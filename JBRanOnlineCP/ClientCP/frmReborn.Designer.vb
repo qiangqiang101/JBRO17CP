@@ -39,7 +39,7 @@ Partial Class frmReborn
         Me.btnReborn.Location = New System.Drawing.Point(351, 383)
         Me.btnReborn.Name = "btnReborn"
         Me.btnReborn.Size = New System.Drawing.Size(105, 29)
-        Me.btnReborn.TabIndex = 31
+        Me.btnReborn.TabIndex = 3
         Me.btnReborn.Text = "确认转生"
         Me.btnReborn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnReborn.UseVisualStyleBackColor = True
@@ -62,7 +62,7 @@ Partial Class frmReborn
         Me.txt_RBUserName.Name = "txt_RBUserName"
         Me.txt_RBUserName.ReadOnly = True
         Me.txt_RBUserName.Size = New System.Drawing.Size(219, 29)
-        Me.txt_RBUserName.TabIndex = 29
+        Me.txt_RBUserName.TabIndex = 1
         '
         'Label6
         '
@@ -82,7 +82,7 @@ Partial Class frmReborn
         Me.cmb_RBChar.Location = New System.Drawing.Point(304, 348)
         Me.cmb_RBChar.Name = "cmb_RBChar"
         Me.cmb_RBChar.Size = New System.Drawing.Size(219, 29)
-        Me.cmb_RBChar.TabIndex = 30
+        Me.cmb_RBChar.TabIndex = 2
         '
         'lbl_RBNote3
         '
@@ -118,6 +118,7 @@ Partial Class frmReborn
         '
         'frmReborn
         '
+        Me.AcceptButton = Me.btnReborn
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White

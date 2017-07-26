@@ -44,7 +44,7 @@ Partial Class frmLogin
         Me.lbl_ForgotPwd.Location = New System.Drawing.Point(286, 156)
         Me.lbl_ForgotPwd.Name = "lbl_ForgotPwd"
         Me.lbl_ForgotPwd.Size = New System.Drawing.Size(74, 21)
-        Me.lbl_ForgotPwd.TabIndex = 33
+        Me.lbl_ForgotPwd.TabIndex = 4
         Me.lbl_ForgotPwd.TabStop = True
         Me.lbl_ForgotPwd.Text = "找回密码"
         '
@@ -54,7 +54,7 @@ Partial Class frmLogin
         Me.btn_Register.Location = New System.Drawing.Point(307, 191)
         Me.btn_Register.Name = "btn_Register"
         Me.btn_Register.Size = New System.Drawing.Size(105, 29)
-        Me.btn_Register.TabIndex = 32
+        Me.btn_Register.TabIndex = 6
         Me.btn_Register.Text = "注册"
         Me.btn_Register.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_Register.UseVisualStyleBackColor = True
@@ -66,7 +66,7 @@ Partial Class frmLogin
         Me.chk_Remember.Location = New System.Drawing.Point(114, 155)
         Me.chk_Remember.Name = "chk_Remember"
         Me.chk_Remember.Size = New System.Drawing.Size(77, 25)
-        Me.chk_Remember.TabIndex = 25
+        Me.chk_Remember.TabIndex = 3
         Me.chk_Remember.Text = "记住我"
         Me.chk_Remember.UseVisualStyleBackColor = True
         '
@@ -76,7 +76,7 @@ Partial Class frmLogin
         Me.btn_Login.Location = New System.Drawing.Point(196, 191)
         Me.btn_Login.Name = "btn_Login"
         Me.btn_Login.Size = New System.Drawing.Size(105, 29)
-        Me.btn_Login.TabIndex = 26
+        Me.btn_Login.TabIndex = 5
         Me.btn_Login.Text = "登入"
         Me.btn_Login.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_Login.UseVisualStyleBackColor = True
@@ -109,7 +109,7 @@ Partial Class frmLogin
         Me.txt_Password.Location = New System.Drawing.Point(114, 120)
         Me.txt_Password.Name = "txt_Password"
         Me.txt_Password.Size = New System.Drawing.Size(246, 29)
-        Me.txt_Password.TabIndex = 24
+        Me.txt_Password.TabIndex = 2
         Me.txt_Password.UseSystemPasswordChar = True
         '
         'txt_UserName
@@ -118,7 +118,7 @@ Partial Class frmLogin
         Me.txt_UserName.Location = New System.Drawing.Point(114, 85)
         Me.txt_UserName.Name = "txt_UserName"
         Me.txt_UserName.Size = New System.Drawing.Size(246, 29)
-        Me.txt_UserName.TabIndex = 23
+        Me.txt_UserName.TabIndex = 1
         '
         'Label1
         '

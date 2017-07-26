@@ -73,7 +73,7 @@ Partial Class frmRename
         Me.txt_CNNewName.MaxLength = 18
         Me.txt_CNNewName.Name = "txt_CNNewName"
         Me.txt_CNNewName.Size = New System.Drawing.Size(219, 29)
-        Me.txt_CNNewName.TabIndex = 61
+        Me.txt_CNNewName.TabIndex = 3
         '
         'btn_ChangeName
         '
@@ -81,7 +81,7 @@ Partial Class frmRename
         Me.btn_ChangeName.Location = New System.Drawing.Point(349, 317)
         Me.btn_ChangeName.Name = "btn_ChangeName"
         Me.btn_ChangeName.Size = New System.Drawing.Size(105, 29)
-        Me.btn_ChangeName.TabIndex = 62
+        Me.btn_ChangeName.TabIndex = 4
         Me.btn_ChangeName.Text = "确认改名"
         Me.btn_ChangeName.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_ChangeName.UseVisualStyleBackColor = True
@@ -104,7 +104,7 @@ Partial Class frmRename
         Me.txt_CNUserName.Name = "txt_CNUserName"
         Me.txt_CNUserName.ReadOnly = True
         Me.txt_CNUserName.Size = New System.Drawing.Size(219, 29)
-        Me.txt_CNUserName.TabIndex = 59
+        Me.txt_CNUserName.TabIndex = 1
         '
         'Label26
         '
@@ -124,7 +124,7 @@ Partial Class frmRename
         Me.cmb_CNCha.Location = New System.Drawing.Point(298, 226)
         Me.cmb_CNCha.Name = "cmb_CNCha"
         Me.cmb_CNCha.Size = New System.Drawing.Size(219, 29)
-        Me.cmb_CNCha.TabIndex = 60
+        Me.cmb_CNCha.TabIndex = 2
         '
         'frmRename
         '

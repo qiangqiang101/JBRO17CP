@@ -58,7 +58,7 @@ Partial Class frmRegister
         Me.btn_Check.Location = New System.Drawing.Point(386, 99)
         Me.btn_Check.Name = "btn_Check"
         Me.btn_Check.Size = New System.Drawing.Size(89, 29)
-        Me.btn_Check.TabIndex = 40
+        Me.btn_Check.TabIndex = 2
         Me.btn_Check.Text = "检测帐号"
         Me.btn_Check.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_Check.UseVisualStyleBackColor = True
@@ -89,7 +89,7 @@ Partial Class frmRegister
         Me.txt_Verification.Location = New System.Drawing.Point(177, 463)
         Me.txt_Verification.Name = "txt_Verification"
         Me.txt_Verification.Size = New System.Drawing.Size(241, 29)
-        Me.txt_Verification.TabIndex = 46
+        Me.txt_Verification.TabIndex = 8
         '
         'Label12
         '
@@ -148,7 +148,7 @@ Partial Class frmRegister
         Me.txt_2ndPass1.MaxLength = 14
         Me.txt_2ndPass1.Name = "txt_2ndPass1"
         Me.txt_2ndPass1.Size = New System.Drawing.Size(298, 29)
-        Me.txt_2ndPass1.TabIndex = 44
+        Me.txt_2ndPass1.TabIndex = 6
         Me.txt_2ndPass1.UseSystemPasswordChar = True
         '
         'Label3
@@ -168,7 +168,7 @@ Partial Class frmRegister
         Me.txt_2ndPass2.MaxLength = 14
         Me.txt_2ndPass2.Name = "txt_2ndPass2"
         Me.txt_2ndPass2.Size = New System.Drawing.Size(299, 29)
-        Me.txt_2ndPass2.TabIndex = 45
+        Me.txt_2ndPass2.TabIndex = 7
         Me.txt_2ndPass2.UseSystemPasswordChar = True
         '
         'Label1
@@ -212,7 +212,7 @@ Partial Class frmRegister
         Me.btnCancel.Location = New System.Drawing.Point(397, 521)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(105, 29)
-        Me.btnCancel.TabIndex = 48
+        Me.btnCancel.TabIndex = 10
         Me.btnCancel.Text = "取消"
         Me.btnCancel.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnCancel.UseVisualStyleBackColor = True
@@ -233,7 +233,7 @@ Partial Class frmRegister
         Me.btnAdd.Location = New System.Drawing.Point(286, 521)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(105, 29)
-        Me.btnAdd.TabIndex = 47
+        Me.btnAdd.TabIndex = 9
         Me.btnAdd.Text = "提交"
         Me.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnAdd.UseVisualStyleBackColor = True
@@ -274,7 +274,7 @@ Partial Class frmRegister
         Me.txt_Email.Location = New System.Drawing.Point(177, 291)
         Me.txt_Email.Name = "txt_Email"
         Me.txt_Email.Size = New System.Drawing.Size(298, 29)
-        Me.txt_Email.TabIndex = 43
+        Me.txt_Email.TabIndex = 5
         '
         'txt_Pass2
         '
@@ -283,7 +283,7 @@ Partial Class frmRegister
         Me.txt_Pass2.MaxLength = 14
         Me.txt_Pass2.Name = "txt_Pass2"
         Me.txt_Pass2.Size = New System.Drawing.Size(299, 29)
-        Me.txt_Pass2.TabIndex = 42
+        Me.txt_Pass2.TabIndex = 4
         Me.txt_Pass2.UseSystemPasswordChar = True
         '
         'txt_Pass1
@@ -293,7 +293,7 @@ Partial Class frmRegister
         Me.txt_Pass1.MaxLength = 14
         Me.txt_Pass1.Name = "txt_Pass1"
         Me.txt_Pass1.Size = New System.Drawing.Size(299, 29)
-        Me.txt_Pass1.TabIndex = 41
+        Me.txt_Pass1.TabIndex = 3
         Me.txt_Pass1.UseSystemPasswordChar = True
         '
         'txt_UserName
@@ -303,7 +303,7 @@ Partial Class frmRegister
         Me.txt_UserName.MaxLength = 14
         Me.txt_UserName.Name = "txt_UserName"
         Me.txt_UserName.Size = New System.Drawing.Size(204, 29)
-        Me.txt_UserName.TabIndex = 39
+        Me.txt_UserName.TabIndex = 1
         '
         'frmRegister
         '

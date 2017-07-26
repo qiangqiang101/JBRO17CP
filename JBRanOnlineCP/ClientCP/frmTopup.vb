@@ -65,6 +65,7 @@ Public Class frmTopup
                     frmCP.cpTab.TabPages.Add(newForm)
                 Catch ex As Exception
                 End Try
+                lbl_CODE.Text = r.Next(1, 9999)
                 Me.Close()
             End Try
         End If

@@ -30,9 +30,9 @@ Partial Class frmTransaction
         Me.chCurrency = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.chChannel = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.chDate = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.btnSubmit = New System.Windows.Forms.Button()
         Me.chStatus = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.chReason = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.btnSubmit = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lvHistory
@@ -92,6 +92,16 @@ Partial Class frmTransaction
         Me.chDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.chDate.Width = 150
         '
+        'chStatus
+        '
+        Me.chStatus.Text = "状态"
+        Me.chStatus.Width = 100
+        '
+        'chReason
+        '
+        Me.chReason.Text = "拒绝理由"
+        Me.chReason.Width = 160
+        '
         'btnSubmit
         '
         Me.btnSubmit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -104,18 +114,9 @@ Partial Class frmTransaction
         Me.btnSubmit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btnSubmit.UseVisualStyleBackColor = True
         '
-        'chStatus
-        '
-        Me.chStatus.Text = "状态"
-        Me.chStatus.Width = 100
-        '
-        'chReason
-        '
-        Me.chReason.Text = "拒绝理由"
-        Me.chReason.Width = 160
-        '
         'frmTransaction
         '
+        Me.AcceptButton = Me.btnSubmit
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White

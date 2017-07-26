@@ -51,7 +51,7 @@ Partial Class frmChgSchool
         Me.cmb_ZXSchool.Location = New System.Drawing.Point(298, 269)
         Me.cmb_ZXSchool.Name = "cmb_ZXSchool"
         Me.cmb_ZXSchool.Size = New System.Drawing.Size(219, 29)
-        Me.cmb_ZXSchool.TabIndex = 44
+        Me.cmb_ZXSchool.TabIndex = 3
         '
         'btn_ChangeSchool
         '
@@ -59,7 +59,7 @@ Partial Class frmChgSchool
         Me.btn_ChangeSchool.Location = New System.Drawing.Point(349, 304)
         Me.btn_ChangeSchool.Name = "btn_ChangeSchool"
         Me.btn_ChangeSchool.Size = New System.Drawing.Size(105, 29)
-        Me.btn_ChangeSchool.TabIndex = 45
+        Me.btn_ChangeSchool.TabIndex = 4
         Me.btn_ChangeSchool.Text = "确认转学"
         Me.btn_ChangeSchool.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_ChangeSchool.UseVisualStyleBackColor = True
@@ -82,7 +82,7 @@ Partial Class frmChgSchool
         Me.txt_ZXUserName.Name = "txt_ZXUserName"
         Me.txt_ZXUserName.ReadOnly = True
         Me.txt_ZXUserName.Size = New System.Drawing.Size(219, 29)
-        Me.txt_ZXUserName.TabIndex = 42
+        Me.txt_ZXUserName.TabIndex = 1
         '
         'Label17
         '
@@ -102,7 +102,7 @@ Partial Class frmChgSchool
         Me.cmb_ZXCha.Location = New System.Drawing.Point(298, 234)
         Me.cmb_ZXCha.Name = "cmb_ZXCha"
         Me.cmb_ZXCha.Size = New System.Drawing.Size(219, 29)
-        Me.cmb_ZXCha.TabIndex = 43
+        Me.cmb_ZXCha.TabIndex = 2
         '
         'lbl_ZXNote
         '

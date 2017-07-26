@@ -52,7 +52,7 @@ Partial Class frmAddPoint
         Me.txt_ChaStRemain.Name = "txt_ChaStRemain"
         Me.txt_ChaStRemain.ReadOnly = True
         Me.txt_ChaStRemain.Size = New System.Drawing.Size(170, 29)
-        Me.txt_ChaStRemain.TabIndex = 53
+        Me.txt_ChaStRemain.TabIndex = 8
         '
         'Label12
         '
@@ -121,7 +121,7 @@ Partial Class frmAddPoint
         Me.txt_SP.MaxLength = 4
         Me.txt_SP.Name = "txt_SP"
         Me.txt_SP.Size = New System.Drawing.Size(170, 29)
-        Me.txt_SP.TabIndex = 52
+        Me.txt_SP.TabIndex = 7
         '
         'txt_HP
         '
@@ -130,7 +130,7 @@ Partial Class frmAddPoint
         Me.txt_HP.MaxLength = 4
         Me.txt_HP.Name = "txt_HP"
         Me.txt_HP.Size = New System.Drawing.Size(170, 29)
-        Me.txt_HP.TabIndex = 51
+        Me.txt_HP.TabIndex = 6
         '
         'txt_Spirit
         '
@@ -139,7 +139,7 @@ Partial Class frmAddPoint
         Me.txt_Spirit.MaxLength = 4
         Me.txt_Spirit.Name = "txt_Spirit"
         Me.txt_Spirit.Size = New System.Drawing.Size(170, 29)
-        Me.txt_Spirit.TabIndex = 50
+        Me.txt_Spirit.TabIndex = 5
         '
         'txt_Dex
         '
@@ -148,7 +148,7 @@ Partial Class frmAddPoint
         Me.txt_Dex.MaxLength = 4
         Me.txt_Dex.Name = "txt_Dex"
         Me.txt_Dex.Size = New System.Drawing.Size(170, 29)
-        Me.txt_Dex.TabIndex = 49
+        Me.txt_Dex.TabIndex = 4
         '
         'txt_Power
         '
@@ -157,7 +157,7 @@ Partial Class frmAddPoint
         Me.txt_Power.MaxLength = 4
         Me.txt_Power.Name = "txt_Power"
         Me.txt_Power.Size = New System.Drawing.Size(170, 29)
-        Me.txt_Power.TabIndex = 48
+        Me.txt_Power.TabIndex = 3
         '
         'btn_AddStat
         '
@@ -165,7 +165,7 @@ Partial Class frmAddPoint
         Me.btn_AddStat.Location = New System.Drawing.Point(354, 385)
         Me.btn_AddStat.Name = "btn_AddStat"
         Me.btn_AddStat.Size = New System.Drawing.Size(105, 29)
-        Me.btn_AddStat.TabIndex = 54
+        Me.btn_AddStat.TabIndex = 9
         Me.btn_AddStat.Text = "确认加点"
         Me.btn_AddStat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_AddStat.UseVisualStyleBackColor = True
@@ -188,7 +188,7 @@ Partial Class frmAddPoint
         Me.txt_JDUserName.Name = "txt_JDUserName"
         Me.txt_JDUserName.ReadOnly = True
         Me.txt_JDUserName.Size = New System.Drawing.Size(219, 29)
-        Me.txt_JDUserName.TabIndex = 46
+        Me.txt_JDUserName.TabIndex = 1
         '
         'Label5
         '
@@ -208,7 +208,7 @@ Partial Class frmAddPoint
         Me.cmb_JDChar.Location = New System.Drawing.Point(298, 194)
         Me.cmb_JDChar.Name = "cmb_JDChar"
         Me.cmb_JDChar.Size = New System.Drawing.Size(219, 29)
-        Me.cmb_JDChar.TabIndex = 47
+        Me.cmb_JDChar.TabIndex = 2
         '
         'lbl_JBNote2
         '

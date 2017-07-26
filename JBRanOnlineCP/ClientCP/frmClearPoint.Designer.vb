@@ -37,7 +37,7 @@ Partial Class frmClearPoint
         Me.btn_ClearStat.Location = New System.Drawing.Point(344, 277)
         Me.btn_ClearStat.Name = "btn_ClearStat"
         Me.btn_ClearStat.Size = New System.Drawing.Size(105, 29)
-        Me.btn_ClearStat.TabIndex = 36
+        Me.btn_ClearStat.TabIndex = 3
         Me.btn_ClearStat.Text = "开始洗点"
         Me.btn_ClearStat.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btn_ClearStat.UseVisualStyleBackColor = True
@@ -60,7 +60,7 @@ Partial Class frmClearPoint
         Me.txt_XDUserName.Name = "txt_XDUserName"
         Me.txt_XDUserName.ReadOnly = True
         Me.txt_XDUserName.Size = New System.Drawing.Size(219, 29)
-        Me.txt_XDUserName.TabIndex = 34
+        Me.txt_XDUserName.TabIndex = 1
         '
         'Label15
         '
@@ -80,7 +80,7 @@ Partial Class frmClearPoint
         Me.cmb_CSCha.Location = New System.Drawing.Point(298, 242)
         Me.cmb_CSCha.Name = "cmb_CSCha"
         Me.cmb_CSCha.Size = New System.Drawing.Size(219, 29)
-        Me.cmb_CSCha.TabIndex = 35
+        Me.cmb_CSCha.TabIndex = 2
         '
         'Label13
         '

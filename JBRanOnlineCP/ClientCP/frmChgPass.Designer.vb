@@ -300,7 +300,6 @@ Partial Class frmChgPass
         '
         'frmChgPass
         '
-        Me.AcceptButton = Me.btn_ChgPwd
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White

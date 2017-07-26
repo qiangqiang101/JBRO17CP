@@ -61,6 +61,7 @@ Partial Class frmSelfHelp
         '
         'frmSelfHelp
         '
+        Me.AcceptButton = Me.btn_SelfHelp
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White

@@ -7,6 +7,7 @@ Public Class frmFgtPwd
     Dim xConn As sqlConn
     Dim userID, userEmail, userPass As New Label
     Dim nl As String = Environment.NewLine
+    Dim r As Random = New Random
 
     'Settings
     Public EmailAddr As String '= "no-reply@zettabytetek.com"
@@ -43,8 +44,10 @@ Public Class frmFgtPwd
 
             If askUser() = True Then
                 SendEmail(userID.Text, userPass.Text, userEmail.Text)
+                lbl_CODE.Text = r.Next(1, 9999)
             Else
                 MsgBox("您输入的帐号不正确。", MsgBoxStyle.Exclamation, "错误")
+                lbl_CODE.Text = r.Next(1, 9999)
             End If
         End If
     End Sub
@@ -69,6 +72,7 @@ Public Class frmFgtPwd
     End Function
 
     Private Sub frmFgtPwd_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        lbl_CODE.Text = r.Next(1, 9999)
         RefreshData()
     End Sub
 

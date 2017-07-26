@@ -80,6 +80,7 @@ Public Class frmRegister
                 xConn.UserSQLConn.Close()
 
                 MsgBox("帐号注册成功，您的帐号是 " & txt_UserName.Text & ".", MsgBoxStyle.Information, "成功")
+                lbl_CODE.Text = r.Next(1, 9999)
                 Me.Close()
             Catch ex As Exception
                 MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
