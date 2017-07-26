@@ -37,6 +37,9 @@ Public Class frmTopup
         If String.IsNullOrEmpty(txt_Amount.Text) Then
             MsgBox("当前操作有误！", MsgBoxStyle.Critical, "错误")
             txt_Amount.Focus()
+        ElseIf txt_Amount.Text = "0" Then
+            MsgBox("当前操作有误！", MsgBoxStyle.Critical, "错误")
+            txt_Amount.Focus()
         ElseIf txt_CPVerification.Text <> lbl_CODE.Text Then
             MsgBox("输入的验证码不正确，请重新输入。", MsgBoxStyle.Critical, "错误")
             txt_CPVerification.Clear()

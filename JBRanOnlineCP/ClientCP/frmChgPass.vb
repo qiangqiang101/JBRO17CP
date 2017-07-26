@@ -6,6 +6,7 @@ Public Class frmChgPass
 
     Dim r As Random = New Random
     Public PasswordEncrypt As Integer = 0
+    Public skipCheck As Boolean = False
 
     Private Sub frmChgPass_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lbl_CODE.Text = r.Next(1, 9999)
@@ -39,24 +40,26 @@ Public Class frmChgPass
                 ElseIf txt_CPNewPwd.Text = "" Or txt_CPNewPwd2.Text = "" Then
                     MsgBox("请输入新密码。", MsgBoxStyle.Critical, "错误")
                     txt_CPNewPwd.Focus()
-                ElseIf Md5FromString(txt_CPPassword.Text) <> OldPwd Then
-                    MsgBox("密码错误，请重新输入！", MsgBoxStyle.Critical, "错误")
-                    txt_CPPassword.Clear()
-                    txt_CPPassword.Focus()
+                ElseIf Not skipCheck Then
+                    If Md5FromString(txt_CPPassword.Text) <> OldPwd Then
+                        MsgBox("密码错误，请重新输入！", MsgBoxStyle.Critical, "错误")
+                        txt_CPPassword.Clear()
+                        txt_CPPassword.Focus()
+                    End If
                 ElseIf txt_CPNewPwd.Text <> txt_CPNewPwd2.Text Then
-                    MsgBox("两次输入的密码不同，请重新输入！", MsgBoxStyle.Critical, "错误")
-                    txt_CPNewPwd.Clear()
-                    txt_CPNewPwd2.Clear()
-                    txt_CPNewPwd.Focus()
-                ElseIf txt_CPVerification.Text = "" Then
-                    MsgBox("请输入验证码。", MsgBoxStyle.Critical, "错误")
-                    txt_CPVerification.Focus()
-                ElseIf txt_CPVerification.Text <> lbl_CODE.Text Then
-                    MsgBox("输入的验证码不正确，请重新输入。", MsgBoxStyle.Critical, "错误")
-                    txt_CPVerification.Clear()
-                    txt_CPVerification.Focus()
-                Else
-                    Try
+                        MsgBox("两次输入的密码不同，请重新输入！", MsgBoxStyle.Critical, "错误")
+                        txt_CPNewPwd.Clear()
+                        txt_CPNewPwd2.Clear()
+                        txt_CPNewPwd.Focus()
+                    ElseIf txt_CPVerification.Text = "" Then
+                        MsgBox("请输入验证码。", MsgBoxStyle.Critical, "错误")
+                        txt_CPVerification.Focus()
+                    ElseIf txt_CPVerification.Text <> lbl_CODE.Text Then
+                        MsgBox("输入的验证码不正确，请重新输入。", MsgBoxStyle.Critical, "错误")
+                        txt_CPVerification.Clear()
+                        txt_CPVerification.Focus()
+                    Else
+                        Try
                         xConn = New sqlConn()
                         xConn.connectUser("Update UserInfo Set " &
                                           "[UserPass] = '" & Md5FromString(txt_CPNewPwd.Text) & "' Where UserID = '" & txt_CPUserName.Text & "';")

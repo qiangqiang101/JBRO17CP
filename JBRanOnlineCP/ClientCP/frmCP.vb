@@ -221,6 +221,7 @@ Public Class frmCP
                 Dim newForm As frmChgPass = New frmChgPass
                 newForm.txt_CPUserName.Text = myUserName
                 newForm.txt_CPPassword.Text = frmLogin.txt_Password.Text
+                newForm.skipCheck = True
                 cpTab.TabPages.Add(newForm)
             Catch ex As Exception
             End Try
@@ -245,11 +246,8 @@ Public Class frmCP
     End Function
 
     Private Sub llblAdmin_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llblAdmin.LinkClicked
-        Try
-            Dim newForm As frmAdCPMain = New frmAdCPMain
-            newForm.Show()
-        Catch ex As Exception
-        End Try
+        frmAdCPMain.Show()
+        'frmAdLogin.Show()
     End Sub
 
     Private Sub fbStore_Click(sender As Object, e As EventArgs) Handles fbStore.Click

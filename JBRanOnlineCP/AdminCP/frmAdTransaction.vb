@@ -32,16 +32,20 @@ Public Class frmAdTransaction
                     Dim Status As String = d("Status")
                     Select Case Status
                         Case "New"
-                            .SubItems.Add("新建")
+                            .SubItems.Add("新建", Color.Blue, Color.White, Me.Font)
                         Case "Processing"
-                            .SubItems.Add("处理中")
+                            .SubItems.Add("处理中", Color.Yellow, Color.White, Me.Font)
                         Case "Approve"
-                            .SubItems.Add("批准")
+                            .SubItems.Add("批准", Color.Green, Color.White, Me.Font)
                         Case "Reject"
-                            .SubItems.Add("拒绝")
+                            .SubItems.Add("拒绝", Color.Red, Color.White, Me.Font)
                     End Select
                     .SubItems.Add(d("Reason"))
                 End With
+
+                For i As Integer = 0 To lvUser.Items.Count - 1
+                    lvUser.Items(i).UseItemStyleForSubItems = False
+                Next
             Loop
             xConn.UserSQLConn.Close()
         Catch ex As Exception
