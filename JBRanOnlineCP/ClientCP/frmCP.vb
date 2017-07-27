@@ -209,7 +209,8 @@ Public Class frmCP
 
     Private Sub fbTopup_Click(sender As Object, e As EventArgs) Handles fbTopup.Click
         Try
-            Dim newForm As frmTransaction = New frmTransaction
+            Dim newForm As frmTopup = New frmTopup
+            newForm.txt_TUUserName.Text = myUserName
             cpTab.TabPages.Add(newForm)
         Catch ex As Exception
         End Try
@@ -240,6 +241,7 @@ Public Class frmCP
             xConn.UserSQLComm.ExecuteNonQuery()
         Catch ex As Exception
             goterror = True
+            Exit Try
         End Try
 
         Return goterror
@@ -253,6 +255,22 @@ Public Class frmCP
     Private Sub fbStore_Click(sender As Object, e As EventArgs) Handles fbStore.Click
         Try
             Dim newForm As frmShop = New frmShop
+            cpTab.TabPages.Add(newForm)
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub llblTopupHistory_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llblTopupHistory.LinkClicked
+        Try
+            Dim newForm As frmTransaction = New frmTransaction
+            cpTab.TabPages.Add(newForm)
+        Catch ex As Exception
+        End Try
+    End Sub
+
+    Private Sub llblShopHistory_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles llblShopHistory.LinkClicked
+        Try
+            Dim newForm As frmShopOrder = New frmShopOrder
             cpTab.TabPages.Add(newForm)
         Catch ex As Exception
         End Try

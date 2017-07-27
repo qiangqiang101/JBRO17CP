@@ -1,5 +1,15 @@
 ﻿Public Class shopItem
 
+    Private _ID As Integer
+    Public Property ItemID As Integer
+        Get
+            Return _ID
+        End Get
+        Set(value As Integer)
+            _ID = value
+        End Set
+    End Property
+
     Public Property Value() As String
         Get
             Return ButtonText.Text

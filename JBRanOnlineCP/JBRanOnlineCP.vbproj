@@ -90,6 +90,12 @@
     <Compile Include="AdminCP\frmAdLogin.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AdminCP\frmAdOrderDetails.Designer.vb">
+      <DependentUpon>frmAdOrderDetails.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\frmAdOrderDetails.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AdminCP\frmAdProductDetails.Designer.vb">
       <DependentUpon>frmAdProductDetails.vb</DependentUpon>
     </Compile>
@@ -100,6 +106,12 @@
       <DependentUpon>frmAdSetting.vb</DependentUpon>
     </Compile>
     <Compile Include="AdminCP\frmAdSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCP\frmAdShopOrder.Designer.vb">
+      <DependentUpon>frmAdShopOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\frmAdShopOrder.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminCP\frmAdTransaction.Designer.vb">
@@ -147,34 +159,34 @@
     <Compile Include="Class\flatButton.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ClientCP\frmAddPoint.Designer.vb">
+    <Compile Include="ClientCP\Stat Point\frmAddPoint.Designer.vb">
       <DependentUpon>frmAddPoint.vb</DependentUpon>
     </Compile>
-    <Compile Include="ClientCP\frmAddPoint.vb">
+    <Compile Include="ClientCP\Stat Point\frmAddPoint.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientCP\frmChgPass.Designer.vb">
+    <Compile Include="ClientCP\Client Functions\frmChgPass.Designer.vb">
       <DependentUpon>frmChgPass.vb</DependentUpon>
     </Compile>
-    <Compile Include="ClientCP\frmChgPass.vb">
+    <Compile Include="ClientCP\Client Functions\frmChgPass.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientCP\frmChgSchool.Designer.vb">
+    <Compile Include="ClientCP\Client Functions\frmChgSchool.Designer.vb">
       <DependentUpon>frmChgSchool.vb</DependentUpon>
     </Compile>
-    <Compile Include="ClientCP\frmChgSchool.vb">
+    <Compile Include="ClientCP\Client Functions\frmChgSchool.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientCP\frmClearPoint.Designer.vb">
+    <Compile Include="ClientCP\Stat Point\frmClearPoint.Designer.vb">
       <DependentUpon>frmClearPoint.vb</DependentUpon>
     </Compile>
-    <Compile Include="ClientCP\frmClearPoint.vb">
+    <Compile Include="ClientCP\Stat Point\frmClearPoint.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientCP\frmClearRed.Designer.vb">
+    <Compile Include="ClientCP\Client Functions\frmClearRed.Designer.vb">
       <DependentUpon>frmClearRed.vb</DependentUpon>
     </Compile>
-    <Compile Include="ClientCP\frmClearRed.vb">
+    <Compile Include="ClientCP\Client Functions\frmClearRed.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ClientCP\frmCP.Designer.vb">
@@ -183,16 +195,16 @@
     <Compile Include="ClientCP\frmCP.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientCP\frmFgtPwd.Designer.vb">
+    <Compile Include="ClientCP\Client Functions\frmFgtPwd.Designer.vb">
       <DependentUpon>frmFgtPwd.vb</DependentUpon>
     </Compile>
-    <Compile Include="ClientCP\frmFgtPwd.vb">
+    <Compile Include="ClientCP\Client Functions\frmFgtPwd.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientCP\frmLogin.Designer.vb">
+    <Compile Include="ClientCP\Client Functions\frmLogin.Designer.vb">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="ClientCP\frmLogin.vb">
+    <Compile Include="ClientCP\Client Functions\frmLogin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ClientCP\frmNotice.Designer.vb">
@@ -201,40 +213,52 @@
     <Compile Include="ClientCP\frmNotice.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientCP\frmRanking.Designer.vb">
+    <Compile Include="ClientCP\Shop\frmProductBrowser.Designer.vb">
+      <DependentUpon>frmProductBrowser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientCP\Shop\frmProductBrowser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientCP\Client Functions\frmRanking.Designer.vb">
       <DependentUpon>frmRanking.vb</DependentUpon>
     </Compile>
-    <Compile Include="ClientCP\frmRanking.vb">
+    <Compile Include="ClientCP\Client Functions\frmRanking.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientCP\frmReborn.Designer.vb">
+    <Compile Include="ClientCP\Client Functions\frmReborn.Designer.vb">
       <DependentUpon>frmReborn.vb</DependentUpon>
     </Compile>
-    <Compile Include="ClientCP\frmReborn.vb">
+    <Compile Include="ClientCP\Client Functions\frmReborn.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientCP\frmRegister.Designer.vb">
+    <Compile Include="ClientCP\Client Functions\frmRegister.Designer.vb">
       <DependentUpon>frmRegister.vb</DependentUpon>
     </Compile>
-    <Compile Include="ClientCP\frmRegister.vb">
+    <Compile Include="ClientCP\Client Functions\frmRegister.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientCP\frmRename.Designer.vb">
+    <Compile Include="ClientCP\Client Functions\frmRename.Designer.vb">
       <DependentUpon>frmRename.vb</DependentUpon>
     </Compile>
-    <Compile Include="ClientCP\frmRename.vb">
+    <Compile Include="ClientCP\Client Functions\frmRename.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientCP\frmSelfHelp.Designer.vb">
+    <Compile Include="ClientCP\Client Functions\frmSelfHelp.Designer.vb">
       <DependentUpon>frmSelfHelp.vb</DependentUpon>
     </Compile>
-    <Compile Include="ClientCP\frmSelfHelp.vb">
+    <Compile Include="ClientCP\Client Functions\frmSelfHelp.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientCP\frmShop.Designer.vb">
+    <Compile Include="ClientCP\Shop\frmShop.Designer.vb">
       <DependentUpon>frmShop.vb</DependentUpon>
     </Compile>
-    <Compile Include="ClientCP\frmShop.vb">
+    <Compile Include="ClientCP\Shop\frmShop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientCP\Shop\frmShopOrder.Designer.vb">
+      <DependentUpon>frmShopOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientCP\Shop\frmShopOrder.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEncDec.Designer.vb">
@@ -250,16 +274,16 @@
       <DependentUpon>frmLoad.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientCP\frmTopup.Designer.vb">
+    <Compile Include="ClientCP\Transaction\frmTopup.Designer.vb">
       <DependentUpon>frmTopup.vb</DependentUpon>
     </Compile>
-    <Compile Include="ClientCP\frmTopup.vb">
+    <Compile Include="ClientCP\Transaction\frmTopup.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientCP\frmTransaction.Designer.vb">
+    <Compile Include="ClientCP\Transaction\frmTransaction.Designer.vb">
       <DependentUpon>frmTransaction.vb</DependentUpon>
     </Compile>
-    <Compile Include="ClientCP\frmTransaction.vb">
+    <Compile Include="ClientCP\Transaction\frmTransaction.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -285,11 +309,17 @@
     <EmbeddedResource Include="AdminCP\frmAdLogin.resx">
       <DependentUpon>frmAdLogin.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminCP\frmAdOrderDetails.resx">
+      <DependentUpon>frmAdOrderDetails.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminCP\frmAdProductDetails.resx">
       <DependentUpon>frmAdProductDetails.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminCP\frmAdSetting.resx">
       <DependentUpon>frmAdSetting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCP\frmAdShopOrder.resx">
+      <DependentUpon>frmAdShopOrder.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminCP\frmAdTransaction.resx">
       <DependentUpon>frmAdTransaction.vb</DependentUpon>
@@ -312,52 +342,58 @@
     <EmbeddedResource Include="Class\shopItem.resx">
       <DependentUpon>shopItem.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientCP\frmAddPoint.resx">
+    <EmbeddedResource Include="ClientCP\Stat Point\frmAddPoint.resx">
       <DependentUpon>frmAddPoint.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientCP\frmChgPass.resx">
+    <EmbeddedResource Include="ClientCP\Client Functions\frmChgPass.resx">
       <DependentUpon>frmChgPass.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientCP\frmChgSchool.resx">
+    <EmbeddedResource Include="ClientCP\Client Functions\frmChgSchool.resx">
       <DependentUpon>frmChgSchool.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientCP\frmClearPoint.resx">
+    <EmbeddedResource Include="ClientCP\Stat Point\frmClearPoint.resx">
       <DependentUpon>frmClearPoint.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientCP\frmClearRed.resx">
+    <EmbeddedResource Include="ClientCP\Client Functions\frmClearRed.resx">
       <DependentUpon>frmClearRed.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientCP\frmCP.resx">
       <DependentUpon>frmCP.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientCP\frmFgtPwd.resx">
+    <EmbeddedResource Include="ClientCP\Client Functions\frmFgtPwd.resx">
       <DependentUpon>frmFgtPwd.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientCP\frmLogin.resx">
+    <EmbeddedResource Include="ClientCP\Client Functions\frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientCP\frmNotice.resx">
       <DependentUpon>frmNotice.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientCP\frmRanking.resx">
+    <EmbeddedResource Include="ClientCP\Shop\frmProductBrowser.resx">
+      <DependentUpon>frmProductBrowser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientCP\Client Functions\frmRanking.resx">
       <DependentUpon>frmRanking.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientCP\frmReborn.resx">
+    <EmbeddedResource Include="ClientCP\Client Functions\frmReborn.resx">
       <DependentUpon>frmReborn.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientCP\frmRegister.resx">
+    <EmbeddedResource Include="ClientCP\Client Functions\frmRegister.resx">
       <DependentUpon>frmRegister.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientCP\frmRename.resx">
+    <EmbeddedResource Include="ClientCP\Client Functions\frmRename.resx">
       <DependentUpon>frmRename.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientCP\frmSelfHelp.resx">
+    <EmbeddedResource Include="ClientCP\Client Functions\frmSelfHelp.resx">
       <DependentUpon>frmSelfHelp.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientCP\frmShop.resx">
+    <EmbeddedResource Include="ClientCP\Shop\frmShop.resx">
       <DependentUpon>frmShop.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientCP\frmTransaction.resx">
+    <EmbeddedResource Include="ClientCP\Shop\frmShopOrder.resx">
+      <DependentUpon>frmShopOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientCP\Transaction\frmTransaction.resx">
       <DependentUpon>frmTransaction.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEncDec.resx">
@@ -366,7 +402,7 @@
     <EmbeddedResource Include="frmLoad.resx">
       <DependentUpon>frmLoad.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientCP\frmTopup.resx">
+    <EmbeddedResource Include="ClientCP\Transaction\frmTopup.resx">
       <DependentUpon>frmTopup.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -391,6 +427,7 @@
   <ItemGroup>
     <Content Include="RanOnlineGS.ico" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

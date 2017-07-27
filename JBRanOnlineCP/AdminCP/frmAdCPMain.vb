@@ -45,4 +45,12 @@
         Catch ex As Exception
         End Try
     End Sub
+
+    Private Sub tsmShopTransaction_Click(sender As Object, e As EventArgs) Handles tsmShopTransaction.Click
+        Try
+            Dim newForm As frmAdShopOrder = New frmAdShopOrder
+            cpTab.TabPages.Add(newForm)
+        Catch ex As Exception
+        End Try
+    End Sub
 End Class

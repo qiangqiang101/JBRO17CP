@@ -30,13 +30,6 @@ Partial Class frmCP
         Me.lbl_Welcome = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.sideBar = New System.Windows.Forms.Panel()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.cpTab = New MdiTabControl.TabControl()
-        Me.llblChgPass = New System.Windows.Forms.LinkLabel()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.llblAdmin = New System.Windows.Forms.LinkLabel()
         Me.copyright = New System.Windows.Forms.Label()
         Me.fbTopup = New JBRanOnlineCP.flatButton()
         Me.fbRanking = New JBRanOnlineCP.flatButton()
@@ -49,6 +42,17 @@ Partial Class frmCP
         Me.fbAddPoint = New JBRanOnlineCP.flatButton()
         Me.fbReborn = New JBRanOnlineCP.flatButton()
         Me.fbNotice = New JBRanOnlineCP.flatButton()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.cpTab = New MdiTabControl.TabControl()
+        Me.llblChgPass = New System.Windows.Forms.LinkLabel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.llblAdmin = New System.Windows.Forms.LinkLabel()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.llblTopupHistory = New System.Windows.Forms.LinkLabel()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.llblShopHistory = New System.Windows.Forms.LinkLabel()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.sideBar.SuspendLayout()
         Me.SuspendLayout()
@@ -133,115 +137,6 @@ Partial Class frmCP
         Me.sideBar.Name = "sideBar"
         Me.sideBar.Size = New System.Drawing.Size(238, 655)
         Me.sideBar.TabIndex = 38
-        '
-        'Timer1
-        '
-        Me.Timer1.Enabled = True
-        Me.Timer1.Interval = 30000
-        '
-        'cpTab
-        '
-        Me.cpTab.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.cpTab.BackHighColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.cpTab.BackLowColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.cpTab.BorderColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.cpTab.BorderColorDisabled = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.cpTab.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.cpTab.ForeColor = System.Drawing.Color.White
-        Me.cpTab.ForeColorDisabled = System.Drawing.Color.Silver
-        Me.cpTab.Location = New System.Drawing.Point(238, 75)
-        Me.cpTab.MenuRenderer = Nothing
-        Me.cpTab.Name = "cpTab"
-        Me.cpTab.Size = New System.Drawing.Size(770, 655)
-        Me.cpTab.TabBackHighColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.cpTab.TabBackHighColorDisabled = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.cpTab.TabBackLowColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.cpTab.TabBorderEnhanced = True
-        Me.cpTab.TabCloseButtonImage = Nothing
-        Me.cpTab.TabCloseButtonImageDisabled = Nothing
-        Me.cpTab.TabCloseButtonImageHot = Nothing
-        Me.cpTab.TabGlassGradient = True
-        Me.cpTab.TabIndex = 39
-        Me.cpTab.TopSeparator = False
-        '
-        'llblChgPass
-        '
-        Me.llblChgPass.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.llblChgPass.AutoSize = True
-        Me.llblChgPass.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.llblChgPass.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.llblChgPass.ForeColor = System.Drawing.Color.White
-        Me.llblChgPass.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
-        Me.llblChgPass.LinkColor = System.Drawing.Color.White
-        Me.llblChgPass.Location = New System.Drawing.Point(854, 51)
-        Me.llblChgPass.Name = "llblChgPass"
-        Me.llblChgPass.Size = New System.Drawing.Size(74, 21)
-        Me.llblChgPass.TabIndex = 40
-        Me.llblChgPass.TabStop = True
-        Me.llblChgPass.Text = "帐户设置"
-        Me.llblChgPass.VisitedLinkColor = System.Drawing.Color.White
-        '
-        'Label2
-        '
-        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label2.AutoSize = True
-        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(934, 51)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(14, 21)
-        Me.Label2.TabIndex = 41
-        Me.Label2.Text = "|"
-        '
-        'LinkLabel1
-        '
-        Me.LinkLabel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.LinkLabel1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.LinkLabel1.ForeColor = System.Drawing.Color.White
-        Me.LinkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
-        Me.LinkLabel1.LinkColor = System.Drawing.Color.White
-        Me.LinkLabel1.Location = New System.Drawing.Point(954, 51)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(42, 21)
-        Me.LinkLabel1.TabIndex = 42
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "登出"
-        Me.LinkLabel1.VisitedLinkColor = System.Drawing.Color.White
-        '
-        'Label3
-        '
-        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(834, 51)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(14, 21)
-        Me.Label3.TabIndex = 43
-        Me.Label3.Text = "|"
-        Me.Label3.Visible = False
-        '
-        'llblAdmin
-        '
-        Me.llblAdmin.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.llblAdmin.AutoSize = True
-        Me.llblAdmin.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
-        Me.llblAdmin.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.llblAdmin.ForeColor = System.Drawing.Color.White
-        Me.llblAdmin.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
-        Me.llblAdmin.LinkColor = System.Drawing.Color.White
-        Me.llblAdmin.Location = New System.Drawing.Point(754, 51)
-        Me.llblAdmin.Name = "llblAdmin"
-        Me.llblAdmin.Size = New System.Drawing.Size(74, 21)
-        Me.llblAdmin.TabIndex = 44
-        Me.llblAdmin.TabStop = True
-        Me.llblAdmin.Text = "进入后台"
-        Me.llblAdmin.Visible = False
-        Me.llblAdmin.VisitedLinkColor = System.Drawing.Color.White
         '
         'copyright
         '
@@ -498,11 +393,184 @@ Partial Class frmCP
         Me.fbNotice.TabIndex = 40
         Me.fbNotice.Value = "游戏公告"
         '
+        'Timer1
+        '
+        Me.Timer1.Enabled = True
+        Me.Timer1.Interval = 30000
+        '
+        'cpTab
+        '
+        Me.cpTab.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.cpTab.BackHighColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.cpTab.BackLowColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.cpTab.BorderColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.cpTab.BorderColorDisabled = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.cpTab.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.cpTab.ForeColor = System.Drawing.Color.White
+        Me.cpTab.ForeColorDisabled = System.Drawing.Color.Silver
+        Me.cpTab.Location = New System.Drawing.Point(238, 75)
+        Me.cpTab.MenuRenderer = Nothing
+        Me.cpTab.Name = "cpTab"
+        Me.cpTab.Size = New System.Drawing.Size(770, 655)
+        Me.cpTab.TabBackHighColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.cpTab.TabBackHighColorDisabled = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.cpTab.TabBackLowColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.cpTab.TabBorderEnhanced = True
+        Me.cpTab.TabCloseButtonImage = Nothing
+        Me.cpTab.TabCloseButtonImageDisabled = Nothing
+        Me.cpTab.TabCloseButtonImageHot = Nothing
+        Me.cpTab.TabGlassGradient = True
+        Me.cpTab.TabIndex = 39
+        Me.cpTab.TopSeparator = False
+        '
+        'llblChgPass
+        '
+        Me.llblChgPass.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.llblChgPass.AutoSize = True
+        Me.llblChgPass.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.llblChgPass.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.llblChgPass.ForeColor = System.Drawing.Color.White
+        Me.llblChgPass.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.llblChgPass.LinkColor = System.Drawing.Color.White
+        Me.llblChgPass.Location = New System.Drawing.Point(854, 51)
+        Me.llblChgPass.Name = "llblChgPass"
+        Me.llblChgPass.Size = New System.Drawing.Size(74, 21)
+        Me.llblChgPass.TabIndex = 40
+        Me.llblChgPass.TabStop = True
+        Me.llblChgPass.Text = "帐户设置"
+        Me.llblChgPass.VisitedLinkColor = System.Drawing.Color.White
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.Location = New System.Drawing.Point(934, 51)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(14, 21)
+        Me.Label2.TabIndex = 41
+        Me.Label2.Text = "|"
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.LinkLabel1.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.LinkLabel1.ForeColor = System.Drawing.Color.White
+        Me.LinkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.LinkLabel1.LinkColor = System.Drawing.Color.White
+        Me.LinkLabel1.Location = New System.Drawing.Point(954, 51)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(42, 21)
+        Me.LinkLabel1.TabIndex = 42
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "登出"
+        Me.LinkLabel1.VisitedLinkColor = System.Drawing.Color.White
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(634, 51)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(14, 21)
+        Me.Label3.TabIndex = 43
+        Me.Label3.Text = "|"
+        Me.Label3.Visible = False
+        '
+        'llblAdmin
+        '
+        Me.llblAdmin.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.llblAdmin.AutoSize = True
+        Me.llblAdmin.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.llblAdmin.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.llblAdmin.ForeColor = System.Drawing.Color.White
+        Me.llblAdmin.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.llblAdmin.LinkColor = System.Drawing.Color.White
+        Me.llblAdmin.Location = New System.Drawing.Point(554, 51)
+        Me.llblAdmin.Name = "llblAdmin"
+        Me.llblAdmin.Size = New System.Drawing.Size(74, 21)
+        Me.llblAdmin.TabIndex = 44
+        Me.llblAdmin.TabStop = True
+        Me.llblAdmin.Text = "进入后台"
+        Me.llblAdmin.Visible = False
+        Me.llblAdmin.VisitedLinkColor = System.Drawing.Color.White
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Label4.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(834, 51)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(14, 21)
+        Me.Label4.TabIndex = 45
+        Me.Label4.Text = "|"
+        '
+        'llblTopupHistory
+        '
+        Me.llblTopupHistory.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.llblTopupHistory.AutoSize = True
+        Me.llblTopupHistory.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.llblTopupHistory.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.llblTopupHistory.ForeColor = System.Drawing.Color.White
+        Me.llblTopupHistory.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.llblTopupHistory.LinkColor = System.Drawing.Color.White
+        Me.llblTopupHistory.Location = New System.Drawing.Point(754, 51)
+        Me.llblTopupHistory.Name = "llblTopupHistory"
+        Me.llblTopupHistory.Size = New System.Drawing.Size(74, 21)
+        Me.llblTopupHistory.TabIndex = 46
+        Me.llblTopupHistory.TabStop = True
+        Me.llblTopupHistory.Text = "充值记录"
+        Me.llblTopupHistory.VisitedLinkColor = System.Drawing.Color.White
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label5.AutoSize = True
+        Me.Label5.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(734, 51)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(14, 21)
+        Me.Label5.TabIndex = 47
+        Me.Label5.Text = "|"
+        '
+        'llblShopHistory
+        '
+        Me.llblShopHistory.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.llblShopHistory.AutoSize = True
+        Me.llblShopHistory.BackColor = System.Drawing.Color.FromArgb(CType(CType(26, Byte), Integer), CType(CType(32, Byte), Integer), CType(CType(40, Byte), Integer))
+        Me.llblShopHistory.Font = New System.Drawing.Font("Segoe UI", 12.0!)
+        Me.llblShopHistory.ForeColor = System.Drawing.Color.White
+        Me.llblShopHistory.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.llblShopHistory.LinkColor = System.Drawing.Color.White
+        Me.llblShopHistory.Location = New System.Drawing.Point(654, 51)
+        Me.llblShopHistory.Name = "llblShopHistory"
+        Me.llblShopHistory.Size = New System.Drawing.Size(74, 21)
+        Me.llblShopHistory.TabIndex = 48
+        Me.llblShopHistory.TabStop = True
+        Me.llblShopHistory.Text = "购物记录"
+        Me.llblShopHistory.VisitedLinkColor = System.Drawing.Color.White
+        '
         'frmCP
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1008, 730)
+        Me.Controls.Add(Me.llblShopHistory)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.llblTopupHistory)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.llblAdmin)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.LinkLabel1)
@@ -554,4 +622,8 @@ Partial Class frmCP
     Friend WithEvents Label3 As Label
     Friend WithEvents llblAdmin As LinkLabel
     Friend WithEvents copyright As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents llblTopupHistory As LinkLabel
+    Friend WithEvents Label5 As Label
+    Friend WithEvents llblShopHistory As LinkLabel
 End Class

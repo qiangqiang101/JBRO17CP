@@ -7,7 +7,6 @@ Public Class frmAdTransDetails
     Public curency As String
 
     Dim xConn As sqlConn
-    Dim items As New ListViewItem()
 
     Private Sub frmAdTransDetails_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Processing()
@@ -82,7 +81,7 @@ Public Class frmAdTransDetails
         End If
     End Sub
 
-    Private Function GetUserPoint()
+    Private Function GetUserPoint() As Integer
         Dim result As Integer = 0
 
         Try
@@ -108,13 +107,20 @@ Public Class frmAdTransDetails
         Dim newPoint As Integer = currentPoint + ConvertMoney2Point(amount)
 
         xConn = New sqlConn()
-        xConn.connectUser("Update UserInfo Set [UserType]='2', [UserPoint]='" & newPoint & "' Where UserName='" & lblUserName.Text & "';")
+
+        Select Case frmCP.userType
+            Case 32
+                xConn.connectUser("Update UserInfo Set [UserPoint]='" & newPoint & "' Where UserName='" & lblUserName.Text & "';")
+            Case Else
+                xConn.connectUser("Update UserInfo Set [UserType]='2', [UserPoint]='" & newPoint & "' Where UserName='" & lblUserName.Text & "';")
+        End Select
+
         xConn.UserSQLComm.Connection = xConn.UserSQLConn
         xConn.UserSQLComm.ExecuteNonQuery()
         xConn.UserSQLConn.Close()
     End Sub
 
-    Private Function ConvertMoney2Point(amount As Integer)
+    Private Function ConvertMoney2Point(amount As Integer) As Integer
         Dim result As Integer = 0
         Select Case curency
             Case "马币"
