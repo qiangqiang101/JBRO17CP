@@ -1,5 +1,8 @@
 ﻿Imports System.Data.Sql
 Imports System.Data.SqlClient
+Imports System.IO
+Imports System.Net
+Imports System.Threading
 
 Public Class frmCP
 
@@ -23,6 +26,8 @@ Public Class frmCP
     'Settings
     Public FormName As String '= "新劲爆乱Online - 控制面板"
 
+    Dim patcherthread As Thread
+
     Private Sub frmCP_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         Dim result As Integer = MessageBox.Show("你确定要离开？", "退出", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
         If result = DialogResult.Yes Then
@@ -35,9 +40,9 @@ Public Class frmCP
     End Sub
 
     Private Sub frmCP_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
+        CheckForIllegalCrossThreadCalls = False
         Me.Text = FormName & " - 控制面板"
         copyright.Text = String.Format("Version: {1}{0}{2}", vbNewLine, My.Application.Info.Version, My.Application.Info.Copyright)
-
     End Sub
 
     Public Function OnlineCheck(ByVal _ChaName As String)
@@ -216,7 +221,29 @@ Public Class frmCP
         End Try
     End Sub
 
+    Private Sub checkForUpdate()
+        Try
+            Dim wc As WebClient = New WebClient()
+            Dim sr As StreamReader = New StreamReader(wc.OpenRead("https://raw.githubusercontent.com/qiangqiang101/JBRO17CP/master/JBRanOnlineCP/Resources/version.txt"))
+            Dim webversion As String = sr.ReadToEnd
+            Dim appversion As String = My.Application.Info.Version.ToString
+
+
+            If webversion <> appversion Then
+                Dim result As Integer = MessageBox.Show("发现新版本，是否要更新？", "新版本", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                If result = DialogResult.Yes Then
+                    Process.Start(String.Format("{0}\cppatcher.exe", My.Application.Info.DirectoryPath), "/updatecp")
+                    End
+                End If
+            End If
+        Catch ex As Exception
+        End Try
+    End Sub
+
     Private Sub frmCP_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        patcherthread = New Thread(AddressOf checkForUpdate)
+        patcherthread.Start()
+
         If frmLogin.PasswordisMd5 Then
             Try
                 Dim newForm As frmChgPass = New frmChgPass

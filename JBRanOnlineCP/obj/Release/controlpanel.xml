@@ -22,5 +22,10 @@ controlpanel
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:JBRanOnlineCP.My.Resources.Resources.version">
+<summary>
+  Looks up a localized string similar to 1.0.727.1.
+</summary>
+</member>
 </members>
 </doc>

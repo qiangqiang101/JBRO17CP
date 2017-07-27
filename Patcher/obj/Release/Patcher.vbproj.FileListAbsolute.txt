@@ -1,0 +1,10 @@
+F:\Users\Bartholomew\Documents\GitHub\JBRO17CP\Patcher\obj\Release\Patcher.frmPatch.resources
+F:\Users\Bartholomew\Documents\GitHub\JBRO17CP\Patcher\obj\Release\Patcher.Resources.resources
+F:\Users\Bartholomew\Documents\GitHub\JBRO17CP\Patcher\obj\Release\Patcher.vbproj.GenerateResource.Cache
+F:\Users\Bartholomew\Documents\GitHub\JBRO17CP\Patcher\bin\Release\cppatcher.pdb
+F:\Users\Bartholomew\Documents\GitHub\JBRO17CP\Patcher\bin\Release\cppatcher.xml
+F:\Users\Bartholomew\Documents\GitHub\JBRO17CP\Patcher\obj\Release\cppatcher.xml
+F:\Users\Bartholomew\Documents\GitHub\JBRO17CP\Patcher\obj\Release\cppatcher.pdb
+F:\Users\Bartholomew\Documents\GitHub\JBRO17CP\Patcher\bin\Release\cppatcher.exe.config
+F:\Users\Bartholomew\Documents\GitHub\JBRO17CP\Patcher\bin\Release\cppatcher.exe
+F:\Users\Bartholomew\Documents\GitHub\JBRO17CP\Patcher\obj\Release\cppatcher.exe
