@@ -426,6 +426,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="RanOnlineGS.ico" />
+    <None Include="Resources\version.txt" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
