@@ -89,24 +89,28 @@ Public Class frmShopOrder
     End Function
 
     Private Sub lvHistory_MouseClick(sender As Object, e As MouseEventArgs) Handles lvHistory.MouseClick
-        If lvHistory.SelectedItems.Count = 0 Then Exit Sub
+        Try
+            If lvHistory.SelectedItems.Count = 0 Then Exit Sub
 
-        Dim mousePos As Point = lvHistory.PointToClient(Control.MousePosition)
-        Dim hitTest As ListViewHitTestInfo = lvHistory.HitTest(mousePos)
-        Dim info As ListViewHitTestInfo = lvHistory.HitTest(e.Y, e.Y)
-        Dim columnIndex As Integer = hitTest.Item.SubItems.IndexOf(hitTest.SubItem)
-        Dim rowIndex As String = info.SubItem.Text
+            Dim mousePos As Point = lvHistory.PointToClient(Control.MousePosition)
+            Dim hitTest As ListViewHitTestInfo = lvHistory.HitTest(mousePos)
+            Dim info As ListViewHitTestInfo = lvHistory.HitTest(e.Y, e.Y)
+            Dim columnIndex As Integer = hitTest.Item.SubItems.IndexOf(hitTest.SubItem)
+            Dim rowIndex As String = info.SubItem.Text
 
-        If Not IsNothing(info.SubItem) Then
-            Dim cancelString As String = lvHistory.SelectedItems(0).SubItems(9).Text
-            If ((columnIndex = 9 AndAlso String.Equals(lvHistory.SelectedItems(0).SubItems(1).Text, rowIndex)) AndAlso cancelString = "取消") Then
-                Dim result As Integer = MessageBox.Show("你确定要取消？", "取消", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
-                If result = DialogResult.Yes Then
-                    CancelPurchase(rowIndex)
-                    LoadOrderHistory()
+            If Not IsNothing(info.SubItem) Then
+                Dim cancelString As String = lvHistory.SelectedItems(0).SubItems(9).Text
+                If ((columnIndex = 9 AndAlso String.Equals(lvHistory.SelectedItems(0).SubItems(1).Text, rowIndex)) AndAlso cancelString = "取消") Then
+                    Dim result As Integer = MessageBox.Show("你确定要取消？", "取消", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                    If result = DialogResult.Yes Then
+                        CancelPurchase(rowIndex)
+                        LoadOrderHistory()
+                    End If
                 End If
             End If
-        End If
+        Catch ex As Exception
+            'MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
+        End Try
     End Sub
 
     Private Sub CancelPurchase(id As Integer)

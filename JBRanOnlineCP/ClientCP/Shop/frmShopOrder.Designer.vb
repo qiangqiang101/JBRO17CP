@@ -50,7 +50,7 @@ Partial Class frmShopOrder
         Me.lvHistory.Location = New System.Drawing.Point(12, 12)
         Me.lvHistory.MultiSelect = False
         Me.lvHistory.Name = "lvHistory"
-        Me.lvHistory.Size = New System.Drawing.Size(981, 561)
+        Me.lvHistory.Size = New System.Drawing.Size(1106, 561)
         Me.lvHistory.TabIndex = 33
         Me.lvHistory.UseCompatibleStateImageBehavior = False
         Me.lvHistory.View = System.Windows.Forms.View.Details
@@ -117,7 +117,7 @@ Partial Class frmShopOrder
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 21.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1005, 585)
+        Me.ClientSize = New System.Drawing.Size(1130, 585)
         Me.Controls.Add(Me.lvHistory)
         Me.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.Black
