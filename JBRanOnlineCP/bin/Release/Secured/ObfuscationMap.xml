@@ -1,0 +1,1056 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AgileDotNet Version="6.4.0.24" Time="28/Jul/2017 1:56:05 AM">
+  <Module N="controlpanel, Version=1.0.728.1, Culture=neutral, PublicKeyToken=null">
+    <Type N="&lt;Module&gt;" />
+    <Type N="JBRanOnlineCP.frmAdCPMain" ON="ohM=.oRM=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void tsmSetting_Click(Object sender, System.EventArgs e)" ON="pRM=" />
+      <Method N="Void tsmUser_Click(Object sender, System.EventArgs e)" ON="phM=" />
+      <Method N="Void frmAdCPMain_FormClosed(Object sender, System.Windows.Forms.FormClosedEventArgs e)" ON="pxM=" />
+      <Method N="Void tsmTransaction_Click(Object sender, System.EventArgs e)" ON="qBM=" />
+      <Method N="Void tsmProducts_Click(Object sender, System.EventArgs e)" ON="qRM=" />
+      <Method N="Void tsmAddProduct_Click(Object sender, System.EventArgs e)" ON="qhM=" />
+      <Method N="Void tsmShopTransaction_Click(Object sender, System.EventArgs e)" ON="qxM=" />
+      <Field N="components" ON="oxM=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmAdLogin" ON="ohM=.rBM=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void btn_Login_Click(Object sender, System.EventArgs e)" ON="rhM=" />
+      <Method N="Void frmAdminLogin_FormClosing(Object sender, System.Windows.Forms.FormClosingEventArgs e)" ON="rxM=" />
+      <Method N="Void frmAdLogin_Shown(Object sender, System.EventArgs e)" ON="sBM=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="AdminPass" ON="rRM=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmAdOrderDetails" ON="ohM=.sRM=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void frmAdOrderDetails_Load(Object sender, System.EventArgs e)" ON="thM=" />
+      <Method N="Void Processing()" ON="txM=" />
+      <Method N="Void btnApprove_Click(Object sender, System.EventArgs e)" ON="uBM=" />
+      <Method N="Void btnReject_Click(Object sender, System.EventArgs e)" ON="uRM=" />
+      <Method N="Int32 GetUserPoint()" ON="uhM=" />
+      <Method N="Void UpdateUserPoint()" ON="uxM=" />
+      <Method N="Int32 GetUserMoney()" ON="vBM=" />
+      <Method N="Void UpdateUserMoney()" ON="vRM=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="amount" ON="shM=" />
+      <Field N="curency" ON="sxM=" />
+      <Field N="xConn" ON="tBM=" />
+      <Field N="items" ON="tRM=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmAdProductDetails" ON="ohM=.vhM=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void btn_Save_Click(Object sender, System.EventArgs e)" ON="wRM=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="editMode" ON="vxM=" />
+      <Field N="id" ON="wBM=" />
+      <Field N="xConn" ON="tBM=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmAdSetting" ON="ohM=.whM=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void btn_Save_Click(Object sender, System.EventArgs e)" ON="wRM=" />
+      <Method N="Void frmAdminSetting_Load(Object sender, System.EventArgs e)" ON="wxM=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="xConn" ON="tBM=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmAdShopOrder" ON="ohM=.xBM=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void RefreshTransaction()" ON="xRM=" />
+      <Method N="Void frmAdShopOrder_Load(Object sender, System.EventArgs e)" ON="xhM=" />
+      <Method N="Void Timer1_Tick(Object sender, System.EventArgs e)" ON="xxM=" />
+      <Method N="Void lvUser_DoubleClick(Object sender, System.EventArgs e)" ON="yBM=" />
+      <Method N="String C2Date(String Tarikh)" ON="yRM=" />
+      <Method N="Void btn_SearchUser_Click(Object sender, System.EventArgs e)" ON="yhM=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="xConn" ON="tBM=" />
+      <Field N="items" ON="tRM=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmAdTransaction" ON="ohM=.yxM=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void btn_SearchUser_Click(Object sender, System.EventArgs e)" ON="yhM=" />
+      <Method N="Void RefreshTransaction()" ON="xRM=" />
+      <Method N="Void frmAdTransaction_Load(Object sender, System.EventArgs e)" ON="zBM=" />
+      <Method N="Void Timer1_Tick(Object sender, System.EventArgs e)" ON="xxM=" />
+      <Method N="Void lvUser_DoubleClick(Object sender, System.EventArgs e)" ON="yBM=" />
+      <Method N="String C2Date(String Tarikh)" ON="yRM=" />
+      <Method N="String C2Time(String Time)" ON="zRM=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="xConn" ON="tBM=" />
+      <Field N="items" ON="tRM=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmAdTransDetails" ON="ohM=.zhM=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void frmAdTransDetails_Load(Object sender, System.EventArgs e)" ON="zxM=" />
+      <Method N="Void Processing()" ON="txM=" />
+      <Method N="Void btnApprove_Click(Object sender, System.EventArgs e)" ON="uBM=" />
+      <Method N="Void btnReject_Click(Object sender, System.EventArgs e)" ON="uRM=" />
+      <Method N="Int32 GetUserPoint()" ON="uhM=" />
+      <Method N="Void UpdateUserPoint()" ON="uxM=" />
+      <Method N="Int32 ConvertMoney2Point(Int32 amount)" ON="0BM=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="amount" ON="shM=" />
+      <Field N="curency" ON="sxM=" />
+      <Field N="xConn" ON="tBM=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmAdUserEdit" ON="ohM=.0RM=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void btn_Save_Click(Object sender, System.EventArgs e)" ON="wRM=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="xConn" ON="tBM=" />
+      <Field N="UserNum" ON="0hM=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmAdUserSetting" ON="ohM=.0xM=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void btn_SearchUser_Click(Object sender, System.EventArgs e)" ON="yhM=" />
+      <Method N="Void lvUser_DoubleClick(Object sender, System.EventArgs e)" ON="yBM=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="xConn" ON="tBM=" />
+      <Field N="items" ON="tRM=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmAdShopMgmt" ON="ohM=.1BM=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void RefreshProducts()" ON="1RM=" />
+      <Method N="Void frmShopMgmt_Load(Object sender, System.EventArgs e)" ON="1hM=" />
+      <Method N="Void btn_Search_Click(Object sender, System.EventArgs e)" ON="1xM=" />
+      <Method N="Void lvProducts_DoubleClick(Object sender, System.EventArgs e)" ON="2BM=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="xConn" ON="tBM=" />
+      <Field N="items" ON="tRM=" />
+    </Type>
+    <Type N="JBRanOnlineCP.cfgRead" ON="ohM=.2RM=">
+      <Method N="String ReadCfgValue(String key, String file)" ON="2hM=" />
+      <Method N="Void WriteCfgValue(String key, String value, String file__1)" ON="2xM=" />
+    </Type>
+    <Type N="JBRanOnlineCP.encryption" ON="ohM=.3BM=">
+      <Method N="String Decrypt(String cipherText)" ON="3RM=" />
+      <Method N="String Encrypt(String plainText)" ON="3hM=" />
+      <Method N="String Md5FromString(String Source)" ON="3xM=" />
+    </Type>
+    <Type N="JBRanOnlineCP.shopItem" ON="ohM=.4BM=">
+      <Property N="ItemID" ON="7xM=">
+        <Getter N="Int32 get_ItemID()" ON="7RM=" />
+        <Setter N="Void set_ItemID(Int32 value)" ON="7hM=" />
+      </Property>
+      <Property N="Value" ON="8hM=">
+        <Getter N="String get_Value()" ON="8BM=" />
+        <Setter N="Void set_Value(String value)" ON="8RM=" />
+      </Property>
+      <Property N="Icon" ON="9RM=">
+        <Getter N="System.Drawing.Image get_Icon()" ON="8xM=" />
+        <Setter N="Void set_Icon(System.Drawing.Image value)" ON="9BM=" />
+      </Property>
+      <Property N="IconSizeMode" ON="/BM=">
+        <Getter N="System.Windows.Forms.PictureBoxSizeMode get_IconSizeMode()" ON="9hM=" />
+        <Setter N="Void set_IconSizeMode(System.Windows.Forms.PictureBoxSizeMode value)" ON="9xM=" />
+      </Property>
+      <Property N="IconBackground" ON="/xM=">
+        <Getter N="System.Drawing.Image get_IconBackground()" ON="/RM=" />
+        <Setter N="Void set_IconBackground(System.Drawing.Image value)" ON="/hM=" />
+      </Property>
+      <Property N="IconBackgroundSizeMode" ON="AhQ=">
+        <Getter N="System.Windows.Forms.ImageLayout get_IconBackgroundSizeMode()" ON="ABQ=" />
+        <Setter N="Void set_IconBackgroundSizeMode(System.Windows.Forms.ImageLayout value)" ON="ARQ=" />
+      </Property>
+      <Property N="NormalColor" ON="BRQ=">
+        <Getter N="System.Drawing.Color get_NormalColor()" ON="AxQ=" />
+        <Setter N="Void set_NormalColor(System.Drawing.Color value)" ON="BBQ=" />
+      </Property>
+      <Property N="NormalTextColor" ON="CBQ=">
+        <Getter N="System.Drawing.Color get_NormalTextColor()" ON="BhQ=" />
+        <Setter N="Void set_NormalTextColor(System.Drawing.Color value)" ON="BxQ=" />
+      </Property>
+      <Property N="HoverColor" ON="CxQ=">
+        <Getter N="System.Drawing.Color get_HoverColor()" ON="CRQ=" />
+        <Setter N="Void set_HoverColor(System.Drawing.Color value)" ON="ChQ=" />
+      </Property>
+      <Property N="HoverTextColor" ON="DhQ=">
+        <Getter N="System.Drawing.Color get_HoverTextColor()" ON="DBQ=" />
+        <Setter N="Void set_HoverTextColor(System.Drawing.Color value)" ON="DRQ=" />
+      </Property>
+      <Property N="ActiveColor" ON="ERQ=">
+        <Getter N="System.Drawing.Color get_ActiveColor()" ON="DxQ=" />
+        <Setter N="Void set_ActiveColor(System.Drawing.Color value)" ON="EBQ=" />
+      </Property>
+      <Property N="ActiveTextColor" ON="FBQ=">
+        <Getter N="System.Drawing.Color get_ActiveTextColor()" ON="EhQ=" />
+        <Setter N="Void set_ActiveTextColor(System.Drawing.Color value)" ON="ExQ=" />
+      </Property>
+      <Property N="DisabledColor" ON="FxQ=">
+        <Getter N="System.Drawing.Color get_DisabledColor()" ON="FRQ=" />
+        <Setter N="Void set_DisabledColor(System.Drawing.Color value)" ON="FhQ=" />
+      </Property>
+      <Property N="CurrencyMethod" ON="GhQ=">
+        <Getter N="JBRanOnlineCP.shopItem+CurrencyType get_CurrencyMethod()" ON="GBQ=" />
+        <Setter N="Void set_CurrencyMethod(JBRanOnlineCP.shopItem+CurrencyType value)" ON="GRQ=" />
+      </Property>
+      <Property N="Price" ON="HRQ=">
+        <Getter N="Int32 get_Price()" ON="GxQ=" />
+        <Setter N="Void set_Price(Int32 value)" ON="HBQ=" />
+      </Property>
+      <Property N="Remaining" ON="IBQ=">
+        <Getter N="Int32 get_Remaining()" ON="HhQ=" />
+        <Setter N="Void set_Remaining(Int32 value)" ON="HxQ=" />
+      </Property>
+      <Property N="Desciption" ON="IxQ=">
+        <Getter N="String get_Desciption()" ON="IRQ=" />
+        <Setter N="Void set_Desciption(String value)" ON="IhQ=" />
+      </Property>
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void .ctor()" />
+      <Method N="Void SetWebImage(String url)" ON="JBQ=" />
+      <Method N="Void Icon_MouseDown(Object sender, System.Windows.Forms.MouseEventArgs e)" ON="JRQ=" />
+      <Method N="Void Icon_MouseUp(Object sender, System.Windows.Forms.MouseEventArgs e)" ON="JhQ=" />
+      <Method N="Void flatButton_EnabledChanged(Object sender, System.EventArgs e)" ON="JxQ=" />
+      <Method N="Void flatButton_MouseEnter(Object sender, System.EventArgs e)" ON="KBQ=" />
+      <Method N="Void flatButton_MouseLeave(Object sender, System.EventArgs e)" ON="KRQ=" />
+      <Method N="Void HandleClick(Object sender, System.EventArgs e)" ON="KhQ=" />
+      <Method N="Void shopItem_Load(Object sender, System.EventArgs e)" ON="KxQ=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="_ID" ON="4RM=" />
+      <Field N="_normalcolor" ON="4hM=" />
+      <Field N="_normalTextColor" ON="4xM=" />
+      <Field N="_hovercolor" ON="5BM=" />
+      <Field N="_hovertextcolor" ON="5RM=" />
+      <Field N="_activeColor" ON="5hM=" />
+      <Field N="_activetextcolor" ON="5xM=" />
+      <Field N="_disabledColor" ON="6BM=" />
+      <Field N="_CurrencyMethod" ON="6RM=" />
+      <Field N="_price" ON="6hM=" />
+      <Field N="_remaining" ON="6xM=" />
+      <Field N="_desc" ON="7BM=" />
+    </Type>
+    <Type N="JBRanOnlineCP.sqlConn" ON="ohM=.LBQ=">
+      <Method N="Void .cctor()" />
+      <Method N="Void .ctor()" />
+      <Method N="Boolean connectUser(Object userSqlString)" ON="ORQ=" />
+      <Method N="Boolean connectGame(Object gameSqlString)" ON="OhQ=" />
+      <Method N="System.Collections.ArrayList getUser()" ON="OxQ=" />
+      <Field N="userSqlString" ON="LRQ=" />
+      <Field N="gameSqlString" ON="LhQ=" />
+      <Field N="err" ON="LxQ=" />
+      <Field N="Server_Enc" ON="MBQ=" />
+      <Field N="User_Enc" ON="MRQ=" />
+      <Field N="Password_Enc" ON="MhQ=" />
+      <Field N="Server" ON="MxQ=" />
+      <Field N="UserDB" ON="NBQ=" />
+      <Field N="GameDB" ON="NRQ=" />
+      <Field N="User" ON="NhQ=" />
+      <Field N="Password" ON="NxQ=" />
+      <Field N="dataReturned" ON="OBQ=" />
+    </Type>
+    <Type N="JBRanOnlineCP.flatButton" ON="ohM=.PBQ=">
+      <Property N="Value" ON="8hM=">
+        <Getter N="String get_Value()" ON="8BM=" />
+        <Setter N="Void set_Value(String value)" ON="8RM=" />
+      </Property>
+      <Property N="Icon" ON="9RM=">
+        <Getter N="System.Drawing.Image get_Icon()" ON="8xM=" />
+        <Setter N="Void set_Icon(System.Drawing.Image value)" ON="9BM=" />
+      </Property>
+      <Property N="IconSizeMode" ON="/BM=">
+        <Getter N="System.Windows.Forms.PictureBoxSizeMode get_IconSizeMode()" ON="9hM=" />
+        <Setter N="Void set_IconSizeMode(System.Windows.Forms.PictureBoxSizeMode value)" ON="9xM=" />
+      </Property>
+      <Property N="IconBackground" ON="/xM=">
+        <Getter N="System.Drawing.Image get_IconBackground()" ON="/RM=" />
+        <Setter N="Void set_IconBackground(System.Drawing.Image value)" ON="/hM=" />
+      </Property>
+      <Property N="IconBackgroundSizeMode" ON="AhQ=">
+        <Getter N="System.Windows.Forms.ImageLayout get_IconBackgroundSizeMode()" ON="ABQ=" />
+        <Setter N="Void set_IconBackgroundSizeMode(System.Windows.Forms.ImageLayout value)" ON="ARQ=" />
+      </Property>
+      <Property N="NormalColor" ON="BRQ=">
+        <Getter N="System.Drawing.Color get_NormalColor()" ON="AxQ=" />
+        <Setter N="Void set_NormalColor(System.Drawing.Color value)" ON="BBQ=" />
+      </Property>
+      <Property N="NormalTextColor" ON="CBQ=">
+        <Getter N="System.Drawing.Color get_NormalTextColor()" ON="BhQ=" />
+        <Setter N="Void set_NormalTextColor(System.Drawing.Color value)" ON="BxQ=" />
+      </Property>
+      <Property N="HoverColor" ON="CxQ=">
+        <Getter N="System.Drawing.Color get_HoverColor()" ON="CRQ=" />
+        <Setter N="Void set_HoverColor(System.Drawing.Color value)" ON="ChQ=" />
+      </Property>
+      <Property N="HoverTextColor" ON="DhQ=">
+        <Getter N="System.Drawing.Color get_HoverTextColor()" ON="DBQ=" />
+        <Setter N="Void set_HoverTextColor(System.Drawing.Color value)" ON="DRQ=" />
+      </Property>
+      <Property N="ActiveColor" ON="ERQ=">
+        <Getter N="System.Drawing.Color get_ActiveColor()" ON="DxQ=" />
+        <Setter N="Void set_ActiveColor(System.Drawing.Color value)" ON="EBQ=" />
+      </Property>
+      <Property N="ActiveTextColor" ON="FBQ=">
+        <Getter N="System.Drawing.Color get_ActiveTextColor()" ON="EhQ=" />
+        <Setter N="Void set_ActiveTextColor(System.Drawing.Color value)" ON="ExQ=" />
+      </Property>
+      <Property N="DisabledColor" ON="FxQ=">
+        <Getter N="System.Drawing.Color get_DisabledColor()" ON="FRQ=" />
+        <Setter N="Void set_DisabledColor(System.Drawing.Color value)" ON="FhQ=" />
+      </Property>
+      <Property N="IconStyle" ON="QBQ=">
+        <Getter N="JBRanOnlineCP.flatButton+IconImageStyle get_IconStyle()" ON="PhQ=" />
+        <Setter N="Void set_IconStyle(JBRanOnlineCP.flatButton+IconImageStyle value)" ON="PxQ=" />
+      </Property>
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void .ctor()" />
+      <Method N="Void Icon_MouseDown(Object sender, System.Windows.Forms.MouseEventArgs e)" ON="JRQ=" />
+      <Method N="Void Icon_MouseUp(Object sender, System.Windows.Forms.MouseEventArgs e)" ON="JhQ=" />
+      <Method N="Void flatButton_EnabledChanged(Object sender, System.EventArgs e)" ON="JxQ=" />
+      <Method N="Void flatButton_MouseEnter(Object sender, System.EventArgs e)" ON="KBQ=" />
+      <Method N="Void flatButton_MouseLeave(Object sender, System.EventArgs e)" ON="KRQ=" />
+      <Method N="Void flatButton_Load(Object sender, System.EventArgs e)" ON="QRQ=" />
+      <Method N="Void HandleClick(Object sender, System.EventArgs e)" ON="KhQ=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="_normalcolor" ON="4hM=" />
+      <Field N="_normalTextColor" ON="4xM=" />
+      <Field N="_hovercolor" ON="5BM=" />
+      <Field N="_hovertextcolor" ON="5RM=" />
+      <Field N="_activeColor" ON="5hM=" />
+      <Field N="_activetextcolor" ON="5xM=" />
+      <Field N="_disabledColor" ON="6BM=" />
+      <Field N="_iconstyle" ON="PRQ=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmAddPoint" ON="ohM=.QhQ=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void frmAddPoint_Load(Object sender, System.EventArgs e)" ON="TxQ=" />
+      <Method N="Void LoadAddStat()" ON="UBQ=" />
+      <Method N="Void btn_AddStat_Click(Object sender, System.EventArgs e)" ON="URQ=" />
+      <Method N="Void cmb_JDChar_SelectedIndexChanged(Object sender, System.EventArgs e)" ON="UhQ=" />
+      <Method N="Void NumbericKeyPress(Object sender, System.Windows.Forms.KeyPressEventArgs e)" ON="UxQ=" />
+      <Method N="Void RefreshData()" ON="VBQ=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="nl" ON="QxQ=" />
+      <Field N="xConn" ON="tBM=" />
+      <Field N="ChaIntel" ON="RBQ=" />
+      <Field N="ChaLevel" ON="RRQ=" />
+      <Field N="ChaMoney" ON="RhQ=" />
+      <Field N="ChaStRemain" ON="RxQ=" />
+      <Field N="ChaRBDate" ON="SBQ=" />
+      <Field N="ChaSchool" ON="SRQ=" />
+      <Field N="ChaBright" ON="ShQ=" />
+      <Field N="ChaCNDate" ON="SxQ=" />
+      <Field N="UserLoginState" ON="TBQ=" />
+      <Field N="AddStatGold" ON="TRQ=" />
+      <Field N="AddStatJifen" ON="ThQ=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmChgPass" ON="ohM=.VRQ=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void frmChgPass_Load(Object sender, System.EventArgs e)" ON="WRQ=" />
+      <Method N="Void btn_ChgPwd_Click(Object sender, System.EventArgs e)" ON="WhQ=" />
+      <Method N="Void RefreshData()" ON="VBQ=" />
+      <Method N="Void RefreshData2()" ON="WxQ=" />
+      <Method N="Void btnUpdateInfo_Click(Object sender, System.EventArgs e)" ON="XBQ=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="xConn" ON="tBM=" />
+      <Field N="r" ON="VhQ=" />
+      <Field N="PasswordEncrypt" ON="VxQ=" />
+      <Field N="skipCheck" ON="WBQ=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmChgSchool" ON="ohM=.XRQ=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void frmChgSchool_Load(Object sender, System.EventArgs e)" ON="YBQ=" />
+      <Method N="Void LoadChangeSchool()" ON="YRQ=" />
+      <Method N="Void cmb_ZXCha_SelectedIndexChanged(Object sender, System.EventArgs e)" ON="YhQ=" />
+      <Method N="Void btn_ChangeSchool_Click(Object sender, System.EventArgs e)" ON="YxQ=" />
+      <Method N="Void RefreshData()" ON="VBQ=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="nl" ON="QxQ=" />
+      <Field N="xConn" ON="tBM=" />
+      <Field N="ChaSchool" ON="SRQ=" />
+      <Field N="ChaMoney" ON="RhQ=" />
+      <Field N="ChangeSchoolGold" ON="XhQ=" />
+      <Field N="ChangeSchoolJifen" ON="XxQ=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmClearPoint" ON="ohM=.ZBQ=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void frmClearPoint_Load(Object sender, System.EventArgs e)" ON="ZRQ=" />
+      <Method N="Void LoadClearStat()" ON="ZhQ=" />
+      <Method N="Void btn_ClearStat_Click(Object sender, System.EventArgs e)" ON="ZxQ=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="nl" ON="QxQ=" />
+      <Field N="xConn" ON="tBM=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmClearRed" ON="ohM=.aBQ=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void frmClearRed_Load(Object sender, System.EventArgs e)" ON="axQ=" />
+      <Method N="Void LoadClearPK()" ON="bBQ=" />
+      <Method N="Void btn_ClearPK_Click(Object sender, System.EventArgs e)" ON="bRQ=" />
+      <Method N="Void NumbericKeyPress(Object sender, System.Windows.Forms.KeyPressEventArgs e)" ON="UxQ=" />
+      <Method N="Void RefreshData()" ON="VBQ=" />
+      <Method N="Void btnClearPKJifen_Click(Object sender, System.EventArgs e)" ON="bhQ=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="nl" ON="QxQ=" />
+      <Field N="xConn" ON="tBM=" />
+      <Field N="ChaBright" ON="ShQ=" />
+      <Field N="ChaMoney" ON="RhQ=" />
+      <Field N="ClearPKGold" ON="aRQ=" />
+      <Field N="ClearPKJifen" ON="ahQ=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmCP" ON="ohM=.bxQ=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void frmCP_FormClosing(Object sender, System.Windows.Forms.FormClosingEventArgs e)" ON="dhQ=" />
+      <Method N="Void frmCP_Load(Object sender, System.EventArgs e)" ON="dxQ=" />
+      <Method N="Object OnlineCheck(String _ChaName)" ON="eBQ=" />
+      <Method N="Void fbNotice_Click(Object sender, System.EventArgs e)" ON="eRQ=" />
+      <Method N="Void fbReborn_Click(Object sender, System.EventArgs e)" ON="ehQ=" />
+      <Method N="Void fbAddPoint_Click(Object sender, System.EventArgs e)" ON="exQ=" />
+      <Method N="Void fbResetPoint_Click(Object sender, System.EventArgs e)" ON="fBQ=" />
+      <Method N="Void fbChgSchool_Click(Object sender, System.EventArgs e)" ON="fRQ=" />
+      <Method N="Void fbClearRed_Click(Object sender, System.EventArgs e)" ON="fhQ=" />
+      <Method N="Void fbRename_Click(Object sender, System.EventArgs e)" ON="fxQ=" />
+      <Method N="Void fbKick_Click(Object sender, System.EventArgs e)" ON="gBQ=" />
+      <Method N="Void fbRanking_Click(Object sender, System.EventArgs e)" ON="gRQ=" />
+      <Method N="Void llblChgPass_LinkClicked(Object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e)" ON="ghQ=" />
+      <Method N="Void LinkLabel1_LinkClicked(Object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e)" ON="gxQ=" />
+      <Method N="Void Timer1_Tick(Object sender, System.EventArgs e)" ON="xxM=" />
+      <Method N="Void RefreshData()" ON="VBQ=" />
+      <Method N="Void UpdateData()" ON="hBQ=" />
+      <Method N="Void fbTopup_Click(Object sender, System.EventArgs e)" ON="hRQ=" />
+      <Method N="Void checkForUpdate()" ON="hhQ=" />
+      <Method N="Void frmCP_Shown(Object sender, System.EventArgs e)" ON="hxQ=" />
+      <Method N="Boolean AdjustPoints(Int32 howMany)" ON="iBQ=" />
+      <Method N="Void llblAdmin_LinkClicked(Object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e)" ON="iRQ=" />
+      <Method N="Void fbStore_Click(Object sender, System.EventArgs e)" ON="ihQ=" />
+      <Method N="Void llblTopupHistory_LinkClicked(Object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e)" ON="ixQ=" />
+      <Method N="Void llblShopHistory_LinkClicked(Object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e)" ON="jBQ=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="xConn" ON="tBM=" />
+      <Field N="userType" ON="cBQ=" />
+      <Field N="userNum" ON="cRQ=" />
+      <Field N="myPoint" ON="chQ=" />
+      <Field N="myUserName" ON="cxQ=" />
+      <Field N="nl" ON="QxQ=" />
+      <Field N="ChaIntel" ON="RBQ=" />
+      <Field N="ChaLevel" ON="RRQ=" />
+      <Field N="ChaMoney" ON="RhQ=" />
+      <Field N="ChaStRemain" ON="RxQ=" />
+      <Field N="ChaRBDate" ON="SBQ=" />
+      <Field N="ChaSchool" ON="SRQ=" />
+      <Field N="ChaBright" ON="ShQ=" />
+      <Field N="ChaCNDate" ON="SxQ=" />
+      <Field N="FormName" ON="dBQ=" />
+      <Field N="patcherthread" ON="dRQ=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmFgtPwd" ON="ohM=.jRQ=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void btn_Login_Click(Object sender, System.EventArgs e)" ON="rhM=" />
+      <Method N="Object askUser()" ON="lhQ=" />
+      <Method N="Void frmFgtPwd_Load(Object sender, System.EventArgs e)" ON="lxQ=" />
+      <Method N="Void frmFgtPwd_FormClosed(Object sender, System.Windows.Forms.FormClosedEventArgs e)" ON="mBQ=" />
+      <Method N="Void SendEmail(String _UserId, String _UserPass, String _UserEmail)" ON="mRQ=" />
+      <Method N="Void RefreshData()" ON="VBQ=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="xConn" ON="tBM=" />
+      <Field N="userID" ON="jhQ=" />
+      <Field N="userEmail" ON="jxQ=" />
+      <Field N="userPass" ON="kBQ=" />
+      <Field N="nl" ON="QxQ=" />
+      <Field N="r" ON="VhQ=" />
+      <Field N="EmailAddr" ON="kRQ=" />
+      <Field N="Password" ON="NxQ=" />
+      <Field N="Port" ON="khQ=" />
+      <Field N="Host" ON="kxQ=" />
+      <Field N="Subject" ON="lBQ=" />
+      <Field N="failed" ON="lRQ=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmLogin" ON="ohM=.mhQ=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void frmLogin_Disposed(Object sender, System.EventArgs e)" ON="nBQ=" />
+      <Method N="Void frmLogin_Load(Object sender, System.EventArgs e)" ON="nRQ=" />
+      <Method N="Object ask()" ON="nhQ=" />
+      <Method N="Void userDetails()" ON="nxQ=" />
+      <Method N="Void btn_Login_Click(Object sender, System.EventArgs e)" ON="rhM=" />
+      <Method N="Void txt_UserName_TextChanged(Object sender, System.EventArgs e)" ON="oBQ=" />
+      <Method N="Void frmLogin_Shown(Object sender, System.EventArgs e)" ON="oRQ=" />
+      <Method N="Void btn_Register_Click(Object sender, System.EventArgs e)" ON="ohQ=" />
+      <Method N="Void lbl_ForgotPwd_LinkClicked(Object sender, System.Windows.Forms.LinkLabelLinkClickedEventArgs e)" ON="oxQ=" />
+      <Method N="Void RefreshData()" ON="VBQ=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="xConn" ON="tBM=" />
+      <Field N="userID" ON="jhQ=" />
+      <Field N="userType" ON="cBQ=" />
+      <Field N="userNum" ON="cRQ=" />
+      <Field N="PasswordEncrypt" ON="VxQ=" />
+      <Field N="PasswordisMd5" ON="mxQ=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmNotice" ON="ohM=.pBQ=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void frmNotice_Load(Object sender, System.EventArgs e)" ON="pRQ=" />
+      <Field N="components" ON="oxM=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmProductBrowser" ON="ohM=.phQ=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void NumbericKeyPress(Object sender, System.Windows.Forms.KeyPressEventArgs e)" ON="UxQ=" />
+      <Method N="Void txtQty_TextChanged(Object sender, System.EventArgs e)" ON="rBQ=" />
+      <Method N="Void GetData()" ON="rRQ=" />
+      <Method N="Void frmProductBrowser_Load(Object sender, System.EventArgs e)" ON="rhQ=" />
+      <Method N="Void btnSubmit_Click(Object sender, System.EventArgs e)" ON="rxQ=" />
+      <Method N="Boolean InsertOrderRecord()" ON="sBQ=" />
+      <Method N="Boolean UpdateProduct()" ON="sRQ=" />
+      <Method N="Int32 GetCharMoney()" ON="shQ=" />
+      <Method N="Void AdjustPoints(Int32 howMany)" ON="iBQ=" />
+      <Method N="Void AdjustMoney(Int32 howMany)" ON="sxQ=" />
+      <Method N="Boolean UpdateCharMoneyOrJifen()" ON="tBQ=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="xConn" ON="tBM=" />
+      <Field N="pID" ON="pxQ=" />
+      <Field N="currencyMethod" ON="qBQ=" />
+      <Field N="price" ON="qRQ=" />
+      <Field N="totalPrice" ON="qhQ=" />
+      <Field N="ChaMoney" ON="RhQ=" />
+      <Field N="type" ON="qxQ=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmRanking" ON="ohM=.tRQ=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void PopulatedCmbRank()" ON="txQ=" />
+      <Method N="Void frmRanking_Load(Object sender, System.EventArgs e)" ON="uBQ=" />
+      <Method N="Void cmb_Rank_SelectedIndexChanged(Object sender, System.EventArgs e)" ON="uRQ=" />
+      <Method N="Void tsmi_Copy_Click(Object sender, System.EventArgs e)" ON="uhQ=" />
+      <Method N="Void RefreshData()" ON="VBQ=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="xConn" ON="tBM=" />
+      <Field N="items" ON="tRM=" />
+      <Field N="RankingDisplay" ON="thQ=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmReborn" ON="ohM=.uxQ=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void LoadReborn()" ON="zRQ=" />
+      <Method N="Void btnReborn_Click(Object sender, System.EventArgs e)" ON="zhQ=" />
+      <Method N="Void UpdateChaIntel(Int32 Reborns, Int32 StRemain, Int32 CostMoney, Int32 CostJifen)" ON="zxQ=" />
+      <Method N="Void frmReborn_Load(Object sender, System.EventArgs e)" ON="0BQ=" />
+      <Method N="Void RefreshData()" ON="VBQ=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="xConn" ON="tBM=" />
+      <Field N="ChaIntel" ON="RBQ=" />
+      <Field N="ChaLevel" ON="RRQ=" />
+      <Field N="ChaMoney" ON="RhQ=" />
+      <Field N="ChaStRemain" ON="RxQ=" />
+      <Field N="ChaRBDate" ON="SBQ=" />
+      <Field N="ChaSchool" ON="SRQ=" />
+      <Field N="ChaBright" ON="ShQ=" />
+      <Field N="ChaCNDate" ON="SxQ=" />
+      <Field N="UserLoginState" ON="TBQ=" />
+      <Field N="nl" ON="QxQ=" />
+      <Field N="Reborn" ON="vBQ=" />
+      <Field N="PrimaryLevel" ON="vRQ=" />
+      <Field N="SecondaryLevel" ON="vhQ=" />
+      <Field N="AdvanceLevel" ON="vxQ=" />
+      <Field N="PrimaryReborn" ON="wBQ=" />
+      <Field N="SecondaryReborn" ON="wRQ=" />
+      <Field N="AdvanceReborn" ON="whQ=" />
+      <Field N="PrimaryStat" ON="wxQ=" />
+      <Field N="SecondaryStat" ON="xBQ=" />
+      <Field N="AdvanceStat" ON="xRQ=" />
+      <Field N="PrimaryGold" ON="xhQ=" />
+      <Field N="PrimaryJifen" ON="xxQ=" />
+      <Field N="SecondaryGold" ON="yBQ=" />
+      <Field N="SecondaryJifen" ON="yRQ=" />
+      <Field N="AdvanceGold" ON="yhQ=" />
+      <Field N="AdvanceJifen" ON="yxQ=" />
+      <Field N="RebornWait" ON="zBQ=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmRegister" ON="ohM=.0RQ=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void frmRegister_Load(Object sender, System.EventArgs e)" ON="1RQ=" />
+      <Method N="Void btnAdd_Click(Object sender, System.EventArgs e)" ON="1hQ=" />
+      <Method N="Void btn_Check_Click(Object sender, System.EventArgs e)" ON="1xQ=" />
+      <Method N="Object check()" ON="2BQ=" />
+      <Method N="Void btnCancel_Click(Object sender, System.EventArgs e)" ON="2RQ=" />
+      <Method N="Void RefreshData()" ON="VBQ=" />
+      <Method N="Void frmRegister_Shown(Object sender, System.EventArgs e)" ON="2hQ=" />
+      <Method N="Void frmRegister_FormClosed(Object sender, System.Windows.Forms.FormClosedEventArgs e)" ON="2xQ=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="xConn" ON="tBM=" />
+      <Field N="r" ON="VhQ=" />
+      <Field N="from" ON="0hQ=" />
+      <Field N="CharRemain" ON="0xQ=" />
+      <Field N="CharTestRemain" ON="1BQ=" />
+      <Field N="PasswordEncrypt" ON="VxQ=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmRename" ON="ohM=.3BQ=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void frmRename_Load(Object sender, System.EventArgs e)" ON="4BQ=" />
+      <Method N="Void LoadChangeName()" ON="4RQ=" />
+      <Method N="Void btn_ChangeName_Click(Object sender, System.EventArgs e)" ON="4hQ=" />
+      <Method N="Object checkName()" ON="4xQ=" />
+      <Method N="Void RefreshData()" ON="VBQ=" />
+      <Method N="Boolean _Lambda$__50-0(String b)" />
+      <Field N="components" ON="oxM=" />
+      <Field N="nl" ON="QxQ=" />
+      <Field N="xConn" ON="tBM=" />
+      <Field N="ChaBright" ON="ShQ=" />
+      <Field N="ChaMoney" ON="RhQ=" />
+      <Field N="ChaCNDate" ON="SxQ=" />
+      <Field N="ChangeNameGold" ON="3RQ=" />
+      <Field N="ChangeNameJifen" ON="3hQ=" />
+      <Field N="ChangeNameWait" ON="3xQ=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmSelfHelp" ON="ohM=.5BQ=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void btn_SelfHelp_Click(Object sender, System.EventArgs e)" ON="5RQ=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="xConn" ON="tBM=" />
+      <Field N="UserLoginState" ON="TBQ=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmShop" ON="ohM=.5hQ=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void frmShop_Load(Object sender, System.EventArgs e)" ON="6RQ=" />
+      <Method N="Void CreateDemo()" ON="6hQ=" />
+      <Method N="Void PopulatePanel()" ON="6xQ=" />
+      <Method N="Void PopulatePanel(Int32 ItemType)" ON="6xQ=" />
+      <Method N="Void fbWeapon_Click(Object sender, System.EventArgs e)" ON="7BQ=" />
+      <Method N="Void fbArmour_Click(Object sender, System.EventArgs e)" ON="7RQ=" />
+      <Method N="Void fbAccessory_Click(Object sender, System.EventArgs e)" ON="7hQ=" />
+      <Method N="Void fbHair_Click(Object sender, System.EventArgs e)" ON="7xQ=" />
+      <Method N="Void fbSkill_Load(Object sender, System.EventArgs e)" ON="8BQ=" />
+      <Method N="Void fbVehicle_Click(Object sender, System.EventArgs e)" ON="8RQ=" />
+      <Method N="Void fbPets_Click(Object sender, System.EventArgs e)" ON="8hQ=" />
+      <Method N="Void fbSet_Click(Object sender, System.EventArgs e)" ON="8xQ=" />
+      <Method N="Void fbMisc_Click(Object sender, System.EventArgs e)" ON="9BQ=" />
+      <Method N="Void ItemClick(JBRanOnlineCP.shopItem sender, System.EventArgs e)" ON="9RQ=" />
+      <Method N="Void _Lambda$__51-0()" />
+      <Method N="Void _Lambda$__53-0()" />
+      <Method N="Void _Lambda$__R53-1(Object a0, System.EventArgs a1)" />
+      <Method N="Void _Lambda$__R53-2(Object a0, System.EventArgs a1)" />
+      <Method N="Void _Lambda$__R54-3(Object a0, System.EventArgs a1)" />
+      <Method N="Void _Lambda$__R54-4(Object a0, System.EventArgs a1)" />
+      <Method N="Void _Lambda$__55-0()" />
+      <Method N="Void _Lambda$__56-0()" />
+      <Method N="Void _Lambda$__57-0()" />
+      <Method N="Void _Lambda$__58-0()" />
+      <Method N="Void _Lambda$__59-0()" />
+      <Method N="Void _Lambda$__60-0()" />
+      <Method N="Void _Lambda$__61-0()" />
+      <Method N="Void _Lambda$__62-0()" />
+      <Method N="Void _Lambda$__63-0()" />
+      <Field N="components" ON="oxM=" />
+      <Field N="xConn" ON="tBM=" />
+      <Field N="thread" ON="5xQ=" />
+      <Field N="item" ON="6BQ=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmShopOrder" ON="ohM=.9hQ=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void frmShopOrder_Load(Object sender, System.EventArgs e)" ON="9xQ=" />
+      <Method N="Void LoadOrderHistory()" ON="/BQ=" />
+      <Method N="String C2Date(String Tarikh)" ON="yRM=" />
+      <Method N="Void lvHistory_MouseClick(Object sender, System.Windows.Forms.MouseEventArgs e)" ON="/RQ=" />
+      <Method N="Void CancelPurchase(Int32 id)" ON="/hQ=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="xConn" ON="tBM=" />
+      <Field N="items" ON="tRM=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmEncDec" ON="ohM=./xQ=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void btnEnc_Click(Object sender, System.EventArgs e)" ON="ABU=" />
+      <Method N="Void btnDec_Click(Object sender, System.EventArgs e)" ON="ARU=" />
+      <Method N="Void frmEncDec_FormClosed(Object sender, System.Windows.Forms.FormClosedEventArgs e)" ON="AhU=" />
+      <Method N="Void frmEncDec_Shown(Object sender, System.EventArgs e)" ON="AxU=" />
+      <Field N="components" ON="oxM=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmLoad" ON="ohM=.BBU=">
+      <Method N="Void .ctor()" />
+      <Method N="Void frmLoad_Load(Object sender, System.EventArgs e)" ON="BhU=" />
+      <Method N="Void ReadServer()" ON="BxU=" />
+      <Method N="Void ReadRegister()" ON="CBU=" />
+      <Method N="Void ReadAdmin()" ON="CRU=" />
+      <Method N="Void Timeout()" ON="ChU=" />
+      <Method N="Void Timer1_Tick(Object sender, System.EventArgs e)" ON="xxM=" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void _Lambda$__R5-1(Object a0)" />
+      <Method N="Void _Lambda$__R6-2(Object a0)" />
+      <Field N="xConn" ON="tBM=" />
+      <Field N="thread" ON="5xQ=" />
+      <Field N="connected" ON="BRU=" />
+      <Field N="components" ON="oxM=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmTopup" ON="ohM=.CxU=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void NumbericKeyPress(Object sender, System.Windows.Forms.KeyPressEventArgs e)" ON="UxQ=" />
+      <Method N="Void frmTopup_Load(Object sender, System.EventArgs e)" ON="DxU=" />
+      <Method N="Void btnSubmit_Click(Object sender, System.EventArgs e)" ON="rxQ=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="xConn" ON="tBM=" />
+      <Field N="r" ON="VhQ=" />
+      <Field N="nl" ON="QxQ=" />
+      <Field N="line1" ON="DBU=" />
+      <Field N="line2" ON="DRU=" />
+      <Field N="line3" ON="DhU=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmTransaction" ON="ohM=.EBU=">
+      <Method N="Void .ctor()" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Method N="Void frmTransaction_Load(Object sender, System.EventArgs e)" ON="ERU=" />
+      <Method N="Void LoadTransactionHistory()" ON="EhU=" />
+      <Method N="String C2Date(String Tarikh)" ON="yRM=" />
+      <Method N="String C2Time(String Time)" ON="zRM=" />
+      <Method N="Void btnSubmit_Click(Object sender, System.EventArgs e)" ON="rxQ=" />
+      <Field N="components" ON="oxM=" />
+      <Field N="xConn" ON="tBM=" />
+      <Field N="items" ON="tRM=" />
+    </Type>
+    <Type N="JBRanOnlineCP.My.MyApplication">
+      <Method N="Void Main(String[] Args)" />
+      <Method N="Void .ctor()" />
+      <Method N="Void OnCreateMainForm()" />
+    </Type>
+    <Type N="JBRanOnlineCP.My.Resources.Resources" ON="FBU=.ExU=">
+      <Property N="ResourceManager" ON="GBU=">
+        <Getter N="System.Resources.ResourceManager get_ResourceManager()" ON="FxU=" />
+      </Property>
+      <Property N="Culture" ON="GxU=">
+        <Getter N="System.Globalization.CultureInfo get_Culture()" ON="GRU=" />
+        <Setter N="Void set_Culture(System.Globalization.CultureInfo Value)" ON="GhU=" />
+      </Property>
+      <Property N="version" ON="HRU=">
+        <Getter N="String get_version()" ON="HBU=" />
+      </Property>
+      <Field N="resourceMan" ON="FRU=" />
+      <Field N="resourceCulture" ON="FhU=" />
+    </Type>
+    <Type N="JBRanOnlineCP.My.MySettings">
+      <Method N="Void .cctor()" />
+      <Method N="Void .ctor()" />
+      <Method N="Void AutoSaveSettings(Object sender, System.EventArgs e)" />
+    </Type>
+    <Type N="JBRanOnlineCP.My.MySettingsProperty" />
+    <Type N="JBRanOnlineCP.My.MyComputer">
+      <Method N="Void .ctor()" />
+    </Type>
+    <Type N="JBRanOnlineCP.My.MyProject">
+      <Method N="Void .cctor()" />
+    </Type>
+    <Type N="JBRanOnlineCP.shopItem+CurrencyType" ON="ohM=.4BM=+HhU=">
+      <Field N="Gold" ON="HxU=" />
+      <Field N="ePoint" ON="IBU=" />
+    </Type>
+    <Type N="JBRanOnlineCP.flatButton+IconImageStyle" ON="ohM=.PBQ=+IRU=">
+      <Field N="Normal" ON="IhU=" />
+      <Field N="Left" ON="IxU=" />
+    </Type>
+    <Type N="JBRanOnlineCP.frmShop+_Closure$__54-0" ON="ohM=.5hQ=+_Closure$__54-0">
+      <Method N="Void .ctor(JBRanOnlineCP.frmShop+_Closure$__54-0 arg0)" />
+      <Method N="Void _Lambda$__0()" />
+    </Type>
+    <Type N="JBRanOnlineCP.My.MyProject+MyForms" ON="JBRanOnlineCP.My.MyProject+JBU=">
+      <Property N="frmAdCPMain" ON="SBU=">
+        <Getter N="JBRanOnlineCP.frmAdCPMain get_frmAdCPMain()" ON="RhU=" />
+        <Setter N="Void set_frmAdCPMain(JBRanOnlineCP.frmAdCPMain Value)" ON="RxU=" />
+      </Property>
+      <Property N="frmAddPoint" ON="SxU=">
+        <Getter N="JBRanOnlineCP.frmAddPoint get_frmAddPoint()" ON="SRU=" />
+        <Setter N="Void set_frmAddPoint(JBRanOnlineCP.frmAddPoint Value)" ON="ShU=" />
+      </Property>
+      <Property N="frmAdLogin" ON="ThU=">
+        <Getter N="JBRanOnlineCP.frmAdLogin get_frmAdLogin()" ON="TBU=" />
+        <Setter N="Void set_frmAdLogin(JBRanOnlineCP.frmAdLogin Value)" ON="TRU=" />
+      </Property>
+      <Property N="frmAdOrderDetails" ON="URU=">
+        <Getter N="JBRanOnlineCP.frmAdOrderDetails get_frmAdOrderDetails()" ON="TxU=" />
+        <Setter N="Void set_frmAdOrderDetails(JBRanOnlineCP.frmAdOrderDetails Value)" ON="UBU=" />
+      </Property>
+      <Property N="frmAdProductDetails" ON="VBU=">
+        <Getter N="JBRanOnlineCP.frmAdProductDetails get_frmAdProductDetails()" ON="UhU=" />
+        <Setter N="Void set_frmAdProductDetails(JBRanOnlineCP.frmAdProductDetails Value)" ON="UxU=" />
+      </Property>
+      <Property N="frmAdSetting" ON="VxU=">
+        <Getter N="JBRanOnlineCP.frmAdSetting get_frmAdSetting()" ON="VRU=" />
+        <Setter N="Void set_frmAdSetting(JBRanOnlineCP.frmAdSetting Value)" ON="VhU=" />
+      </Property>
+      <Property N="frmAdShopMgmt" ON="WhU=">
+        <Getter N="JBRanOnlineCP.frmAdShopMgmt get_frmAdShopMgmt()" ON="WBU=" />
+        <Setter N="Void set_frmAdShopMgmt(JBRanOnlineCP.frmAdShopMgmt Value)" ON="WRU=" />
+      </Property>
+      <Property N="frmAdShopOrder" ON="XRU=">
+        <Getter N="JBRanOnlineCP.frmAdShopOrder get_frmAdShopOrder()" ON="WxU=" />
+        <Setter N="Void set_frmAdShopOrder(JBRanOnlineCP.frmAdShopOrder Value)" ON="XBU=" />
+      </Property>
+      <Property N="frmAdTransaction" ON="YBU=">
+        <Getter N="JBRanOnlineCP.frmAdTransaction get_frmAdTransaction()" ON="XhU=" />
+        <Setter N="Void set_frmAdTransaction(JBRanOnlineCP.frmAdTransaction Value)" ON="XxU=" />
+      </Property>
+      <Property N="frmAdTransDetails" ON="YxU=">
+        <Getter N="JBRanOnlineCP.frmAdTransDetails get_frmAdTransDetails()" ON="YRU=" />
+        <Setter N="Void set_frmAdTransDetails(JBRanOnlineCP.frmAdTransDetails Value)" ON="YhU=" />
+      </Property>
+      <Property N="frmAdUserEdit" ON="ZhU=">
+        <Getter N="JBRanOnlineCP.frmAdUserEdit get_frmAdUserEdit()" ON="ZBU=" />
+        <Setter N="Void set_frmAdUserEdit(JBRanOnlineCP.frmAdUserEdit Value)" ON="ZRU=" />
+      </Property>
+      <Property N="frmAdUserSetting" ON="aRU=">
+        <Getter N="JBRanOnlineCP.frmAdUserSetting get_frmAdUserSetting()" ON="ZxU=" />
+        <Setter N="Void set_frmAdUserSetting(JBRanOnlineCP.frmAdUserSetting Value)" ON="aBU=" />
+      </Property>
+      <Property N="frmChgPass" ON="bBU=">
+        <Getter N="JBRanOnlineCP.frmChgPass get_frmChgPass()" ON="ahU=" />
+        <Setter N="Void set_frmChgPass(JBRanOnlineCP.frmChgPass Value)" ON="axU=" />
+      </Property>
+      <Property N="frmChgSchool" ON="bxU=">
+        <Getter N="JBRanOnlineCP.frmChgSchool get_frmChgSchool()" ON="bRU=" />
+        <Setter N="Void set_frmChgSchool(JBRanOnlineCP.frmChgSchool Value)" ON="bhU=" />
+      </Property>
+      <Property N="frmClearPoint" ON="chU=">
+        <Getter N="JBRanOnlineCP.frmClearPoint get_frmClearPoint()" ON="cBU=" />
+        <Setter N="Void set_frmClearPoint(JBRanOnlineCP.frmClearPoint Value)" ON="cRU=" />
+      </Property>
+      <Property N="frmClearRed" ON="dRU=">
+        <Getter N="JBRanOnlineCP.frmClearRed get_frmClearRed()" ON="cxU=" />
+        <Setter N="Void set_frmClearRed(JBRanOnlineCP.frmClearRed Value)" ON="dBU=" />
+      </Property>
+      <Property N="frmCP" ON="eBU=">
+        <Getter N="JBRanOnlineCP.frmCP get_frmCP()" ON="dhU=" />
+        <Setter N="Void set_frmCP(JBRanOnlineCP.frmCP Value)" ON="dxU=" />
+      </Property>
+      <Property N="frmEncDec" ON="exU=">
+        <Getter N="JBRanOnlineCP.frmEncDec get_frmEncDec()" ON="eRU=" />
+        <Setter N="Void set_frmEncDec(JBRanOnlineCP.frmEncDec Value)" ON="ehU=" />
+      </Property>
+      <Property N="frmFgtPwd" ON="fhU=">
+        <Getter N="JBRanOnlineCP.frmFgtPwd get_frmFgtPwd()" ON="fBU=" />
+        <Setter N="Void set_frmFgtPwd(JBRanOnlineCP.frmFgtPwd Value)" ON="fRU=" />
+      </Property>
+      <Property N="frmLoad" ON="gRU=">
+        <Getter N="JBRanOnlineCP.frmLoad get_frmLoad()" ON="fxU=" />
+        <Setter N="Void set_frmLoad(JBRanOnlineCP.frmLoad Value)" ON="gBU=" />
+      </Property>
+      <Property N="frmLogin" ON="hBU=">
+        <Getter N="JBRanOnlineCP.frmLogin get_frmLogin()" ON="ghU=" />
+        <Setter N="Void set_frmLogin(JBRanOnlineCP.frmLogin Value)" ON="gxU=" />
+      </Property>
+      <Property N="frmNotice" ON="hxU=">
+        <Getter N="JBRanOnlineCP.frmNotice get_frmNotice()" ON="hRU=" />
+        <Setter N="Void set_frmNotice(JBRanOnlineCP.frmNotice Value)" ON="hhU=" />
+      </Property>
+      <Property N="frmProductBrowser" ON="ihU=">
+        <Getter N="JBRanOnlineCP.frmProductBrowser get_frmProductBrowser()" ON="iBU=" />
+        <Setter N="Void set_frmProductBrowser(JBRanOnlineCP.frmProductBrowser Value)" ON="iRU=" />
+      </Property>
+      <Property N="frmRanking" ON="jRU=">
+        <Getter N="JBRanOnlineCP.frmRanking get_frmRanking()" ON="ixU=" />
+        <Setter N="Void set_frmRanking(JBRanOnlineCP.frmRanking Value)" ON="jBU=" />
+      </Property>
+      <Property N="frmReborn" ON="kBU=">
+        <Getter N="JBRanOnlineCP.frmReborn get_frmReborn()" ON="jhU=" />
+        <Setter N="Void set_frmReborn(JBRanOnlineCP.frmReborn Value)" ON="jxU=" />
+      </Property>
+      <Property N="frmRegister" ON="kxU=">
+        <Getter N="JBRanOnlineCP.frmRegister get_frmRegister()" ON="kRU=" />
+        <Setter N="Void set_frmRegister(JBRanOnlineCP.frmRegister Value)" ON="khU=" />
+      </Property>
+      <Property N="frmRename" ON="lhU=">
+        <Getter N="JBRanOnlineCP.frmRename get_frmRename()" ON="lBU=" />
+        <Setter N="Void set_frmRename(JBRanOnlineCP.frmRename Value)" ON="lRU=" />
+      </Property>
+      <Property N="frmSelfHelp" ON="mRU=">
+        <Getter N="JBRanOnlineCP.frmSelfHelp get_frmSelfHelp()" ON="lxU=" />
+        <Setter N="Void set_frmSelfHelp(JBRanOnlineCP.frmSelfHelp Value)" ON="mBU=" />
+      </Property>
+      <Property N="frmShop" ON="nBU=">
+        <Getter N="JBRanOnlineCP.frmShop get_frmShop()" ON="mhU=" />
+        <Setter N="Void set_frmShop(JBRanOnlineCP.frmShop Value)" ON="mxU=" />
+      </Property>
+      <Property N="frmShopOrder" ON="nxU=">
+        <Getter N="JBRanOnlineCP.frmShopOrder get_frmShopOrder()" ON="nRU=" />
+        <Setter N="Void set_frmShopOrder(JBRanOnlineCP.frmShopOrder Value)" ON="nhU=" />
+      </Property>
+      <Property N="frmTopup" ON="ohU=">
+        <Getter N="JBRanOnlineCP.frmTopup get_frmTopup()" ON="oBU=" />
+        <Setter N="Void set_frmTopup(JBRanOnlineCP.frmTopup Value)" ON="oRU=" />
+      </Property>
+      <Property N="frmTransaction" ON="pRU=">
+        <Getter N="JBRanOnlineCP.frmTransaction get_frmTransaction()" ON="oxU=" />
+        <Setter N="Void set_frmTransaction(JBRanOnlineCP.frmTransaction Value)" ON="pBU=" />
+      </Property>
+      <Method N="!0 Create__Instance__(!0 Instance)" ON="phU=" />
+      <Method N="Void Dispose__Instance__(!0&amp; instance)" ON="pxU=" />
+      <Method N="Void .ctor()" />
+      <Method N="Boolean Equals(Object o)" />
+      <Method N="Int32 GetHashCode()" />
+      <Method N="System.Type GetType()" ON="qBU=" />
+      <Method N="String ToString()" />
+      <Field N="m_FormBeingCreated" ON="JRU=" />
+      <Field N="m_frmAdCPMain" ON="JhU=" />
+      <Field N="m_frmAddPoint" ON="JxU=" />
+      <Field N="m_frmAdLogin" ON="KBU=" />
+      <Field N="m_frmAdOrderDetails" ON="KRU=" />
+      <Field N="m_frmAdProductDetails" ON="KhU=" />
+      <Field N="m_frmAdSetting" ON="KxU=" />
+      <Field N="m_frmAdShopMgmt" ON="LBU=" />
+      <Field N="m_frmAdShopOrder" ON="LRU=" />
+      <Field N="m_frmAdTransaction" ON="LhU=" />
+      <Field N="m_frmAdTransDetails" ON="LxU=" />
+      <Field N="m_frmAdUserEdit" ON="MBU=" />
+      <Field N="m_frmAdUserSetting" ON="MRU=" />
+      <Field N="m_frmChgPass" ON="MhU=" />
+      <Field N="m_frmChgSchool" ON="MxU=" />
+      <Field N="m_frmClearPoint" ON="NBU=" />
+      <Field N="m_frmClearRed" ON="NRU=" />
+      <Field N="m_frmCP" ON="NhU=" />
+      <Field N="m_frmEncDec" ON="NxU=" />
+      <Field N="m_frmFgtPwd" ON="OBU=" />
+      <Field N="m_frmLoad" ON="ORU=" />
+      <Field N="m_frmLogin" ON="OhU=" />
+      <Field N="m_frmNotice" ON="OxU=" />
+      <Field N="m_frmProductBrowser" ON="PBU=" />
+      <Field N="m_frmRanking" ON="PRU=" />
+      <Field N="m_frmReborn" ON="PhU=" />
+      <Field N="m_frmRegister" ON="PxU=" />
+      <Field N="m_frmRename" ON="QBU=" />
+      <Field N="m_frmSelfHelp" ON="QRU=" />
+      <Field N="m_frmShop" ON="QhU=" />
+      <Field N="m_frmShopOrder" ON="QxU=" />
+      <Field N="m_frmTopup" ON="RBU=" />
+      <Field N="m_frmTransaction" ON="RRU=" />
+    </Type>
+    <Type N="JBRanOnlineCP.My.MyProject+MyWebServices" ON="JBRanOnlineCP.My.MyProject+qRU=">
+      <Method N="Boolean Equals(Object o)" />
+      <Method N="Int32 GetHashCode()" />
+      <Method N="System.Type GetType()" ON="qBU=" />
+      <Method N="String ToString()" />
+      <Method N="!0 Create__Instance__(!0 instance)" ON="phU=" />
+      <Method N="Void Dispose__Instance__(!0&amp; instance)" ON="pxU=" />
+      <Method N="Void .ctor()" />
+    </Type>
+    <Type N="JBRanOnlineCP.My.MyProject+ThreadSafeObjectProvider`1" ON="JBRanOnlineCP.My.MyProject+qhU=`1">
+      <Property N="GetInstance" ON="rBU=">
+        <Getter N="!0 get_GetInstance()" ON="qxU=" />
+      </Property>
+      <Method N="Void .ctor()" />
+    </Type>
+  </Module>
+  <Module N="cppatcher, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <Type N="&lt;Module&gt;" />
+    <Type N="Patcher.frmPatch" ON="rhU=.rRU=">
+      <Method N="Void .ctor()" />
+      <Method N="Void frmPatch_Load(Object sender, System.EventArgs e)" ON="rxU=" />
+      <Method N="Void KillControlPanel()" ON="sBU=" />
+      <Method N="Void DownloadUpdate()" ON="sRU=" />
+      <Method N="Void WC_DownloadProgressChanged(Object sender, System.Net.DownloadProgressChangedEventArgs e)" ON="shU=" />
+      <Method N="Void WC_DownloadProgressCompleted(Object sender, System.ComponentModel.AsyncCompletedEventArgs e)" ON="sxU=" />
+      <Method N="Void Dispose(Boolean disposing)" />
+      <Method N="Void InitializeComponent()" ON="pBM=" />
+      <Field N="thread" ON="5xQ=" />
+      <Field N="components" ON="oxM=" />
+    </Type>
+    <Type N="Patcher.My.MyApplication">
+      <Method N="Void Main(String[] Args)" />
+      <Method N="Void .ctor()" />
+      <Method N="Void OnCreateMainForm()" />
+    </Type>
+    <Type N="Patcher.My.Resources.Resources" ON="tBU=.ExU=">
+      <Property N="ResourceManager" ON="GBU=">
+        <Getter N="System.Resources.ResourceManager get_ResourceManager()" ON="FxU=" />
+      </Property>
+      <Property N="Culture" ON="GxU=">
+        <Getter N="System.Globalization.CultureInfo get_Culture()" ON="GRU=" />
+        <Setter N="Void set_Culture(System.Globalization.CultureInfo Value)" ON="GhU=" />
+      </Property>
+      <Field N="resourceMan" ON="FRU=" />
+      <Field N="resourceCulture" ON="FhU=" />
+    </Type>
+    <Type N="Patcher.My.MySettings">
+      <Method N="Void .cctor()" />
+      <Method N="Void .ctor()" />
+      <Method N="Void AutoSaveSettings(Object sender, System.EventArgs e)" />
+    </Type>
+    <Type N="Patcher.My.MySettingsProperty" />
+    <Type N="Patcher.My.MyComputer">
+      <Method N="Void .ctor()" />
+    </Type>
+    <Type N="Patcher.My.MyProject">
+      <Method N="Void .cctor()" />
+    </Type>
+    <Type N="Patcher.My.MyProject+MyForms" ON="Patcher.My.MyProject+JBU=">
+      <Property N="frmPatch" ON="uBU=">
+        <Getter N="Patcher.frmPatch get_frmPatch()" ON="thU=" />
+        <Setter N="Void set_frmPatch(Patcher.frmPatch Value)" ON="txU=" />
+      </Property>
+      <Method N="!0 Create__Instance__(!0 Instance)" ON="phU=" />
+      <Method N="Void Dispose__Instance__(!0&amp; instance)" ON="pxU=" />
+      <Method N="Void .ctor()" />
+      <Method N="Boolean Equals(Object o)" />
+      <Method N="Int32 GetHashCode()" />
+      <Method N="System.Type GetType()" ON="qBU=" />
+      <Method N="String ToString()" />
+      <Field N="m_FormBeingCreated" ON="JRU=" />
+      <Field N="m_frmPatch" ON="tRU=" />
+    </Type>
+    <Type N="Patcher.My.MyProject+MyWebServices" ON="Patcher.My.MyProject+qRU=">
+      <Method N="Boolean Equals(Object o)" />
+      <Method N="Int32 GetHashCode()" />
+      <Method N="System.Type GetType()" ON="qBU=" />
+      <Method N="String ToString()" />
+      <Method N="!0 Create__Instance__(!0 instance)" ON="phU=" />
+      <Method N="Void Dispose__Instance__(!0&amp; instance)" ON="pxU=" />
+      <Method N="Void .ctor()" />
+    </Type>
+    <Type N="Patcher.My.MyProject+ThreadSafeObjectProvider`1" ON="Patcher.My.MyProject+qhU=`1">
+      <Property N="GetInstance" ON="rBU=">
+        <Getter N="!0 get_GetInstance()" ON="qxU=" />
+      </Property>
+      <Method N="Void .ctor()" />
+    </Type>
+  </Module>
+</AgileDotNet>

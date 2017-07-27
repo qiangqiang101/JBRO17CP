@@ -8,3 +8,4 @@ F:\Users\Bartholomew\Documents\GitHub\JBRO17CP\Patcher\obj\Release\cppatcher.pdb
 F:\Users\Bartholomew\Documents\GitHub\JBRO17CP\Patcher\bin\Release\cppatcher.exe.config
 F:\Users\Bartholomew\Documents\GitHub\JBRO17CP\Patcher\bin\Release\cppatcher.exe
 F:\Users\Bartholomew\Documents\GitHub\JBRO17CP\Patcher\obj\Release\cppatcher.exe
+F:\Users\Bartholomew\Documents\GitHub\JBRO17CP\Patcher\obj\Release\Patcher.vbprojResolveAssemblyReference.cache

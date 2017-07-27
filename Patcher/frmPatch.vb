@@ -40,7 +40,7 @@ Public Class frmPatch
         Try
             KillControlPanel()
             Threading.Thread.Sleep(2000)
-            wc.DownloadFileAsync(New Uri("https://github.com/qiangqiang101/JBRO17CP/blob/master/JBRanOnlineCP/bin/Release/controlpanel.exe?raw=true"), "controlpanel.exe")
+            wc.DownloadFileAsync(New Uri("https://github.com/qiangqiang101/JBRO17CP/blob/master/JBRanOnlineCP/bin/Release/Secured/controlpanel.exe?raw=true"), "controlpanel.exe")
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
         End Try
