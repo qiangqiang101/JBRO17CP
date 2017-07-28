@@ -57,6 +57,42 @@ Public Class frmAdOrderDetails
         End Try
     End Sub
 
+    Public Function GetItemRemaining() As Integer
+        Dim result As Integer = 0
+        Try
+            xConn = New sqlConn()
+            xConn.connectUser(String.Format("Select * From CPProduct Where ItemID='{0}' And ItemEnable='1';", lblID.Text))
+
+            xConn.UserSQLComm.Connection = xConn.UserSQLConn
+            Dim d As SqlDataReader = xConn.UserSQLComm.ExecuteReader()
+            Do While d.Read
+                result = d("ItemRemain")
+            Loop
+
+            xConn.UserSQLConn.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
+        End Try
+
+        Return result
+    End Function
+
+    Private Sub UpdateItemRemaining()
+        Dim remain As Integer = GetItemRemaining()
+        Dim newRemain As Integer = remain - lblID.Text
+
+        Try
+            xConn = New sqlConn()
+            xConn.connectUser("Update CPProduct Set [ItemRemain] = '" & newRemain & "' Where ItemID = " & lblID.Text & ";")
+            xConn.UserSQLComm.Connection = xConn.UserSQLConn
+            xConn.UserSQLComm.ExecuteNonQuery()
+            xConn.UserSQLConn.Close()
+            Me.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
+        End Try
+    End Sub
+
     Private Sub btnReject_Click(sender As Object, e As EventArgs) Handles btnReject.Click
         Try
             Select Case lblStatus.Text
@@ -74,8 +110,8 @@ Public Class frmAdOrderDetails
                             UpdateUserPoint()
                     End Select
 
+                    UpdateItemRemaining()
                     lblStatus.Text = "拒绝"
-
                     btnApprove.Enabled = False
                     btnReject.Enabled = False
                     Me.Close()

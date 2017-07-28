@@ -18,6 +18,7 @@ Public Class frmAdUserEdit
                                "[ChaRemain] = '" & txt_ChaRemain.Text & "', " &
                                "[UserEmail] = '" & txt_UserEmail.Text & "', " &
                                 "[UserPoint] = '" & txt_UserPoint.Text & "', " &
+                                "[UserBlock] = '" & Convert.ToInt32(cbBanned.Checked) & "', " &
                                 "[UserType] = '" & txt_UserType.Text & "' " &
                                 "Where UserNum = " & UserNum.Text & ";")
             xConn.UserSQLComm.Connection = xConn.UserSQLConn
@@ -27,5 +28,13 @@ Public Class frmAdUserEdit
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
         End Try
+    End Sub
+
+    Private Sub btnMD5_Click(sender As Object, e As EventArgs) Handles btnMD5.Click
+        txt_UserPass.Text = Md5FromString(txt_UserPass.Text)
+    End Sub
+
+    Private Sub btnMD5_2_Click(sender As Object, e As EventArgs) Handles btnMD5_2.Click
+        txt_UserPass2.Text = Md5FromString(txt_UserPass2.Text)
     End Sub
 End Class

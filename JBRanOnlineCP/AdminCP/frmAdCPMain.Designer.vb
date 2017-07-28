@@ -136,13 +136,13 @@ Partial Class frmAdCPMain
         'tsmProducts
         '
         Me.tsmProducts.Name = "tsmProducts"
-        Me.tsmProducts.Size = New System.Drawing.Size(152, 22)
+        Me.tsmProducts.Size = New System.Drawing.Size(122, 22)
         Me.tsmProducts.Text = "商城管理"
         '
         'tsmAddProduct
         '
         Me.tsmAddProduct.Name = "tsmAddProduct"
-        Me.tsmAddProduct.Size = New System.Drawing.Size(152, 22)
+        Me.tsmAddProduct.Size = New System.Drawing.Size(122, 22)
         Me.tsmAddProduct.Text = "添加产品"
         '
         'tsmShopTransaction

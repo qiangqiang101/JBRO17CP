@@ -108,21 +108,42 @@ Public Class frmProductBrowser
         ElseIf txtQty.Text = "0" Then
             MsgBox("当前操作有误！", MsgBoxStyle.Critical, "错误")
             txtQty.Focus()
-        ElseIf frmCP.onlinecheck(cmb_Char.SelectedItem) Then
-            MsgBox("转生失败，角色还在线上，请下线后再试。", MsgBoxStyle.Critical, "错误")
+        ElseIf frmCP.OnlineCheck(cmb_Char.SelectedItem) Then
+            MsgBox("购买失败，角色还在线上，请下线后再试。", MsgBoxStyle.Critical, "错误")
+        ElseIf String.IsNullOrEmpty(cmb_Char.SelectedItem) Then
+            MsgBox("请选择要购买的角色！", MsgBoxStyle.Critical, "错误")
+        ElseIf String.Equals(currencyMethod.ToString, "0") Then
+            If GetCharMoney() < price Then
+                MsgBox("购买失败，角色游戏币不足。", MsgBoxStyle.Critical, "错误")
+            Else
+                GoTo Buy
+            End If
+        ElseIf String.Equals(currencyMethod.ToString, "1") Then
+            If frmCP.myPoint < price Then
+                MsgBox("购买失败，积分不足。", MsgBoxStyle.Critical, "错误")
+            Else
+                GoTo Buy
+            End If
         Else
-            If InsertOrderRecord() = False Then
-                If UpdateProduct() = False Then
-                    If UpdateCharMoneyOrJifen() = False Then
-                        Try
-                            Dim newForm As frmShopOrder = New frmShopOrder
-                            frmCP.cpTab.TabPages.Add(newForm)
-                        Catch ex As Exception
-                        End Try
-                        Me.Close()
+Buy:
+            Try
+                If InsertOrderRecord() = False Then
+                    If UpdateProduct() = False Then
+                        If UpdateCharMoneyOrJifen() = False Then
+                            Try
+                                Dim newForm As frmShopOrder = New frmShopOrder
+                                frmCP.cpTab.TabPages.Add(newForm)
+                            Catch ex As Exception
+                            End Try
+                            frmCP.RefreshData()
+                            frmCP.UpdateData()
+                            Me.Close()
+                        End If
                     End If
                 End If
-            End If
+            Catch ex As Exception
+                MsgBox(ex.Message, MsgBoxStyle.Critical, "错误")
+            End Try
         End If
     End Sub
 

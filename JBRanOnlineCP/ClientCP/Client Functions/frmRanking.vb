@@ -119,51 +119,51 @@ Public Class frmRanking
         Dim selectedItem As String
         Select Case cmb_Rank.SelectedItem
             Case "总排行"
-                selectedItem = "Select Top 30 * From ChaInfo Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
+                selectedItem = "Select Top 30 * From ChaInfo Where ChaDeleted='0' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
             Case "圣门学院"
-                selectedItem = "Select Top 30 * From ChaInfo Where ChaSchool='0' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
+                selectedItem = "Select Top 30 * From ChaInfo Where ChaSchool='0' And ChaDeleted='0' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
             Case "玄岩学院"
-                selectedItem = "Select Top 30 * From ChaInfo Where ChaSchool='1' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
+                selectedItem = "Select Top 30 * From ChaInfo Where ChaSchool='1' And ChaDeleted='0' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
             Case "凤凰学院"
-                selectedItem = "Select Top 30 * From ChaInfo Where ChaSchool='2' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
+                selectedItem = "Select Top 30 * From ChaInfo Where ChaSchool='2' And ChaDeleted='0' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
             Case "格斗部", "男格斗"
-                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='1' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
+                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='1' And ChaDeleted='0' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
             Case "剑道部"， “男剑道”
-                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='2' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
+                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='2' And ChaDeleted='0' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
             Case "弓箭部", "女弓箭"
-                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='4' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
+                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='4' And ChaDeleted='0' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
             Case "气功部", "女气功"
-                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='8' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
+                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='8' And ChaDeleted='0' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
             Case "龙鳞部", "男终极"
-                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='16' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
+                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='16' And ChaDeleted='0' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
             Case "龙凤部", "女终极"
-                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='32' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
+                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='32' And ChaDeleted='0' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
             Case "女格斗"
-                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='64' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
+                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='64' And ChaDeleted='0' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
             Case "女剑道"
-                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='128' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
+                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='128' And ChaDeleted='0' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
             Case "男弓箭"
-                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='256' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
+                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='256' And ChaDeleted='0' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
             Case "男气功"
-                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='512' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
+                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='512' And ChaDeleted='0' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
             Case "男超能"
-                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='1024' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
+                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='1024 And ChaDeleted='0'' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
             Case "女超能"
-                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='2048' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
+                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='2048' And ChaDeleted='0' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
             Case "男忍术"
-                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='4096' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
+                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='4096' And ChaDeleted='0' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
             Case "女忍术"
-                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='8192' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
+                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='8192' And ChaDeleted='0' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
             Case "男魔术"
-                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='16384' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
+                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='16384' And ChaDeleted='0' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
             Case "女魔术"
-                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='32768' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
+                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='32768' And ChaDeleted='0' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
             Case "男变身"
-                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='65536' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
+                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='65536' And ChaDeleted='0' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
             Case "女变身"
-                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='131072' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
+                selectedItem = "Select Top 30 * From ChaInfo Where ChaClass='131072' And ChaDeleted='0' Order By ChaIntel Desc, ChaLevel Desc, ChaMoney Desc;"
             Case "大富翁"
-                selectedItem = "Select Top 30 * From ChaInfo Order By ChaMoney Desc;"
+                selectedItem = "Select Top 30 * From ChaInfo Where ChaDeleted='0' Order By ChaMoney Desc;"
         End Select
 
         Try
@@ -177,9 +177,17 @@ Public Class frmRanking
                 items = lvRank.Items.Add(d("ChaName"))
                 With items
                     .SubItems.Add(items.Index + 1)
+                    Dim _ChaClass As Integer = d("ChaClass")
+                    Select Case _ChaClass
+                        Case 1， 2， 16， 256, 512, 1024， 4096， 16384， 65536
+                            .SubItems.Add("帅哥")
+                        Case 4, 8, 32, 64, 128, 2048, 8192, 32768, 131027
+                            .SubItems.Add("美女")
+                        Case Else
+                            .SubItems.Add("人妖")
+                    End Select
                     .SubItems.Add(d("ChaIntel"))
                     .SubItems.Add(d("ChaLevel"))
-                    Dim _ChaClass As Integer = d("ChaClass")
                     Select Case _ChaClass
                         Case 1, 64
                             .SubItems.Add("格斗部")
@@ -213,8 +221,19 @@ Public Class frmRanking
                     End Select
                     Dim _ChaMoney As String = d("ChaMoney".ToString)
                     Dim _ChaMoney2 As Decimal = _ChaMoney.Substring(0, _ChaMoney.Length - 5)
-                    .SubItems.Add(_ChaMoney2.ToString("N"))
+                    .SubItems.Add(_ChaMoney2.ToString("N0"))
+                    Dim _ChaOnline As Integer = d("ChaOnline")
+                    Select Case _ChaOnline
+                        Case 0
+                            .SubItems.Add("离线", Color.Red, Color.White, Me.Font)
+                        Case 1
+                            .SubItems.Add("在线", Color.Green, Color.White, Me.Font)
+                    End Select
                 End With
+
+                For i As Integer = 0 To lvRank.Items.Count - 1
+                    lvRank.Items(i).UseItemStyleForSubItems = False
+                Next
             Loop
 
             xConn.GameSQLConn.Close()

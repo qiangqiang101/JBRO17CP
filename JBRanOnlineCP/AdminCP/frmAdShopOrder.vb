@@ -100,7 +100,13 @@ Public Class frmAdShopOrder
                 newForm.lblUserName.Text = d("UserName")
                 newForm.Text = String.Format("购物ID：{0}", d("OrderID"))
                 newForm.lblCharName.Text = d("CharName")
-                newForm.lblPrice.Text = String.Format("{0} {1}", d("ItemPrice"), d("ItemCurrency"))
+                Dim currency As Integer = d("ItemCurrency")
+                Select Case currency
+                    Case 0
+                        newForm.lblPrice.Text = String.Format("{0} 游戏币", d("ItemPrice"))
+                    Case 1
+                        newForm.lblPrice.Text = String.Format("{0} 积分", d("ItemPrice"))
+                End Select
                 newForm.amount = d("ItemPrice")
                 newForm.curency = d("ItemCurrency")
                 newForm.lblQty.Text = d("ItemQty")

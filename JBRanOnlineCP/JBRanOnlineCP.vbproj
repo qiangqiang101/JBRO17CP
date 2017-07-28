@@ -78,6 +78,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminCP\frmAdChaEdit.Designer.vb">
+      <DependentUpon>frmAdChaEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\frmAdChaEdit.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCP\frmAdChaSetting.Designer.vb">
+      <DependentUpon>frmAdChaSetting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCP\frmAdChaSetting.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AdminCP\frmAdCPMain.Designer.vb">
       <DependentUpon>frmAdCPMain.vb</DependentUpon>
     </Compile>
@@ -303,6 +315,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AdminCP\frmAdChaEdit.resx">
+      <DependentUpon>frmAdChaEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCP\frmAdChaSetting.resx">
+      <DependentUpon>frmAdChaSetting.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminCP\frmAdCPMain.resx">
       <DependentUpon>frmAdCPMain.vb</DependentUpon>
     </EmbeddedResource>

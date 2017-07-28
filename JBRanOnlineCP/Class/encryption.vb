@@ -79,7 +79,7 @@ Module encryption
         result = sb.ToString.Substring(0, 19)
 
         'Return md5 hash.
-        Return result
+        Return result.ToUpper
 
     End Function
 End Module

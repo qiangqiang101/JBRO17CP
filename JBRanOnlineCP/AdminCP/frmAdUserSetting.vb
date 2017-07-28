@@ -65,6 +65,7 @@ Public Class frmAdUserSetting
                 newForm.txt_UserEmail.Text = d("UserEmail")
                 newForm.txt_UserPoint.Text = d("UserPoint")
                 newForm.txt_UserType.Text = d("UserType")
+                newForm.cbBanned.Checked = Convert.ToBoolean(d("UserBlock"))
             Loop
             xConn.UserSQLConn.Close()
         Catch ex As Exception

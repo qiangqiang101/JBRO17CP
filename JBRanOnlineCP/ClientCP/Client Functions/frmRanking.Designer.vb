@@ -36,6 +36,8 @@ Partial Class frmRanking
         Me.chChaMoney = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.cms_Rank = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.tsmi_Copy = New System.Windows.Forms.ToolStripMenuItem()
+        Me.chSex = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.chOnline = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.cms_Rank.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -44,7 +46,7 @@ Partial Class frmRanking
         Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Label2.Location = New System.Drawing.Point(528, 15)
+        Me.Label2.Location = New System.Drawing.Point(634, 15)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(45, 21)
         Me.Label2.TabIndex = 33
@@ -57,7 +59,7 @@ Partial Class frmRanking
         Me.cmb_Rank.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.cmb_Rank.FormattingEnabled = True
         Me.cmb_Rank.Items.AddRange(New Object() {"总排行", "圣门学院", "玄岩学院", "凤凰学院", "大富翁"})
-        Me.cmb_Rank.Location = New System.Drawing.Point(579, 12)
+        Me.cmb_Rank.Location = New System.Drawing.Point(685, 12)
         Me.cmb_Rank.Name = "cmb_Rank"
         Me.cmb_Rank.Size = New System.Drawing.Size(219, 29)
         Me.cmb_Rank.TabIndex = 32
@@ -68,7 +70,7 @@ Partial Class frmRanking
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lvRank.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.lvRank.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.chChaName, Me.chNo, Me.chChaIntel, Me.chChaLevel, Me.chChaClass, Me.chChaSchool, Me.chChaMoney})
+        Me.lvRank.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.chChaName, Me.chNo, Me.chSex, Me.chChaIntel, Me.chChaLevel, Me.chChaClass, Me.chChaSchool, Me.chChaMoney, Me.chOnline})
         Me.lvRank.ContextMenuStrip = Me.cms_Rank
         Me.lvRank.Font = New System.Drawing.Font("Segoe UI", 12.0!)
         Me.lvRank.FullRowSelect = True
@@ -77,7 +79,7 @@ Partial Class frmRanking
         Me.lvRank.Location = New System.Drawing.Point(12, 47)
         Me.lvRank.MultiSelect = False
         Me.lvRank.Name = "lvRank"
-        Me.lvRank.Size = New System.Drawing.Size(786, 419)
+        Me.lvRank.Size = New System.Drawing.Size(892, 419)
         Me.lvRank.TabIndex = 31
         Me.lvRank.UseCompatibleStateImageBehavior = False
         Me.lvRank.View = System.Windows.Forms.View.Details
@@ -140,12 +142,22 @@ Partial Class frmRanking
         Me.tsmi_Copy.Size = New System.Drawing.Size(200, 26)
         Me.tsmi_Copy.Text = "複製文字"
         '
+        'chSex
+        '
+        Me.chSex.Text = "性别"
+        Me.chSex.Width = 50
+        '
+        'chOnline
+        '
+        Me.chOnline.Text = "状态"
+        Me.chOnline.Width = 50
+        '
         'frmRanking
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(810, 478)
+        Me.ClientSize = New System.Drawing.Size(916, 478)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.cmb_Rank)
         Me.Controls.Add(Me.lvRank)
@@ -172,4 +184,6 @@ Partial Class frmRanking
     Friend WithEvents chChaMoney As ColumnHeader
     Friend WithEvents cms_Rank As ContextMenuStrip
     Friend WithEvents tsmi_Copy As ToolStripMenuItem
+    Friend WithEvents chSex As ColumnHeader
+    Friend WithEvents chOnline As ColumnHeader
 End Class

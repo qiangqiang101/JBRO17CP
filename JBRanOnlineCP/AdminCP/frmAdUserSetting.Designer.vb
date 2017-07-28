@@ -94,28 +94,28 @@ Partial Class frmAdUserSetting
         'chUserID
         '
         Me.chUserID.DisplayIndex = 1
-        Me.chUserID.Text = "User ID"
+        Me.chUserID.Text = "帐号"
         Me.chUserID.Width = 200
         '
         'chUserNum
         '
         Me.chUserNum.DisplayIndex = 0
-        Me.chUserNum.Text = "User Num"
+        Me.chUserNum.Text = "帐号ID"
         Me.chUserNum.Width = 80
         '
         'chUserType
         '
-        Me.chUserType.Text = "User Type"
+        Me.chUserType.Text = "会员"
         Me.chUserType.Width = 80
         '
         'chUserLoginState
         '
-        Me.chUserLoginState.Text = "User State"
+        Me.chUserLoginState.Text = "状态"
         Me.chUserLoginState.Width = 80
         '
         'chUserPoint
         '
-        Me.chUserPoint.Text = "User Point"
+        Me.chUserPoint.Text = "积分"
         Me.chUserPoint.Width = 80
         '
         'frmAdUserSetting

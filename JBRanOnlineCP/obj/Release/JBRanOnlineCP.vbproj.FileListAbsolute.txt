@@ -46,3 +46,5 @@ F:\Users\Bartholomew\Documents\GitHub\JBRO17CP\JBRanOnlineCP\obj\Release\control
 F:\Users\Bartholomew\Documents\GitHub\JBRO17CP\JBRanOnlineCP\bin\Release\cppatcher.pdb
 F:\Users\Bartholomew\Documents\GitHub\JBRO17CP\JBRanOnlineCP\bin\Release\cppatcher.xml
 F:\Users\Bartholomew\Documents\GitHub\JBRO17CP\JBRanOnlineCP\bin\Release\cppatcher.exe
+F:\Users\Bartholomew\Documents\GitHub\JBRO17CP\JBRanOnlineCP\obj\Release\JBRanOnlineCP.frmAdChaEdit.resources
+F:\Users\Bartholomew\Documents\GitHub\JBRO17CP\JBRanOnlineCP\obj\Release\JBRanOnlineCP.frmAdChaSetting.resources

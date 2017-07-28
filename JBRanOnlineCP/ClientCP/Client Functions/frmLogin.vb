@@ -46,10 +46,11 @@ Public Class frmLogin
         Select Case PasswordEncrypt
             Case 1
                 For Each _DataRow In dt.Rows
-                    If txt_UserName.Text = _DataRow.item(2) And Md5FromString(txt_Password.Text) = _DataRow(3) Then
+                    Dim _DataPass As String = _DataRow(3)
+                    If (txt_UserName.Text = _DataRow.item(2) And Md5FromString(txt_Password.Text) = _DataPass.ToUpper) AndAlso _DataRow(13) = 0 Then
                         xConn.UserSQLConn.Close()
                         Return True
-                    ElseIf txt_UserName.Text = _DataRow.item(2) And txt_Password.Text = _DataRow(3) Then
+                    ElseIf (txt_UserName.Text = _DataRow.item(2) And txt_Password.Text = _DataRow(3)) AndAlso _DataRow(13) = 0 Then
                         xConn.UserSQLConn.Close()
                         PasswordisMd5 = True
                         Return True
@@ -57,7 +58,7 @@ Public Class frmLogin
                 Next
             Case 0
                 For Each _DataRow In dt.Rows
-                    If txt_UserName.Text = _DataRow.item(2) And txt_Password.Text = _DataRow(3) Then
+                    If (txt_UserName.Text = _DataRow.item(2) And txt_Password.Text = _DataRow(3)) AndAlso _DataRow(13) = 0 Then
                         xConn.UserSQLConn.Close()
                         Return True
                     End If

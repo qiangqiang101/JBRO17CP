@@ -47,7 +47,7 @@ Public Class frmShopOrder
                     End Select
                     .SubItems.Add(d("ItemQty"))
                     Dim amount As Integer = d("ItemPrice")
-                    .SubItems.Add(amount.ToString("N"))
+                    .SubItems.Add(amount)
                     Dim currency As Integer = d("ItemCurrency")
                     Select Case currency
                         Case 0

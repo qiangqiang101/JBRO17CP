@@ -53,4 +53,12 @@
         Catch ex As Exception
         End Try
     End Sub
+
+    Private Sub tsmChar_Click(sender As Object, e As EventArgs) Handles tsmChar.Click
+        Try
+            Dim newForm As frmAdChaSetting = New frmAdChaSetting
+            cpTab.TabPages.Add(newForm)
+        Catch ex As Exception
+        End Try
+    End Sub
 End Class
