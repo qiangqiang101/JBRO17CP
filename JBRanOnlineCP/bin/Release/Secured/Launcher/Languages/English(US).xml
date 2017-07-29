@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Credits to Barry (I'm Not MentaL)-->
+<DATA>
+	<TEXT>
+		<LOGIN_FAILED_VER_FILE_1>Client file has corrupted</LOGIN_FAILED_VER_FILE_1>
+		<LOGIN_FAILED_VER_FILE_2>Please try to reinstall again.</LOGIN_FAILED_VER_FILE_2>
+		<INTERNET_ALREADYOFFLINE_1>Failed to connect due to unstable network connection.</INTERNET_ALREADYOFFLINE_1>
+		<INTERNET_ALREADYOFFLINE_2>Please try again.</INTERNET_ALREADYOFFLINE_2>
+		<SERVER_ONLINE>Online</SERVER_ONLINE>
+		<SERVER_OFFLINE>Status Unknown</SERVER_OFFLINE>
+		<UPDATE_CANCELLED>Update terminated by user</UPDATE_CANCELLED>
+		<UPDATE_ERROR>An Error occurred</UPDATE_ERROR>
+		<UPDATE_PREPARING_DOWNLOAD>Preparing for download</UPDATE_PREPARING_DOWNLOAD>
+		<UPDATE_CHECKING>Checking resources...</UPDATE_CHECKING>
+		<UPDATE_NO_NEW>Client is ready</UPDATE_NO_NEW>
+		<UPDATE_FINISHED>Client is ready</UPDATE_FINISHED>
+		<UPDATE_NEW_VER>New patch available, downloading now...</UPDATE_NEW_VER>
+		<UPDATE_DOWNLOADING>Downloading patch</UPDATE_DOWNLOADING>
+		<UPDATE_DOWNLOADED>Downloading updates </UPDATE_DOWNLOADED>
+		<UPDATE_PREPARING_INSTALL>Preparing to install updates...</UPDATE_PREPARING_INSTALL>
+		<UPDATE_INSTALLING>Installing Updates...</UPDATE_INSTALLING>
+		<REGISTER>Or Create Account</REGISTER>
+		<WEBSITE>Website</WEBSITE>
+		<SUPPORT>Customer Support</SUPPORT>
+		<STORE>Store</STORE>
+		<FACEBOOK>Facebook</FACEBOOK>
+		<JOIN_1>JOIN</JOIN_1>
+		<JOIN_2>OTHER PLAYERS</JOIN_2>
+		<PLAY>PLAY</PLAY>
+		<SERVER>SERVER:</SERVER>
+	</TEXT>
+</DATA>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<!--Credits to Tanakwagu and google--> 
+<DATA> 
+	<TEXT> 
+		<LOGIN_FAILED_VER_FILE_1>Terdapat kerosakan pada fail Client </LOGIN_FAILED_VER_FILE_1> 
+		<LOGIN_FAILED_VER_FILE_2>Anda dinasihatkan untuk membuat proses 'install' semula.</LOGIN_FAILED_VER_FILE_2>  
+		<INTERNET_ALREADYOFFLINE_1>Gagal disebabkan masalah 'line internet' kurang stabil.</INTERNET_ALREADYOFFLINE_1>
+		<INTERNET_ALREADYOFFLINE_2>Sila cuba sebentar lagi.</INTERNET_ALREADYOFFLINE_2>
+		<SERVER_ONLINE>Online</SERVER_ONLINE>
+		<SERVER_OFFLINE>Status Unknown</SERVER_OFFLINE>
+		<UPDATE_CANCELLED>Proses 'Update' dibatalkan</UPDATE_CANCELLED> 
+		<UPDATE_ERROR>Masalah berlaku.</UPDATE_ERROR> 
+		<UPDATE_PREPARING_DOWNLOAD>Bersedia untuk proses Muat Turun</UPDATE_PREPARING_DOWNLOAD> 
+		<UPDATE_CHECKING>Pemeriksaan 'Update'...</UPDATE_CHECKING> 
+		<UPDATE_NO_NEW>Tiada 'Update' baru.</UPDATE_NO_NEW> 
+		<UPDATE_FINISHED>Proses 'Update' tamat, Anda mempunyai versi yang paling baru.</UPDATE_FINISHED> 
+		<UPDATE_NEW_VER>Versi baru dikesan, Muat turun sekarang...</UPDATE_NEW_VER> 
+		<UPDATE_DOWNLOADING>Muat turun patch</UPDATE_DOWNLOADING> 
+		<UPDATE_DOWNLOADED>Telah dimuat turun </UPDATE_DOWNLOADED> 
+		<UPDATE_PREPARING_INSTALL>Bersedia untuk proses pemasangan 'Update'...</UPDATE_PREPARING_INSTALL> 
+		<UPDATE_INSTALLING>Proses pemasangan 'Update' sedang dijalankan...</UPDATE_INSTALLING> 
+		<REGISTER>Atau Daftar Akaun</REGISTER>
+		<WEBSITE>Laman Web</WEBSITE>
+		<SUPPORT>Support</SUPPORT>
+		<STORE>Stor</STORE>
+		<FACEBOOK>Facebook</FACEBOOK>
+		<JOIN_1>SERTAI</JOIN_1>
+		<JOIN_2>PERMAIN LAIN</JOIN_2>
+		<PLAY>MAIN</PLAY>
+		<SERVER>SERVER:</SERVER>
+	</TEXT> 
+</DATA>
